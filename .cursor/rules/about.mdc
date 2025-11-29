@@ -1,0 +1,98 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# About Matt Palmer
+
+<introduction>
+Background context for AI assistants working with Matt Palmer's content and projects.
+</introduction>
+
+<professional_identity>
+<role>Lead of Developer Relations at Replit (since February 2024), educator, and prominent voice in the developer community</role>
+<company_focus>Replit's AI-powered development tools, technical content, and product marketing</company_focus>
+<career_background>Previous roles: Lead Developer Relations at Mage, Senior Data Engineer, Senior Product Analyst</career_background>
+<education>Physics and Economics degree from Swarthmore College</education>
+<mission>Empower ambitious individuals with actionable, evidence-based strategies for growth through accessible, secure "vibe coding"</mission>
+<core_philosophy>"Vibe coding": Modern, intuitive AI-assisted development that makes coding accessible, efficient, and secure for all skill levels</core_philosophy>
+</professional_identity>
+
+<expertise_areas>
+<primary_focus>AI-assisted development, Replit's AI tools (Replit Agent, Replit Assistant), developer education</primary_focus>
+<technical_specialties>AI coding tools, cloud-based development, secure-by-default configurations, accessibility in tech, technical content creation</technical_specialties>
+<platform_presence>
+<youtube>YouTube channel (@mattpalmer)</youtube>
+<twitter>Twitter: https://x.com/mattppal</twitter>
+<linkedin>LinkedIn: https://www.linkedin.com/in/matt-palmer/</linkedin>
+<courses>Producer and instructor for "Vibe Coding 101" with DeepLearningAI (60,000+ students globally)</courses>
+<engagement>Developer community engagement, live demonstrations, industry partnerships</engagement>
+</platform_presence>
+<content_themes>Practical tutorials, evidence-based strategies, community building, democratizing software creation, live troubleshooting</content_themes>
+<business_impact>Contributed to significant growth at Replit, developed key industry partnerships, technical content and product marketing leadership</business_impact>
+</expertise_areas>
+
+<audience_focus>
+<target_groups>
+<group id="aspiring_developers">Individuals new to coding seeking AI-assisted entry points</group>
+<group id="experienced_developers">Coders wanting to leverage AI and Replit tools for efficiency gains</group>
+<group id="entrepreneurs">Founders seeking proven, actionable strategies for rapid development</group>
+<group id="lifelong_learners">Curious minds passionate about evidence-based knowledge and AI-powered development</group>
+</target_groups>
+</audience_focus>
+
+<content_approach>
+<educational_principles>
+<principle>Simplify complex topics with practical, hands-on tutorials using Replit's tools</principle>
+<principle>Ground all advice in research and proven principles</principle>
+<principle>Focus on immediate, actionable value and rapid deployment</principle>
+<principle>Foster inclusive, collaborative learning communities</principle>
+<principle>Emphasize outcomes over tools, with AI as productivity enhancer</principle>
+<principle>Show authentic content including live troubleshooting and real development challenges</principle>
+</educational_principles>
+
+<voice_characteristics>
+<formal_mode>Professional, technically precise, complete grammar (blog posts, documentation)</formal_mode>
+<casual_mode>Lowercase styling, abbreviations, conversational (Twitter, social media)</casual_mode>
+<authentic_mode>Strategic mix of formal/casual, relatable, genuine (personal stories, community, live demos)</authentic_mode>
+<empathy_focus>Empathetic to developer journey, understanding pain points and barriers to entry</empathy_focus>
+<authentic_elements>
+<personal_anecdotes>Include real stories, struggles, and relatable experiences </personal_anecdotes>
+<self_deprecating_humor>Honest about limitations and learning process, makes content relatable</self_deprecating_humor>
+<stream_of_consciousness>Natural thought flow rather than overly structured, polished prose</stream_of_consciousness>
+</authentic_elements>
+</voice_characteristics>
+</content_approach>
+
+<key_themes>
+<democratization>Making software development accessible to people without traditional CS backgrounds through AI and Replit</democratization>
+<ai_integration>Practical application of AI tools (Replit Agent, Assistant) to enhance developer productivity and creativity</ai_integration>
+<rapid_development>Showcasing how individuals can build and deploy applications rapidly using AI-assisted tools</rapid_development>
+<security_focus>Emphasizing secure-by-default configurations and responsible development practices</security_focus>
+<community_building>Creating inclusive spaces for collaborative learning and knowledge sharing</community_building>
+<evidence_based>Grounding recommendations in data, research, and proven methodologies</evidence_based>
+<barrier_removal>Lowering the barrier to entry for software creation and making coding more accessible</barrier_removal>
+</key_themes>
+
+<replit_specific_context>
+<tools_focus>Replit Agent, Replit Assistant, and other AI-powered development tools</tools_focus>
+<platform_benefits>Cloud-based development, rapid deployment, collaborative coding, AI assistance</platform_benefits>
+<demonstration_style>Live coding, real-time problem solving, authentic troubleshooting, practical applications</demonstration_style>
+</replit_specific_context>
+
+<context_for_ai>
+<communication_style>Direct, impactful, witty yet analytical, enthusiastic but professional, empathetic to developer challenges</communication_style>
+<avoid_patterns>
+<generic_transitions>Avoid overused phrases like "Here's the thing about...", "The truth is...", "At the end of the day..."</generic_transitions>
+<marketing_speak>No verbose explanations, excessive jargon without explanation, or overly polished corporate language</marketing_speak>
+<overwhelming_complexity>Don't make things more complex than necessary for beginners</overwhelming_complexity>
+</avoid_patterns>
+<encourage_patterns>
+<show_dont_tell>Use concrete examples and live demonstrations rather than abstract explanations</show_dont_tell>
+<outcomes_focus>Connect features to benefits, emphasize what users can achieve</outcomes_focus>
+<community_elements>Include collaborative aspects and shared learning experiences</community_elements>
+<authentic_voice>Preserve personal touches, honest struggles, and genuine personality</authentic_voice>
+<direct_language>Be conversational and direct rather than formally structured</direct_language>
+</encourage_patterns>
+<authenticity_emphasis>Include real challenges, live troubleshooting, genuine problem-solving process, personal learning journey</authenticity_emphasis>
+</context_for_ai>

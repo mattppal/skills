@@ -1,0 +1,6831 @@
+1
+00:00:18,210 --> 00:00:25,050
+Welcome back to Next Dev FM. My name is Ryan Vogel and I'm joined by my co-host here, Dan Gusswin.
+
+2
+00:00:26,190 --> 00:00:32,130
+And we've got a very special guest today, but before we get to that, Dan, I was pushing
+
+3
+00:00:32,130 --> 00:00:36,610
+some code on the Next Dev repository because we're trying to get that new UI update going.
+
+4
+00:00:37,250 --> 00:00:44,630
+And I saw something weird. It was actually the logo right here that kept popping up all over
+
+5
+00:00:44,630 --> 00:00:49,470
+my code review. Did you like rename your account like code rabbit or something like that?
+
+6
+00:00:50,110 --> 00:00:54,250
+Oh yeah, that's actually that really, really cool thing. It doesn't have anything to do with your
+
+7
+00:00:54,250 --> 00:00:59,830
+account. It's essentially an AI that reviews your code for you. And it has actually saved my ass
+
+8
+00:00:59,830 --> 00:01:03,930
+a few times before with the environment variables that I almost leaked. So you should really
+
+9
+00:01:03,930 --> 00:01:08,190
+listen to what this thing has to say. Oh wow. Well, that's really good. But I mean,
+
+10
+00:01:08,190 --> 00:01:12,330
+my open source repository, I mean, I'm not generating any money. So like, I don't want
+
+11
+00:01:12,330 --> 00:01:17,990
+it to be like super expensive or anything like that. How much is this going to cost me, man?
+
+12
+00:01:19,010 --> 00:01:23,730
+Well, uh, luckily for you, it is free on open source repository. So all you have to do is
+
+13
+00:01:23,730 --> 00:01:28,850
+just enable it. That's perfect. That's perfect. Thank you so much to code rabbit for sponsoring
+
+14
+00:01:28,850 --> 00:01:33,290
+all next dev lives. Check them out at dev link dot run forward slash code rabbit
+
+15
+00:01:33,290 --> 00:01:38,530
+and start doing PRs and code reviews just better. All right. We are going to bring forward our
+
+16
+00:01:38,530 --> 00:01:46,490
+guest, Matt Palmer. There we go. Let's get that all rearranged. Matt is a head of devro
+
+17
+00:01:46,490 --> 00:01:51,150
+or head of developer relations or shenanigans at replet. Matt, how you doing?
+
+18
+00:01:52,090 --> 00:01:55,290
+Doing super well. Great to be here. Thank you both for having me.
+
+19
+00:01:56,150 --> 00:02:04,150
+Awesome. Super excited to have you, Matt. I ran into you NSF at a party the other day. I'm like,
+
+20
+00:02:04,190 --> 00:02:08,310
+dude, you're so awesome. We must get you into Posca and now you're here was so quickly.
+
+21
+00:02:09,009 --> 00:02:15,950
+I'm just happy. But anyway, let's get to the juice support, which is who you are. What do
+
+22
+00:02:15,950 --> 00:02:19,650
+you do? Just give us a two minute intro so that people know who they're looking at.
+
+23
+00:02:20,250 --> 00:02:26,170
+Absolutely happy to. Yeah, thanks for the kind words there, Dan. I'm Matt, head of DevRel at
+
+24
+00:02:26,170 --> 00:02:32,550
+replet. Yeah, living in NSF, going to parties, doing the thing. Mission is to make coding,
+
+25
+00:02:32,730 --> 00:02:37,010
+make building with AI accessible to everybody. That's what I've been up to for the past
+
+26
+00:02:37,570 --> 00:02:41,310
+almost two years now. Yeah. And how did you get into developer relations?
+
+27
+00:02:42,610 --> 00:02:49,170
+Yeah, man. I feel like it was one of those things that kind of found me. I didn't really
+
+28
+00:02:49,170 --> 00:02:55,570
+in tech through data. So, started out first graduated school in finance, moved into data
+
+29
+00:02:55,570 --> 00:02:58,930
+analytics. That was probably the hardest thing. One of the harder things I've done in my life,
+
+30
+00:02:59,090 --> 00:03:04,850
+just kind of like saying, hey, I'm working in financial consulting. I want to be doing SQL in
+
+31
+00:03:04,850 --> 00:03:09,170
+Python. And I'm just going to teach myself how to do those things. So, you know, I bought
+
+32
+00:03:09,730 --> 00:03:16,230
+a giant Python textbook, taught myself SQL, and it just applied to like a ton of jobs. Shout out
+
+33
+00:03:16,230 --> 00:03:20,390
+to like my first manager, Brent, who like totally took a chance on me and said, hey, we're going
+
+34
+00:03:20,390 --> 00:03:23,950
+to bring this guy who doesn't really know what he's doing, kind of learned how to be a data analyst,
+
+35
+00:03:24,110 --> 00:03:28,130
+who was a data analyst at all trails. As a matter of fact, that's kind of a throwback, but
+
+36
+00:03:28,130 --> 00:03:33,850
+got into data engineering just because I loved the technical side of things. But I think after
+
+37
+00:03:33,850 --> 00:03:37,970
+a certain point, I realized, okay, I can't sit in, you know, a dark room and just write code.
+
+38
+00:03:38,430 --> 00:03:41,590
+I want to tell people about these things. So, I started writing like these really bad,
+
+39
+00:03:41,590 --> 00:03:48,410
+these really shitty blog posts on like, what an OLAP database was, what an OLTP database was. And
+
+40
+00:03:48,410 --> 00:03:53,430
+at some point, somebody was like reading these blog articles at O'Reilly, and they reached out like,
+
+41
+00:03:53,470 --> 00:03:57,430
+oh, hey, we want you to write a white paper with Databricks. We want you to write a white paper
+
+42
+00:03:57,430 --> 00:04:02,090
+with this company called Colas. Again, huge shout outs to these companies who are like, oh,
+
+43
+00:04:02,090 --> 00:04:05,450
+yeah, here's this guy. He's just like writing about data stuff, you know, we'll take a bet
+
+44
+00:04:05,450 --> 00:04:11,270
+on him. And those opportunities kind of led to some courses, did a course with LinkedIn on
+
+45
+00:04:11,270 --> 00:04:16,010
+data transformation, led to some other opportunities. And again, this whole time, I was a data engineer
+
+46
+00:04:16,010 --> 00:04:21,450
+just going to conferences and sharing my thoughts. And I think I realized, hey, I want to do this
+
+47
+00:04:21,450 --> 00:04:26,490
+full time. Like, what is this called? And it was the same thing when I got into data analytics.
+
+48
+00:04:26,710 --> 00:04:30,410
+I didn't even know what data analytics was. I was just like, hey, I want to do this. I want to
+
+49
+00:04:30,410 --> 00:04:34,310
+write Python, I want to write SQL, I want to write scripts. What do you call people who do
+
+50
+00:04:34,910 --> 00:04:39,230
+those things for their career? And so very similarly, you know, I was like, what do you
+
+51
+00:04:39,230 --> 00:04:43,390
+call somebody who's an engineer, but then like, tells people about how things work,
+
+52
+00:04:43,490 --> 00:04:48,710
+or helps educate people or explains things. And some people call it DevRel. So, you know,
+
+53
+00:04:48,710 --> 00:04:56,110
+I got a job in San Jose, actually, probably three years ago, doing DevRel for a data engineering
+
+54
+00:04:56,110 --> 00:05:00,610
+company. And, you know, I was working remote through the pandemic, through all this stuff,
+
+55
+00:05:00,610 --> 00:05:03,950
+and I was really wanting to make a bet on in person work, sold everything I owned,
+
+56
+00:05:04,370 --> 00:05:07,310
+I was living in North Carolina at the time, everything I owned fit in my truck,
+
+57
+00:05:07,310 --> 00:05:13,230
+drove across the country, like camped along, it was actually a blast, just left everything behind,
+
+58
+00:05:14,050 --> 00:05:18,870
+drove out to San Jose, did that whole thing, found Replet. And then I was like, hey, you know,
+
+59
+00:05:19,090 --> 00:05:22,770
+I guess I'm gonna teach people with vibe code. Well, actually, at the time, Replet was about
+
+60
+00:05:22,770 --> 00:05:27,250
+deployments and about writing code. And I thought, oh, wow, this would be an amazing opportunity to
+
+61
+00:05:27,250 --> 00:05:32,590
+be able to teach people how to use like this deployment stuff, which was really painful at
+
+62
+00:05:32,590 --> 00:05:35,470
+the time, right? If you remember a few years back, like I remember when I got into data
+
+63
+00:05:35,470 --> 00:05:39,150
+analytics and data engineering, the thing that was hardest for me to learn was DevOps, I was like,
+
+64
+00:05:39,170 --> 00:05:42,470
+okay, I can write Python scripts, I can write stuff that work can work. At the time, I was like
+
+65
+00:05:42,470 --> 00:05:46,770
+writing streamlet apps. I didn't know like how to deploy it or what to do with any of these things.
+
+66
+00:05:46,990 --> 00:05:51,410
+And so, you know, I joined Replet with the intention of making that easy and educating
+
+67
+00:05:51,410 --> 00:05:57,890
+on those topics. But, you know, Sonic came along, AI came along, and now I'm teaching
+
+68
+00:05:57,890 --> 00:06:02,570
+vibe coding. So that's kind of been the journey soup to nuts. But you know, it's been really
+
+69
+00:06:02,570 --> 00:06:07,750
+great. Wow, it's actually an incredible journey from valuation spreadsheets to developer relations.
+
+70
+00:06:07,970 --> 00:06:13,310
+I don't think I've ever heard anything like that. Yeah, exactly. You know, I it's, it's crazy,
+
+71
+00:06:13,310 --> 00:06:17,630
+I think about four or five years ago, what I was doing. It's like, you know, like you said,
+
+72
+00:06:17,650 --> 00:06:22,870
+valuations, I was doing debt valuation for commercial real estate companies, you can actually
+
+73
+00:06:22,870 --> 00:06:26,430
+like value the debt that a company has, if you're like JP Morgan or Blackstone or something,
+
+74
+00:06:26,430 --> 00:06:33,510
+like you take out a bunch of loans to finance buying real estate. The loan exists on your
+
+75
+00:06:33,510 --> 00:06:38,030
+balance sheet. And based on where interest rates are, that loan has some value. So like,
+
+76
+00:06:38,030 --> 00:06:41,570
+it could be worth less than the actual amount of debt. But from that, I was like living in
+
+77
+00:06:41,570 --> 00:06:45,870
+Pennsylvania as like this whole thing. And now I'm like, I live in SF, I get to make apps for
+
+78
+00:06:45,870 --> 00:06:50,950
+fun and talk to you guys. So yeah, completely crazy stuff, man. Yeah, yeah, that's super cool.
+
+79
+00:06:51,130 --> 00:06:56,130
+And it's, it's interesting, because I've definitely seen like the evolution of Replet over the years.
+
+80
+00:06:56,430 --> 00:07:03,410
+Because about I think it was about three years ago, I only knew Replet as like this platform that I
+
+81
+00:07:03,410 --> 00:07:10,370
+would write like C++ and like Python on for like my school classes. And it was just this platform
+
+82
+00:07:10,370 --> 00:07:15,330
+that we use to kind of like run and execute this code. And then that's about it. And now it's kind
+
+83
+00:07:15,330 --> 00:07:21,450
+of reshaped into this sort of not necessarily a vibe coding, but like a vibe infrastructure type
+
+84
+00:07:21,450 --> 00:07:26,290
+thing where it handles everything. And you can just sort of use AI to interconnect everything
+
+85
+00:07:26,290 --> 00:07:32,550
+like that. But obviously, since you've had your sort of foundations and everything like that in
+
+86
+00:07:32,550 --> 00:07:38,530
+data, how do you see that sort of incorporate in your day to day? Because I'm sure some of those
+
+87
+00:07:38,530 --> 00:07:43,690
+habits probably are still there about understanding data, conceptualizing it and working with it.
+
+88
+00:07:44,050 --> 00:07:47,630
+Does that like a does that kind of get into your day to day a little bit?
+
+89
+00:07:48,370 --> 00:07:54,590
+Absolutely. I mean, in my opinion, everything is data, right? I'm biased. But you know,
+
+90
+00:07:54,590 --> 00:07:58,730
+like, if I'm building an app, or if I'm teaching people about, you know, building vibe coding
+
+91
+00:07:58,730 --> 00:08:03,870
+applications and whatnot, it's like, understanding data structures is actually a huge advantage,
+
+92
+00:08:03,930 --> 00:08:08,270
+right? And more than that, just the primitives, what is a database, you know, like, what is a
+
+93
+00:08:08,270 --> 00:08:13,970
+table? What is a column? How do you think about things in a data oriented way? If I'm starting to
+
+94
+00:08:13,970 --> 00:08:18,890
+build an app, like I like fitness, I'm working on some like fitness stuff on the side. I'm
+
+95
+00:08:18,890 --> 00:08:22,490
+probably I'm breaking these ideas down into primitives and thinking them at the thinking
+
+96
+00:08:22,490 --> 00:08:26,070
+about them at the table level and how they relate to one another. So I'm like, okay,
+
+97
+00:08:26,090 --> 00:08:30,550
+well, like maybe I have a program, the program is made up of weeks and days and sets and reps.
+
+98
+00:08:30,850 --> 00:08:37,210
+And like, you can architect the data model for that application. And then the logic for
+
+99
+00:08:37,210 --> 00:08:40,909
+the application almost just follows from the data. It's like, oh, well, once I decide on
+
+100
+00:08:40,909 --> 00:08:44,990
+what the data model looks like, everything else just kind of falls into place, like the logic
+
+101
+00:08:44,990 --> 00:08:51,050
+for what I'm building. And so like, data can really be foundational to any type of application.
+
+102
+00:08:51,050 --> 00:08:57,330
+Does that mean you need to be a data analyst or data engineer to do this? No. But if you're new to
+
+103
+00:08:58,150 --> 00:09:03,330
+building, if you're a new coder, if you're someone who's trying to learn, data can be a really great
+
+104
+00:09:03,330 --> 00:09:07,530
+place to start. And understanding how some of these systems work can be really advantageous.
+
+105
+00:09:07,790 --> 00:09:13,190
+So I see it a lot on the educational piece and on the like building piece. But then, you know,
+
+106
+00:09:13,470 --> 00:09:17,630
+like, reading a lot of code with AI these days, and just understanding like what object oriented
+
+107
+00:09:17,630 --> 00:09:21,310
+Python is or having the background and, you know, like kind of data and pro data engineering
+
+108
+00:09:22,510 --> 00:09:25,810
+is useful every day. So hopefully that answers your question.
+
+109
+00:09:26,370 --> 00:09:32,710
+No, yeah, definitely does. Yeah, it's it's, it's interesting, because especially now with AI
+
+110
+00:09:33,610 --> 00:09:37,830
+conversations, tool calls, everything like that, that's all just data. And then that data needs
+
+111
+00:09:37,830 --> 00:09:42,430
+to be reformatted into the AI and everything like that. And I was watching something the other day,
+
+112
+00:09:42,430 --> 00:09:48,470
+where this company is essentially paying like real coders and real programmers to work on
+
+113
+00:09:48,470 --> 00:09:53,370
+these fake projects that will never get shipped to have high quality production level code.
+
+114
+00:09:53,910 --> 00:09:57,950
+And they're just selling that to essentially AI data companies and everything like that.
+
+115
+00:09:59,070 --> 00:10:02,830
+And it's like, we're not even doing it for the love of the game now, we're just doing it for
+
+116
+00:10:02,830 --> 00:10:07,790
+the love of the data. So it's, it's really interesting how, how crazy data centric the
+
+117
+00:10:07,790 --> 00:10:12,030
+world is right now, because we're running out of data with all these AI agents and everything.
+
+118
+00:10:12,430 --> 00:10:16,330
+Well, there's no such thing as running out of data. There's running out of high quality data.
+
+119
+00:10:16,610 --> 00:10:21,410
+That's exactly right. If you I think, study last year, disclose some to like,
+
+120
+00:10:22,110 --> 00:10:26,530
+hundreds of zettabytes stored worldwide. Can you imagine how big of a number it is? I'm not even
+
+121
+00:10:26,530 --> 00:10:34,630
+sure. I know how many zeros that is, but it's a lot. Yeah, there's a lot of data to deal with.
+
+122
+00:10:35,730 --> 00:10:41,970
+But curious, going back to our questions, that you mentioned that you wanted to teach people,
+
+123
+00:10:41,970 --> 00:10:47,510
+like, that's something that people don't know about themselves. And I've discovered that
+
+124
+00:10:47,510 --> 00:10:52,070
+randomly in their lives. I'm curious, at what point did you realize that you enjoy teaching people
+
+125
+00:10:52,070 --> 00:10:59,330
+things? That's a great question. Okay, so I'm gonna answer this first. I'm gonna say,
+
+126
+00:10:59,390 --> 00:11:03,430
+I just think about like data, I have this amazing, maybe the best piece of company merch
+
+127
+00:11:03,430 --> 00:11:08,230
+that's ever been given to me by I think was thought spot at a snowflake conference.
+
+128
+00:11:08,570 --> 00:11:13,710
+They gave me a hat, and it says Data Daddy on it. That's all it says. And if I'd known we were going
+
+129
+00:11:13,710 --> 00:11:16,690
+to go down this rabbit hole, I would have brought on this podcast, but probably best
+
+130
+00:11:16,690 --> 00:11:20,750
+merch of all time. I blacked out the spot logo. So just it's just a hat that says Data Daddy.
+
+131
+00:11:21,190 --> 00:11:25,430
+And I haven't broken it out in a bit. So next SF party I go to, I might be wearing that hat.
+
+132
+00:11:25,830 --> 00:11:32,470
+But back to your point. How did I know I want to educate? I don't think I ever like,
+
+133
+00:11:32,610 --> 00:11:36,930
+I don't know, maybe it's not traditional education, especially like online, it's very one way.
+
+134
+00:11:36,930 --> 00:11:41,750
+So you create something, you don't necessarily know who engages with it. Or maybe some months later,
+
+135
+00:11:41,770 --> 00:11:45,070
+you hear from someone, oh, this video really helped me. This blog really helped me. I really
+
+136
+00:11:45,070 --> 00:11:49,530
+enjoyed this piece you wrote, or read a book, and I like never know really who read it or who got
+
+137
+00:11:49,530 --> 00:11:56,270
+value from it. But I think the thing for me was, I was so enamored with learning, like,
+
+138
+00:11:56,270 --> 00:12:01,390
+oh, I built this project, and it had this technology in it. Like I learned about this
+
+139
+00:12:01,390 --> 00:12:05,670
+thing, replant, and I had all these problems that I couldn't figure out with deploying
+
+140
+00:12:05,670 --> 00:12:10,630
+things before. But today, I was able to deploy something really fast. Everyone should know about
+
+141
+00:12:10,630 --> 00:12:15,110
+this. Like, everyone needs to know that this is the best way to do this thing. And I get enamored
+
+142
+00:12:15,110 --> 00:12:21,070
+with doing things efficiently, or technology just gets me so excited that it's like, I feel
+
+143
+00:12:21,070 --> 00:12:25,310
+it's like my job to go and be like, hey, you guys are doing stuff the wrong way, you could
+
+144
+00:12:25,310 --> 00:12:28,830
+be doing it better, there's a better way of doing things. And I learned about this,
+
+145
+00:12:28,870 --> 00:12:32,050
+and I'm so excited and so passionate about it, I want to share it with you. And something was
+
+146
+00:12:32,050 --> 00:12:37,150
+through that, that process of like discovery, understanding and sharing, just basically like
+
+147
+00:12:37,150 --> 00:12:41,730
+my own learning, they got me really motivated and really excited to say, I want to go teach people
+
+148
+00:12:41,730 --> 00:12:47,230
+about these things, not because inherently, like I enjoy necessarily like the process of teaching,
+
+149
+00:12:47,230 --> 00:12:52,310
+but because I think it's the most important thing and the most exciting thing that everyone knows
+
+150
+00:12:52,310 --> 00:12:56,410
+the best way of doing things. And they're these exciting technologies that exist.
+
+151
+00:12:57,210 --> 00:13:02,530
+As an ending, it's almost like it's your natural calling that you've found, I must show others what
+
+152
+00:13:02,530 --> 00:13:07,530
+they can do with technology of today. Sure, sure. But it starts, it starts with building,
+
+153
+00:13:07,650 --> 00:13:11,170
+right? It starts with like, what am I going to do? You know, if I have a free morning or free
+
+154
+00:13:11,170 --> 00:13:14,670
+afternoon? Well, I'm probably like hiking or something, you know, I'm like, I also love a
+
+155
+00:13:14,670 --> 00:13:19,070
+lot of other things. But one of the things is like, I want to just like build cool stuff,
+
+156
+00:13:19,170 --> 00:13:22,270
+right? I want to try and make things more efficient. I want to create something creative,
+
+157
+00:13:22,270 --> 00:13:27,830
+I want to create something for people to engage with. And then through that process,
+
+158
+00:13:28,650 --> 00:13:32,830
+that creative process, you like learn about these all these interesting things. And it's
+
+159
+00:13:32,830 --> 00:13:36,030
+just like this endless rabbit hole. It's really fun to go down.
+
+160
+00:13:37,090 --> 00:13:40,950
+Yeah, and I think that's like a crucial part of like, well, I've seen with like other dev rel
+
+161
+00:13:40,950 --> 00:13:46,250
+people, it's like they don't create content because they have to, they create it because
+
+162
+00:13:46,250 --> 00:13:51,470
+they love it. And that's I vibe with that very, very much so, where it's like all of my little
+
+163
+00:13:51,470 --> 00:13:56,250
+side projects and stuff like that. I make videos and talk about how that happened and stuff like
+
+164
+00:13:56,250 --> 00:14:01,590
+that, because I find it fun. I find it exciting and engaging. And like just today, for example,
+
+165
+00:14:02,010 --> 00:14:07,130
+with inbound, there was an outage due to like some SES configuration error. And I feel like a
+
+166
+00:14:07,130 --> 00:14:10,730
+normal company or something like that, or a normal person would just kind of fix it and then call
+
+167
+00:14:10,730 --> 00:14:14,870
+it good or whatnot. But I was like, I looked into it. And then I kind of wrote like a like
+
+168
+00:14:14,870 --> 00:14:18,910
+a video blog post about it and posted that I'm like, here's what I learned. And here's what
+
+169
+00:14:18,910 --> 00:14:23,630
+you can learn as well. And I feel like all of us dev rel just kind of get that. And we're like,
+
+170
+00:14:23,630 --> 00:14:29,530
+I learned this. And I feel like I should compact this and present this to you. So that way you
+
+171
+00:14:29,530 --> 00:14:39,210
+can learn it as well. Yeah, absolutely love that. Yeah. So leading into that, if a data engineer
+
+172
+00:14:39,790 --> 00:14:46,330
+asks, how do I break into dev rel without starting from like absolute zero, what would you like
+
+173
+00:14:46,330 --> 00:14:49,190
+kind of recommend them to do? Because there's like a bunch of different ways that you could
+
+174
+00:14:49,190 --> 00:14:54,270
+kind of do this and be like, just go grab a Lumix s five to camera and start filming or
+
+175
+00:14:54,270 --> 00:14:56,950
+something like that. What would kind of be your workflow be like for that?
+
+176
+00:14:57,390 --> 00:15:01,870
+Yeah, I would say, you know, go buy the most expensive camera you can go get your red
+
+177
+00:15:01,870 --> 00:15:09,510
+AK, spend two years learning how to edit video. These are the things not to do. And my advice
+
+178
+00:15:09,510 --> 00:15:13,890
+actually would be exactly the same for any profession. If you said how do I become an AI
+
+179
+00:15:13,890 --> 00:15:18,750
+engineer? How do I become a data analyst? How do I become a data engineer? Just start doing it.
+
+180
+00:15:19,010 --> 00:15:26,410
+Like you don't, there is no magical path. There is no, there's no like special road,
+
+181
+00:15:26,510 --> 00:15:30,350
+especially in tech, right? Okay, maybe if you want to be a doctor, there is a very
+
+182
+00:15:31,150 --> 00:15:34,950
+thought out path to becoming a doctor that you just kind of have to do. And that's like
+
+183
+00:15:34,950 --> 00:15:41,870
+how the world works. We need more doctors. But in tech, you just manifest whatever you
+
+184
+00:15:41,870 --> 00:15:44,770
+want to do, or at least that's how I look at it. Now, there are a bunch of different
+
+185
+00:15:44,770 --> 00:15:49,790
+ways that you can approach that maybe you find a mentor, maybe you get involved in some
+
+186
+00:15:49,790 --> 00:15:53,970
+communities, you start going into like a discord group, you know, it's like you you insert
+
+187
+00:15:53,970 --> 00:15:58,830
+yourself into a collection of people that they're already doing these things. And you kind of like
+
+188
+00:15:58,830 --> 00:16:05,890
+through osmosis become engaged in that activity. I think that's really important. But the most
+
+189
+00:16:05,890 --> 00:16:09,430
+straightforward one is you just open up your laptop and you say, Hey, you know what, I want
+
+190
+00:16:09,430 --> 00:16:13,270
+to build something and I'm gonna share it with people. And it's kind of a long road, right? Like
+
+191
+00:16:13,270 --> 00:16:17,590
+it's it can be kind of a lonely road. But I think that part of it is finding people that love to do
+
+192
+00:16:18,010 --> 00:16:22,930
+what you love to do. And so, you know, I'm a huge advocate of seeking out where the people who are
+
+193
+00:16:22,930 --> 00:16:26,550
+the best at what they do are and going there physically. That's why I live in San Francisco.
+
+194
+00:16:27,370 --> 00:16:32,330
+I think maybe Dan came here for similar reasons. And I see that as kind of like a shortcut or a
+
+195
+00:16:32,330 --> 00:16:36,390
+superpower of like, hey, I'm gonna go, we go find these people, I'm gonna go engage with this
+
+196
+00:16:36,390 --> 00:16:40,470
+thing. And then I'm also just gonna do it on my own, right? And I'm gonna ship it. And so like,
+
+197
+00:16:40,650 --> 00:16:44,890
+you know, my advice is always like, build something cool, open up your laptop and tell people about
+
+198
+00:16:44,890 --> 00:16:48,390
+it. If you want to write, if you want to create video, if you want to, I don't know, go talk about
+
+199
+00:16:48,390 --> 00:16:53,090
+it in person face to face. That's all that's DevRel. Through that you meet people, you do stuff,
+
+200
+00:16:53,350 --> 00:16:59,930
+and it just happens, right? Yeah. And I wanted to pull up a post that you shared on Twitter
+
+201
+00:16:59,930 --> 00:17:04,670
+about your setup, what you're using for producing content, I found that very inspiring,
+
+202
+00:17:04,670 --> 00:17:09,569
+especially the part on the image from the top left, the quick disclaimer, like, just go and start
+
+203
+00:17:09,569 --> 00:17:15,089
+right now. Yes, you with your MacBook, camera and mic, I found this super, super awesome, like,
+
+204
+00:17:15,190 --> 00:17:20,569
+it's literally all you need to do just start, just do the thing. And people always get that wrong.
+
+205
+00:17:21,250 --> 00:17:24,569
+Yeah, I get this question all the time. And it might be tough to see on the screen here,
+
+206
+00:17:24,569 --> 00:17:27,610
+if you're on a smaller screen. But like, if you click on that image, yeah, on the top left,
+
+207
+00:17:28,050 --> 00:17:33,850
+because people ask this question. The first thing I always tell them is, this isn't even
+
+208
+00:17:33,850 --> 00:17:38,130
+really Yeah, here you go. You can kind of see it. The disclaimer is, you know, you shouldn't
+
+209
+00:17:38,130 --> 00:17:42,410
+feel like you have to spend $5,000 to make great content start right now. Yes, you with your
+
+210
+00:17:42,410 --> 00:17:46,330
+MacBook, camera and mic, because that's what I did. And, you know, people are always like,
+
+211
+00:17:46,330 --> 00:17:50,550
+Oh, tell me about the boom mic that you use. Tell me about camera that you use. But like,
+
+212
+00:17:50,550 --> 00:17:55,510
+unless you're consistently producing and creating, that might not be the right question to ask.
+
+213
+00:17:56,790 --> 00:18:00,350
+All that stuff comes later. And with my own content, like, if you look at the videos,
+
+214
+00:18:00,350 --> 00:18:03,790
+maybe a year and a half ago, they were like very bad, or even two years ago, it was very bad.
+
+215
+00:18:03,970 --> 00:18:09,130
+But I recorded courses in my first dev rel job with my MacBook camera and my and my AirPods.
+
+216
+00:18:09,750 --> 00:18:12,810
+And we shipped them and people got value from them. And look, there are a lot of people that have
+
+217
+00:18:12,810 --> 00:18:16,550
+a lot more followers and a lot more success than I do that have a shittier setup than I do.
+
+218
+00:18:16,610 --> 00:18:20,050
+And they're doing just fine, right? So like, all of the nice stuff is just,
+
+219
+00:18:21,050 --> 00:18:25,290
+you know, flourish. And I think, don't get me wrong, it's part of being a professional that
+
+220
+00:18:25,290 --> 00:18:28,430
+you care about the way that your content looks and sounds and the way that you present. I think
+
+221
+00:18:28,430 --> 00:18:33,950
+that's all very important. But the content is more important than the fidelity in some regards.
+
+222
+00:18:34,530 --> 00:18:39,030
+So like, you can always become a better speaker, become a better presenter without the equipment.
+
+223
+00:18:39,550 --> 00:18:44,470
+And that's kind of what I tell people. Yeah, absolutely. Your most valuable piece of equipment
+
+224
+00:18:44,470 --> 00:18:49,810
+is yourself and your tongue, right? Like, moving it and making things sound nice.
+
+225
+00:18:50,470 --> 00:18:55,730
+I think maybe it was, I can't remember who it said, maybe Tiago Forte, somebody else online,
+
+226
+00:18:56,590 --> 00:19:00,750
+protect the asset and the asset is up here. So everything that you should do is
+
+227
+00:19:00,750 --> 00:19:06,470
+revolves around protecting the asset and making yourself a better person and a bill,
+
+228
+00:19:06,490 --> 00:19:10,710
+like more able to produce higher quality work or accomplish whatever you want.
+
+229
+00:19:11,190 --> 00:19:20,430
+Yeah, that's right. Anyway, getting back to you and your developer relations journey at Replit,
+
+230
+00:19:20,690 --> 00:19:24,990
+when you joined the company, they weren't exactly what they are today, as you mentioned,
+
+231
+00:19:24,990 --> 00:19:29,430
+I'm really curious, what did you walk into when you joined Replit at first? What was going on?
+
+232
+00:19:30,190 --> 00:19:34,790
+Man, a lot of things are going on. So I mean, first thing I have to say is like, big shout out to
+
+233
+00:19:34,790 --> 00:19:39,990
+David Hong, DH, he hired me at Replit. Again, you know, taking a bet on somebody that I've been
+
+234
+00:19:39,990 --> 00:19:44,690
+doing dev rel for a few years at the time. Coming from data engineering, it wasn't like,
+
+235
+00:19:44,790 --> 00:19:48,410
+you know, Replit was like the perfect fit. And I know there were a lot of other people
+
+236
+00:19:48,410 --> 00:19:53,250
+that were interested in the opportunity. But I joined and Replit, as I mentioned,
+
+237
+00:19:53,250 --> 00:19:58,630
+was just a tool for deploying code. As Ryan mentioned, you can run C+, you can do, you know,
+
+238
+00:19:58,790 --> 00:20:03,670
+Python, JavaScript, Rust, .NET, whatever you want. One of the things that makes the platform amazing
+
+239
+00:20:03,670 --> 00:20:08,450
+is that you can run a bunch of different stuff on it. But it was a place for technical people
+
+240
+00:20:08,450 --> 00:20:13,950
+that was more simpler than using other CLI-based tools for deployment or other more complicated
+
+241
+00:20:13,950 --> 00:20:18,470
+DevOps tools to write code in the browser without installing anything and deploy it quickly.
+
+242
+00:20:19,030 --> 00:20:22,250
+So when I joined, I thought, oh, cool, I'm going to teach people this simplified process,
+
+243
+00:20:22,250 --> 00:20:27,930
+it's all going to be about writing code and creation free GBT 3.5. The company, what I didn't
+
+244
+00:20:27,930 --> 00:20:33,730
+know was kind of in the midst or on the cusp of undergoing a major reorg. So a few months after I
+
+245
+00:20:33,730 --> 00:20:37,030
+joined, this is all kind of public information you can read about it, there was like a very big
+
+246
+00:20:37,030 --> 00:20:42,650
+layoff impacted, you know, 30 or 40% of the company. So we went from being, you know, like
+
+247
+00:20:42,650 --> 00:20:49,270
+140, 130, 140, when I joined, down to being under 100. I was the only person left on
+
+248
+00:20:49,270 --> 00:20:55,310
+the marketing team after that layoff. And the summer of 2024, summer into fall,
+
+249
+00:20:55,690 --> 00:20:58,970
+it was like a really tough time, because you know, like you undergo a layoff, everybody's
+
+250
+00:20:58,970 --> 00:21:05,010
+morale is pretty low. You know, we were, the replica has always been an amazing product and
+
+251
+00:21:05,010 --> 00:21:10,230
+a product for builders. But like commercially, the success wasn't necessarily there. And so
+
+252
+00:21:10,230 --> 00:21:14,190
+there's this very painful pivot that had to take place over the course of a few months. And so
+
+253
+00:21:14,190 --> 00:21:17,770
+I think from, you know, when I joined, which is like 130, it went all the way down to like
+
+254
+00:21:17,770 --> 00:21:24,430
+50 or 60. Again, that's, that's like a really painful process. And in that summer, I was just
+
+255
+00:21:24,430 --> 00:21:27,950
+kind of like, trying to do my best, you know, again, we didn't really have a marketing team,
+
+256
+00:21:28,210 --> 00:21:31,830
+I was creating content, I was pushing videos also became known as kind of like the video guy,
+
+257
+00:21:32,250 --> 00:21:35,570
+some sense. So like, if you look at the original agent launch video, it was just like,
+
+258
+00:21:36,210 --> 00:21:41,350
+me with my camera and a tripod recording Amjad, doing the demo on his laptop, and I like edited
+
+259
+00:21:41,350 --> 00:21:46,790
+it. I remember there's a photo on Twitter, somewhere like me, in like the quote unquote
+
+260
+00:21:46,790 --> 00:21:50,950
+war room with the AI team, like shipping the original agent at like 2am. You know,
+
+261
+00:21:51,030 --> 00:21:58,050
+like I'm editing the launch video. It's absolutely ridiculous stuff. But yeah, this is there's this
+
+262
+00:21:58,050 --> 00:22:02,730
+like long, painful process. And then this big bet that obviously Amjad and Michaela and the
+
+263
+00:22:02,730 --> 00:22:09,110
+company leadership made on AI and on ruplet agent, that then paid off and turned us into kind of
+
+264
+00:22:09,110 --> 00:22:14,270
+this vibe coding company or what we were. But like the the journey to that was very,
+
+265
+00:22:14,270 --> 00:22:19,150
+very challenging, right. And a lot of a lot of really great people I worked with,
+
+266
+00:22:19,650 --> 00:22:23,290
+who are no longer at the company, it's still obviously amazing people we keep in touch,
+
+267
+00:22:23,730 --> 00:22:27,190
+a lot of people at the company that stuck that out that kind of like fought through
+
+268
+00:22:27,670 --> 00:22:31,950
+that really challenging time. And so yeah, that transition from
+
+269
+00:22:31,950 --> 00:22:39,110
+ruplet, as everyone knew it a couple years ago to ruplet agent, ruplet vibe coding company,
+
+270
+00:22:39,110 --> 00:22:44,690
+was a painful one. But one that you know, will require a lot of hard work, a lot of really
+
+271
+00:22:44,690 --> 00:22:52,380
+amazing people that I'm grateful to work with every day. Yeah, that's Yeah, I can definitely
+
+272
+00:22:52,380 --> 00:22:59,140
+see the evolution of that and the evolution of quality as well, which leads me into our next
+
+273
+00:22:59,140 --> 00:23:07,020
+question. So we have Lee Rob on here a couple weeks ago. And he said the most important
+
+274
+00:23:07,020 --> 00:23:14,040
+indicator for like KPIs and tracking and stuff like that is quality. How well does your quality
+
+275
+00:23:14,040 --> 00:23:20,400
+evolve over time? So what do you sort of you because every devil kind of has a different way
+
+276
+00:23:20,400 --> 00:23:26,840
+of like their KPIs and measurements of success? How do you and your team sort of justify and
+
+277
+00:23:26,840 --> 00:23:37,000
+like, I don't know, measure that stuff. I think quality is a good one. It's a bit of
+
+278
+00:23:37,000 --> 00:23:43,020
+it. I think everybody has their way of measuring these things. And again, like I said, if you look
+
+279
+00:23:43,020 --> 00:23:47,540
+at my first videos, they're terrible, if you look at my videos, now, they're better. I still
+
+280
+00:23:47,540 --> 00:23:51,360
+see places where they can improve. And I hope in three years, right, I look at it, I say they're
+
+281
+00:23:51,360 --> 00:23:57,260
+the best, right. So definitely, I want quality to the quality of the content that I create,
+
+282
+00:23:57,320 --> 00:24:01,160
+the quality of my writing has improved a lot as well. But like, how do I how do I measure that,
+
+283
+00:24:01,160 --> 00:24:07,200
+right? The perhaps a lagging indicator of quality is
+
+284
+00:24:07,200 --> 00:24:10,840
+engagement. That's not always true. It's imperfect metric,
+
+285
+00:24:10,920 --> 00:24:13,540
+right? You can have content with very poor quality that gets
+
+286
+00:24:13,540 --> 00:24:16,800
+high engagement. But if you think about it kind of like a
+
+287
+00:24:16,800 --> 00:24:20,080
+funnel, and this is this is how I think about it, right? Think
+
+288
+00:24:20,080 --> 00:24:23,480
+about the product funnel, you have, you know, maybe some
+
+289
+00:24:23,480 --> 00:24:25,940
+awareness, are people aware of your product engagement? Are
+
+290
+00:24:25,940 --> 00:24:28,800
+people engaging using the product? Down the funnel, you
+
+291
+00:24:28,800 --> 00:24:31,580
+have something like adoption? Are they like actually using it
+
+292
+00:24:31,580 --> 00:24:34,680
+day to day? Power users, champions, purchasers, right?
+
+293
+00:24:34,940 --> 00:24:37,680
+Like, this varies by the product. I think to typically
+
+294
+00:24:37,680 --> 00:24:40,540
+develop relations, works somewhere in the middle of that
+
+295
+00:24:40,540 --> 00:24:45,400
+funnel. Engagement adoption. And that's where like, if you read
+
+296
+00:24:45,400 --> 00:24:48,860
+Swix's blog posts, measuring dev rel, it's kind of like monthly
+
+297
+00:24:48,860 --> 00:24:51,640
+active users, it's kind of like the gold star. How do you
+
+298
+00:24:51,640 --> 00:24:54,740
+measure that, right? That's challenging. Maybe you put UTM
+
+299
+00:24:54,740 --> 00:24:57,640
+parameters on your links, you use a tool like amplitude or
+
+300
+00:24:57,640 --> 00:25:00,980
+post hog to say how many users are engaging with these UTM
+
+301
+00:25:00,980 --> 00:25:04,400
+params, how many are entering the product through my means. But
+
+302
+00:25:05,160 --> 00:25:07,260
+for many of us, we're not working for consumer products.
+
+303
+00:25:07,300 --> 00:25:09,220
+We're working for developer tools. I'm grateful at Replit
+
+304
+00:25:09,220 --> 00:25:13,040
+that we do have massive volume. And I can move some of these
+
+305
+00:25:13,040 --> 00:25:16,100
+numbers in a tangible way. But you know, for many of us, it
+
+306
+00:25:16,100 --> 00:25:19,260
+might be a little bit different. Hey, maybe, you know, the
+
+307
+00:25:19,260 --> 00:25:21,280
+bigger metric that we're moving here is like enterprise
+
+308
+00:25:21,280 --> 00:25:24,740
+leads. Is there a way that we can measure the number of users
+
+309
+00:25:24,740 --> 00:25:27,560
+from enterprise that are engaging with our content. And
+
+310
+00:25:27,560 --> 00:25:30,860
+you know, to to Lee Rob's point, I think in some sense, these
+
+311
+00:25:30,860 --> 00:25:33,960
+metrics follow from quality. So if I'm continuously pushing the
+
+312
+00:25:33,960 --> 00:25:36,980
+quality, are people getting value out of the thing that I'm
+
+313
+00:25:36,980 --> 00:25:39,640
+delivering? That's actually what these numbers are
+
+314
+00:25:39,640 --> 00:25:43,060
+measuring. The number of active users that I'm driving are
+
+315
+00:25:43,060 --> 00:25:46,580
+directly correlated to the value that I'm providing with
+
+316
+00:25:46,580 --> 00:25:49,060
+the content that I create. And that's highly correlated with
+
+317
+00:25:49,060 --> 00:25:51,880
+the quality of the content that I'm creating. And so yeah, as
+
+318
+00:25:51,880 --> 00:25:56,620
+I think about metrics, the goal should always be to benefit the
+
+319
+00:25:56,620 --> 00:25:59,700
+user in everything that you do in product endeavor, right in
+
+320
+00:25:59,700 --> 00:26:01,760
+marketing, you're talking about marketing, marketing is kind of
+
+321
+00:26:01,760 --> 00:26:04,520
+a dirty word. But really marketing is just, hey, I
+
+322
+00:26:04,520 --> 00:26:06,280
+didn't know about this thing. And now I know that it can
+
+323
+00:26:06,280 --> 00:26:08,860
+help me. And so like, yeah, that's actually benefiting me
+
+324
+00:26:08,860 --> 00:26:12,740
+like good marketing is helping people. Um, but I think about
+
+325
+00:26:12,740 --> 00:26:15,280
+all through the lens of like, how do we help the user and
+
+326
+00:26:15,280 --> 00:26:17,660
+provide as much value as possible? And then what are some
+
+327
+00:26:17,660 --> 00:26:20,080
+ways that we can measure that, you know, like I don't,
+
+328
+00:26:20,540 --> 00:26:23,060
+it's a little superficial, but like the number of followers
+
+329
+00:26:23,060 --> 00:26:25,740
+that you have the number of people that engage with your
+
+330
+00:26:25,740 --> 00:26:29,740
+content in an ideal world is a reflection of if you're doing
+
+331
+00:26:29,740 --> 00:26:33,320
+the right thing. So, you know, take it for what it's worth. I
+
+332
+00:26:33,320 --> 00:26:35,440
+think it's different at every company. But typically, I look
+
+333
+00:26:35,440 --> 00:26:37,760
+at DevRel like a funnel. And then we pick some parts in the
+
+334
+00:26:37,760 --> 00:26:40,620
+funnel, maybe typically middle to bottom, depending on the
+
+335
+00:26:40,620 --> 00:26:42,800
+goals of your company, and then measure those things,
+
+336
+00:26:42,900 --> 00:26:44,720
+right? How many people are engaging? Are we able to
+
+337
+00:26:44,720 --> 00:26:46,440
+drive that? How many people are converting or becoming
+
+338
+00:26:46,440 --> 00:26:48,680
+champions? Typically, that tends with towards more
+
+339
+00:26:48,680 --> 00:26:50,880
+community, things towards the top of the funnel are a bit
+
+340
+00:26:50,880 --> 00:26:53,660
+more advocacy slash marketing. And then the middle of the
+
+341
+00:26:53,660 --> 00:26:56,360
+funnel is developer relations or experience.
+
+342
+00:26:56,740 --> 00:27:01,780
+Yeah, very, very good take. And I don't think it's all
+
+343
+00:27:01,780 --> 00:27:06,160
+that important to be stuck up on the numbers. Because at
+
+344
+00:27:06,160 --> 00:27:08,600
+the end of the day, the journeys that developer
+
+345
+00:27:08,600 --> 00:27:11,580
+relations referred customers usually go through are so
+
+346
+00:27:11,580 --> 00:27:16,400
+long, or so like exotic that it's literally impossible to
+
+347
+00:27:16,400 --> 00:27:18,880
+quantify. So yeah,
+
+348
+00:27:19,120 --> 00:27:21,380
+actually, and I have another comment on that, since you
+
+349
+00:27:21,380 --> 00:27:26,100
+brought it up, I was speaking with another DevRel. And, you
+
+350
+00:27:26,100 --> 00:27:28,740
+know, one thing he said is, hey, it's actually, especially
+
+351
+00:27:28,740 --> 00:27:31,580
+at a startup, it's a lot about trust, because there aren't
+
+352
+00:27:31,580 --> 00:27:34,760
+super concrete metrics in a lot of cases. And so, if you're
+
+353
+00:27:34,760 --> 00:27:36,680
+bringing on a DevRel, if you're a DevRel, and you're
+
+354
+00:27:36,680 --> 00:27:39,060
+hiring, you have to be hiring for people that you trust
+
+355
+00:27:39,060 --> 00:27:41,580
+that even if I'm not, you know, there's not somebody
+
+356
+00:27:41,580 --> 00:27:43,600
+breathing down your throat with like some like quarterly
+
+357
+00:27:43,600 --> 00:27:45,840
+metric for you to hit, you're going to go out and do
+
+358
+00:27:45,840 --> 00:27:48,040
+the right thing. You know, a lot of it is just like, if
+
+359
+00:27:48,040 --> 00:27:50,600
+you're at a startup, I don't know that everybody that's
+
+360
+00:27:50,600 --> 00:27:53,600
+watching this has worked at a startup, things are fuzzy,
+
+361
+00:27:53,660 --> 00:27:56,060
+and things are gray, and things are not, you know, like
+
+362
+00:27:56,060 --> 00:27:59,300
+big public company, like metrics, like, you know, just
+
+363
+00:27:59,300 --> 00:28:01,760
+kind of Amazon, you're just like cranking through wrote
+
+364
+00:28:01,760 --> 00:28:04,800
+writing code, and you have to make decisions. I have to
+
+365
+00:28:04,800 --> 00:28:06,960
+say, what's the best for our users? What do I see?
+
+366
+00:28:07,100 --> 00:28:09,120
+What am I going to invest my time in this week? And
+
+367
+00:28:09,120 --> 00:28:11,540
+so, yeah, there's like a big element of trust there
+
+368
+00:28:11,540 --> 00:28:14,320
+before you get to the metrics. And don't get me
+
+369
+00:28:14,320 --> 00:28:16,620
+wrong, metrics are super important, because a lot of
+
+370
+00:28:16,620 --> 00:28:18,820
+times, you know, if I can quantify something in
+
+371
+00:28:18,820 --> 00:28:21,620
+dollars and cents, if I can say, hey, you know, I went
+
+372
+00:28:21,620 --> 00:28:24,080
+out and I did 30 million impressions, and that
+
+373
+00:28:24,080 --> 00:28:25,880
+corresponds to x amount of ad dollars. And like,
+
+374
+00:28:25,900 --> 00:28:27,760
+this is how we can quantify this is how we can
+
+375
+00:28:27,760 --> 00:28:30,760
+just put some value of what I'm doing. That can be
+
+376
+00:28:30,760 --> 00:28:32,900
+really powerful in the right in the right room, but
+
+377
+00:28:32,900 --> 00:28:35,800
+so can anecdotes of somebody like, hey, that course
+
+378
+00:28:35,800 --> 00:28:37,800
+that you made, really made it easier for me to
+
+379
+00:28:37,800 --> 00:28:39,460
+understand this concept and I signed up or
+
+380
+00:28:39,460 --> 00:28:39,800
+something.
+
+381
+00:28:40,540 --> 00:28:44,400
+Yeah, makes a lot of sense. Going back to your
+
+382
+00:28:44,400 --> 00:28:48,560
+developer relations work at Replit. You are in a
+
+383
+00:28:48,560 --> 00:28:50,660
+very, very interesting position, at least I find
+
+384
+00:28:50,660 --> 00:28:54,680
+it very interesting, where now it's largely about
+
+385
+00:28:54,680 --> 00:29:01,800
+vibe coding, right? If you encounter an engineer or
+
+386
+00:29:01,800 --> 00:29:03,500
+somebody with a lot of experience in the
+
+387
+00:29:03,500 --> 00:29:07,060
+industry, they might approach this concept, this
+
+388
+00:29:07,060 --> 00:29:10,320
+topic as something to dismiss, you know, something
+
+389
+00:29:10,320 --> 00:29:15,220
+like, oh, vibe coding, ew. But curious, how do you
+
+390
+00:29:15,220 --> 00:29:18,260
+define and explain what vibe coding to such
+
+391
+00:29:19,160 --> 00:29:21,400
+skeptical users? And how do you address this kind
+
+392
+00:29:21,400 --> 00:29:21,900
+of feedback?
+
+393
+00:29:23,320 --> 00:29:26,000
+Oh, man. Yeah, vibe coding gets a lot of shade. I
+
+394
+00:29:26,000 --> 00:29:27,480
+think there are a lot of things to unpack here.
+
+395
+00:29:28,680 --> 00:29:29,880
+So first, I mean, there are a lot of people
+
+396
+00:29:29,880 --> 00:29:32,140
+that just, they don't even know what the term is.
+
+397
+00:29:32,200 --> 00:29:34,040
+Maybe they've never used vibe coding before. Like
+
+398
+00:29:34,040 --> 00:29:35,680
+they're still like, we're definitely living in
+
+399
+00:29:35,680 --> 00:29:37,700
+bubble NSF, this is something new that's being
+
+400
+00:29:37,700 --> 00:29:40,740
+adopted. And the skepticism is warranted, right? With
+
+401
+00:29:40,740 --> 00:29:42,780
+any new technology, I think they're a group of
+
+402
+00:29:42,780 --> 00:29:45,800
+skeptics and they're a group of early adopters. And
+
+403
+00:29:45,800 --> 00:29:48,140
+so all I'll say is that in my own experience as a
+
+404
+00:29:48,140 --> 00:29:49,720
+dev, there's a spectrum, right? There's like
+
+405
+00:29:49,720 --> 00:29:51,540
+people that vibe code, like I've never written
+
+406
+00:29:51,540 --> 00:29:54,140
+code before. And there are devs that are super
+
+407
+00:29:54,140 --> 00:29:56,720
+surgical and tactical and use this tool to just
+
+408
+00:29:56,720 --> 00:29:59,680
+get more stuff done. The reason I believe in vibe
+
+409
+00:29:59,680 --> 00:30:01,120
+coding, and the reason I work at Replit is
+
+410
+00:30:01,120 --> 00:30:03,280
+because a year ago, when Sonic first came out, I
+
+411
+00:30:03,280 --> 00:30:06,500
+realized, holy cow, I can just get more stuff done.
+
+412
+00:30:06,860 --> 00:30:10,260
+And for me, you know, it's I appreciate the art
+
+413
+00:30:10,260 --> 00:30:13,080
+of writing code that's important. But for me, it's
+
+414
+00:30:13,080 --> 00:30:14,720
+like about what I can build and the stuff that I
+
+415
+00:30:14,720 --> 00:30:16,540
+can get done and the people that I can help. And
+
+416
+00:30:16,540 --> 00:30:18,820
+so once I realize I can help more people and I
+
+417
+00:30:18,820 --> 00:30:20,940
+can get more stuff done, that really convinced me
+
+418
+00:30:20,940 --> 00:30:23,100
+immediately, I should be using this more. And
+
+419
+00:30:23,100 --> 00:30:24,680
+again, if you understand how to, or well, not
+
+420
+00:30:24,680 --> 00:30:26,540
+again, if you understand how to use context and
+
+421
+00:30:26,540 --> 00:30:29,880
+you understand how to use LLMs as a tool to
+
+422
+00:30:29,880 --> 00:30:32,680
+accomplish goals, there are really amazing things
+
+423
+00:30:32,680 --> 00:30:34,700
+that you can do. So if you're a dev, and you've
+
+424
+00:30:34,700 --> 00:30:36,240
+been saying, hey, you know, like, I don't need
+
+425
+00:30:36,240 --> 00:30:38,340
+any of this vibe coding nonsense, you know, I'm
+
+426
+00:30:38,340 --> 00:30:41,680
+a, you know, I'm a hardcore, you know, DevOps guy
+
+427
+00:30:41,680 --> 00:30:44,200
+or whatever, give it a shot. Try and find the
+
+428
+00:30:44,200 --> 00:30:45,580
+right tools, spend 30 minutes or an hour
+
+429
+00:30:45,580 --> 00:30:46,840
+playing around with it, for sure. I think
+
+430
+00:30:46,840 --> 00:30:48,260
+you'll find it useful if you use it in the
+
+431
+00:30:48,260 --> 00:30:50,920
+right way. If you're somebody who's saying, I
+
+432
+00:30:50,920 --> 00:30:52,800
+can't stand all these vibe coders out here
+
+433
+00:30:52,800 --> 00:30:54,240
+that have never written code, building apps,
+
+434
+00:30:54,420 --> 00:30:57,100
+you know, I get it. At Replit, our goal is to
+
+435
+00:30:57,100 --> 00:30:58,860
+empower everyone to create software, regardless
+
+436
+00:30:58,860 --> 00:31:00,780
+of what background you come from. But I view
+
+437
+00:31:00,780 --> 00:31:02,140
+things a little bit differently, right? I
+
+438
+00:31:02,140 --> 00:31:05,140
+think if you think about vibe coding as a
+
+439
+00:31:05,140 --> 00:31:07,000
+creative tool, I think it's very interesting,
+
+440
+00:31:07,160 --> 00:31:10,400
+creative tool, a tool for, or productive tool,
+
+441
+00:31:10,540 --> 00:31:12,020
+tool for entrepreneurs, a tool for
+
+442
+00:31:12,020 --> 00:31:14,880
+professionals, a tool for people who are
+
+443
+00:31:14,880 --> 00:31:16,200
+inspired with an idea that just want to
+
+444
+00:31:16,200 --> 00:31:17,920
+create what they always have. The same way
+
+445
+00:31:17,920 --> 00:31:20,900
+that you think about maybe a MacBook as a
+
+446
+00:31:20,900 --> 00:31:23,940
+powerful tool, or you think about, you know,
+
+447
+00:31:24,100 --> 00:31:26,160
+some of these classical, even like Nike, right?
+
+448
+00:31:26,500 --> 00:31:29,940
+Nike in 1970. There is no finish line, right?
+
+449
+00:31:30,080 --> 00:31:31,720
+Like these, you buy the shoes to
+
+450
+00:31:31,720 --> 00:31:33,260
+accomplish amazing things, right? I think
+
+451
+00:31:33,260 --> 00:31:36,800
+about Replit as somewhere you can go to
+
+452
+00:31:36,800 --> 00:31:39,600
+build amazing things, right? And vibe
+
+453
+00:31:39,600 --> 00:31:41,560
+coding, right? Like, I think people want to
+
+454
+00:31:41,560 --> 00:31:42,960
+talk about it as like, oh, you go and it
+
+455
+00:31:42,960 --> 00:31:45,120
+just magically just like apps just appear
+
+456
+00:31:45,120 --> 00:31:46,640
+like you don't have to do anything. It's
+
+457
+00:31:46,640 --> 00:31:49,240
+actually just engineering. I don't, you
+
+458
+00:31:49,240 --> 00:31:50,960
+know, this is maybe a hot take. It's I
+
+459
+00:31:50,960 --> 00:31:52,140
+can't go to people and just say, I'm gonna
+
+460
+00:31:52,140 --> 00:31:54,900
+teach you how to be an engineer. But good
+
+461
+00:31:54,900 --> 00:31:56,880
+vibe coders are good engineers. Like I'm
+
+462
+00:31:56,880 --> 00:31:58,060
+gonna think logically, they're good
+
+463
+00:31:58,060 --> 00:32:00,320
+builders. Like if you can fix a motorcycle,
+
+464
+00:32:00,320 --> 00:32:02,460
+if you can fix a car engine, you're gonna
+
+465
+00:32:02,460 --> 00:32:03,940
+be an amazing vibe coder. If you know how
+
+466
+00:32:03,940 --> 00:32:05,220
+to use an Excel spreadsheet, you're gonna
+
+467
+00:32:05,220 --> 00:32:07,300
+be amazing vibe coder because under the
+
+468
+00:32:07,300 --> 00:32:09,400
+hood, it's just logic. It's just software
+
+469
+00:32:09,400 --> 00:32:10,520
+engineering. It's software engineering
+
+470
+00:32:10,520 --> 00:32:12,440
+without software engineering, right? And
+
+471
+00:32:12,440 --> 00:32:13,840
+it's first principles thinking, it's
+
+472
+00:32:13,840 --> 00:32:15,380
+systems thinking, it's breaking down
+
+473
+00:32:15,380 --> 00:32:17,900
+problems. It's product sense. If you go
+
+474
+00:32:17,900 --> 00:32:19,780
+into if you open up your phone, and you
+
+475
+00:32:19,780 --> 00:32:21,580
+use an app, and you're like, this app
+
+476
+00:32:21,580 --> 00:32:24,620
+sucks because XYZ, XYZ, XYZ. And these
+
+477
+00:32:24,620 --> 00:32:25,720
+are the things I want to change. You're
+
+478
+00:32:25,720 --> 00:32:26,680
+gonna be an outstanding vibe coder
+
+479
+00:32:26,680 --> 00:32:28,960
+because it's being super conscientious
+
+480
+00:32:28,960 --> 00:32:30,820
+and pedantic and having attention to
+
+481
+00:32:30,820 --> 00:32:32,740
+detail. And these are characteristics
+
+482
+00:32:32,740 --> 00:32:35,420
+of a software engineer. But there's the
+
+483
+00:32:35,420 --> 00:32:38,940
+code is English, right? And so the more
+
+484
+00:32:38,940 --> 00:32:41,080
+I explore these ideas, the more I try
+
+485
+00:32:41,080 --> 00:32:43,060
+to communicate to engineers, don't
+
+486
+00:32:43,060 --> 00:32:45,280
+necessarily think about it as just
+
+487
+00:32:45,280 --> 00:32:46,680
+like people, I don't know, like
+
+488
+00:32:46,680 --> 00:32:48,680
+frolicking and just like willy-nilly
+
+489
+00:32:48,680 --> 00:32:51,120
+creating apps. But think about it as a
+
+490
+00:32:51,120 --> 00:32:52,940
+tool for accomplishing goals. The
+
+491
+00:32:52,940 --> 00:32:54,360
+goal is to create something amazing.
+
+492
+00:32:54,880 --> 00:32:56,460
+And more and more with AI, we can do
+
+493
+00:32:56,460 --> 00:32:58,360
+that with natural language. It's kind
+
+494
+00:32:58,360 --> 00:32:59,440
+of hard approach it.
+
+495
+00:33:00,680 --> 00:33:02,440
+Yeah, no, I think that I think that
+
+496
+00:33:02,440 --> 00:33:05,240
+makes sense. Because I give a talk
+
+497
+00:33:05,240 --> 00:33:07,480
+about this at Next.js comp, where
+
+498
+00:33:07,480 --> 00:33:10,300
+it's like, AI shouldn't replace you as
+
+499
+00:33:10,300 --> 00:33:12,540
+the developer, but you should be the
+
+500
+00:33:12,540 --> 00:33:14,980
+developer delegating to it like in
+
+501
+00:33:14,980 --> 00:33:18,060
+insane detail. And that's why I am a
+
+502
+00:33:18,060 --> 00:33:20,940
+huge, huge supporter of voice mode,
+
+503
+00:33:21,260 --> 00:33:22,660
+whether that be via like super
+
+504
+00:33:22,660 --> 00:33:23,920
+whisper or something like that.
+
+505
+00:33:24,120 --> 00:33:26,800
+Because I am amazing at like
+
+506
+00:33:26,800 --> 00:33:28,460
+visualizing out like the flow chart
+
+507
+00:33:28,460 --> 00:33:30,020
+of how the app works and how the
+
+508
+00:33:30,020 --> 00:33:32,300
+stuff works. So I will literally my
+
+509
+00:33:32,300 --> 00:33:33,380
+girlfriend will come in and be like,
+
+510
+00:33:33,380 --> 00:33:35,220
+what the hell are you doing? Because
+
+511
+00:33:35,220 --> 00:33:36,620
+she'll see me and I'm just like,
+
+512
+00:33:36,800 --> 00:33:38,200
+literally like this just like
+
+513
+00:33:38,200 --> 00:33:39,960
+dictating like at the speed of
+
+514
+00:33:39,960 --> 00:33:41,740
+light to like the agent and I
+
+515
+00:33:41,740 --> 00:33:43,660
+submit paragraphs at a time, but
+
+516
+00:33:43,660 --> 00:33:45,140
+it does it like insanely well,
+
+517
+00:33:45,140 --> 00:33:46,960
+because it's just I reference all
+
+518
+00:33:46,960 --> 00:33:48,200
+the little context bits and
+
+519
+00:33:48,200 --> 00:33:49,540
+everything like that. So we can
+
+520
+00:33:49,540 --> 00:33:50,940
+actually understand what's
+
+521
+00:33:50,940 --> 00:33:53,560
+happening. So I think that pairing
+
+522
+00:33:53,560 --> 00:33:55,380
+of yourself as a developer with
+
+523
+00:33:55,380 --> 00:33:57,500
+the agent as the tool can just
+
+524
+00:33:57,500 --> 00:33:59,560
+push you even further and just
+
+525
+00:33:59,560 --> 00:34:04,200
+make it work seamlessly. So um,
+
+526
+00:34:05,140 --> 00:34:06,660
+that's, that's spot on, right?
+
+527
+00:34:07,340 --> 00:34:09,300
+And commonly, that's how I'm using
+
+528
+00:34:09,300 --> 00:34:10,860
+replet. I'm using I'm doing the
+
+529
+00:34:10,860 --> 00:34:12,580
+same thing with voice. And I'm
+
+530
+00:34:12,580 --> 00:34:14,020
+like, looking at this thing, I'm
+
+531
+00:34:14,020 --> 00:34:14,920
+like a locked in, I'm like,
+
+532
+00:34:15,000 --> 00:34:16,139
+change this button, make this
+
+533
+00:34:16,139 --> 00:34:17,159
+thing work different. I want to
+
+534
+00:34:17,159 --> 00:34:18,040
+implement this other thing,
+
+535
+00:34:18,040 --> 00:34:19,060
+right? But the thing I want to
+
+536
+00:34:19,060 --> 00:34:19,860
+you know, the point I think
+
+537
+00:34:19,860 --> 00:34:20,679
+that's important to make is
+
+538
+00:34:20,679 --> 00:34:23,300
+that even if you've never used
+
+539
+00:34:23,300 --> 00:34:24,460
+code before, even if you don't
+
+540
+00:34:24,460 --> 00:34:26,199
+know what code is, the latency
+
+541
+00:34:26,199 --> 00:34:27,920
+to information is like zero now,
+
+542
+00:34:28,040 --> 00:34:29,600
+right? Like you have your
+
+543
+00:34:29,600 --> 00:34:30,840
+coding agent open and you're
+
+544
+00:34:30,840 --> 00:34:33,139
+like, what's a shader? I don't
+
+545
+00:34:33,139 --> 00:34:34,440
+know what a shader is. Explain
+
+546
+00:34:34,440 --> 00:34:35,560
+to me what a shader is and
+
+547
+00:34:35,560 --> 00:34:36,620
+explain to me how it works in my
+
+548
+00:34:36,620 --> 00:34:37,900
+application. And you can just
+
+549
+00:34:38,320 --> 00:34:39,659
+literally double click on every
+
+550
+00:34:39,659 --> 00:34:40,980
+piece of information and learn
+
+551
+00:34:40,980 --> 00:34:43,300
+so fast. So the latency to
+
+552
+00:34:43,300 --> 00:34:45,699
+information is lower. You know,
+
+553
+00:34:45,699 --> 00:34:47,000
+we talked about we're developers
+
+554
+00:34:47,000 --> 00:34:48,179
+talk about developer experience.
+
+555
+00:34:48,179 --> 00:34:49,239
+What is developer experience?
+
+556
+00:34:49,380 --> 00:34:50,480
+Well, it's like feedback loops,
+
+557
+00:34:50,560 --> 00:34:51,699
+cognitive load and flow
+
+558
+00:34:51,699 --> 00:34:53,739
+state, right? And so all of
+
+559
+00:34:53,739 --> 00:34:55,940
+these things, we can lower the
+
+560
+00:34:55,940 --> 00:34:57,480
+feedback loop to information,
+
+561
+00:34:57,700 --> 00:34:58,700
+but then also implementing the
+
+562
+00:34:58,700 --> 00:34:59,800
+features, we can lower the
+
+563
+00:34:59,800 --> 00:35:01,520
+cognitive load of having to
+
+564
+00:35:01,520 --> 00:35:02,560
+switch to multiple tools by
+
+565
+00:35:02,560 --> 00:35:03,520
+just asking our chat
+
+566
+00:35:03,520 --> 00:35:05,020
+interface. And ultimately, that
+
+567
+00:35:05,020 --> 00:35:06,540
+gets us in a flow state as a
+
+568
+00:35:06,540 --> 00:35:07,620
+builder, whether you're someone
+
+569
+00:35:07,620 --> 00:35:08,780
+new to code or your software
+
+570
+00:35:08,780 --> 00:35:10,020
+engineer, that lets you just
+
+571
+00:35:10,020 --> 00:35:11,040
+do more stuff and build
+
+572
+00:35:11,040 --> 00:35:13,020
+amazing things. And Ryan, I
+
+573
+00:35:13,020 --> 00:35:13,740
+think like what you're
+
+574
+00:35:13,740 --> 00:35:14,640
+mentioning there is you can
+
+575
+00:35:14,640 --> 00:35:16,020
+use voice, you can use
+
+576
+00:35:16,020 --> 00:35:17,820
+super whisper, whisper flow,
+
+577
+00:35:17,980 --> 00:35:20,620
+shout out to nay to turn
+
+578
+00:35:20,620 --> 00:35:22,440
+these things take you want to
+
+579
+00:35:22,440 --> 00:35:23,600
+mind meld with the computer,
+
+580
+00:35:23,600 --> 00:35:24,620
+right? You just want to be in
+
+581
+00:35:24,620 --> 00:35:25,840
+this like freakin loop. It's
+
+582
+00:35:25,840 --> 00:35:27,780
+super fun. But yeah, man, I
+
+583
+00:35:27,780 --> 00:35:28,760
+think that's spot on for what
+
+584
+00:35:28,760 --> 00:35:30,360
+like vibe coding really is.
+
+585
+00:35:30,660 --> 00:35:31,960
+You get you get like in this
+
+586
+00:35:31,960 --> 00:35:34,080
+flow state. And I was in this
+
+587
+00:35:34,080 --> 00:35:35,320
+today when I was just debugging
+
+588
+00:35:35,320 --> 00:35:36,460
+one of the incidents that I
+
+589
+00:35:36,460 --> 00:35:38,400
+have. And it just it just
+
+590
+00:35:38,400 --> 00:35:40,960
+feels like, especially if you
+
+591
+00:35:40,960 --> 00:35:42,420
+use like a fast model like
+
+592
+00:35:42,420 --> 00:35:43,980
+composer or something like that.
+
+593
+00:35:44,460 --> 00:35:45,660
+It just feels like you're in
+
+594
+00:35:45,660 --> 00:35:46,700
+this flow state where you're
+
+595
+00:35:46,700 --> 00:35:48,740
+just input output input output
+
+596
+00:35:48,740 --> 00:35:49,880
+and you're generating really
+
+597
+00:35:49,880 --> 00:35:51,440
+good code because it's all
+
+598
+00:35:51,440 --> 00:35:53,740
+super, super detail oriented
+
+599
+00:35:53,740 --> 00:35:55,000
+and everything like that. And
+
+600
+00:35:55,000 --> 00:35:56,800
+it's just once you experience
+
+601
+00:35:56,800 --> 00:35:58,000
+it, you're like, Oh, man, I
+
+602
+00:35:58,000 --> 00:35:59,060
+love that feeling. It kind of
+
+603
+00:35:59,060 --> 00:36:00,560
+gives me the rush of like
+
+604
+00:36:00,560 --> 00:36:02,280
+coding itself, but I'm just
+
+605
+00:36:02,280 --> 00:36:04,260
+able to work 10 times faster.
+
+606
+00:36:04,820 --> 00:36:06,060
+And it's just it's it's a
+
+607
+00:36:06,060 --> 00:36:07,780
+crazy, crazy experience.
+
+608
+00:36:08,920 --> 00:36:10,040
+Here's a here's I like to
+
+609
+00:36:10,040 --> 00:36:10,900
+flip this. I like to ask
+
+610
+00:36:10,900 --> 00:36:11,740
+the interviewers questions
+
+611
+00:36:11,740 --> 00:36:12,860
+sometimes how do you guys
+
+612
+00:36:12,860 --> 00:36:13,840
+like make sure that you're
+
+613
+00:36:13,840 --> 00:36:15,020
+writing code because I was
+
+614
+00:36:15,020 --> 00:36:16,660
+like, I had to write some
+
+615
+00:36:16,660 --> 00:36:17,900
+Python the other day. I was
+
+616
+00:36:17,900 --> 00:36:19,760
+like, dude, I'm a little
+
+617
+00:36:19,760 --> 00:36:21,420
+rusty. You know what I'm
+
+618
+00:36:21,420 --> 00:36:22,580
+seeing? That's the that's
+
+619
+00:36:22,580 --> 00:36:23,420
+the thing with me. I don't
+
+620
+00:36:23,420 --> 00:36:26,620
+really write code. Um, I, I
+
+621
+00:36:26,620 --> 00:36:27,920
+know the syntax because I
+
+622
+00:36:27,920 --> 00:36:31,420
+ingest it enough. So, um, if
+
+623
+00:36:31,420 --> 00:36:32,160
+I've got to like edit
+
+624
+00:36:32,160 --> 00:36:33,340
+something, I can do it
+
+625
+00:36:33,340 --> 00:36:34,420
+really, really well with
+
+626
+00:36:34,420 --> 00:36:36,520
+like cursor tab. But if
+
+627
+00:36:36,520 --> 00:36:37,640
+you were to plot me down
+
+628
+00:36:37,640 --> 00:36:39,540
+in the old reflet editor,
+
+629
+00:36:39,540 --> 00:36:41,280
+like, I don't know what
+
+630
+00:36:41,280 --> 00:36:43,000
+three years ago, and it's
+
+631
+00:36:43,000 --> 00:36:44,900
+like, hey, create a react
+
+632
+00:36:44,900 --> 00:36:46,160
+app type script, I can
+
+633
+00:36:46,160 --> 00:36:47,500
+kind of do okay. But
+
+634
+00:36:47,500 --> 00:36:48,800
+create like a react app or
+
+635
+00:36:48,800 --> 00:36:51,080
+something like that. Dude, I
+
+636
+00:36:51,080 --> 00:36:52,700
+would be cooked, especially
+
+637
+00:36:52,700 --> 00:36:53,840
+with all this like react
+
+638
+00:36:53,840 --> 00:36:55,300
+query stuff and all the
+
+639
+00:36:55,300 --> 00:36:57,160
+query and the hooks I would
+
+640
+00:36:57,160 --> 00:37:00,400
+be absolutely just gone,
+
+641
+00:37:00,940 --> 00:37:01,400
+gone.
+
+642
+00:37:02,920 --> 00:37:04,160
+Dan, you got any tips?
+
+643
+00:37:05,260 --> 00:37:08,840
+Yeah, I actually do not
+
+644
+00:37:08,840 --> 00:37:10,500
+trust models enough to
+
+645
+00:37:10,500 --> 00:37:12,920
+just ship code the way I
+
+646
+00:37:12,920 --> 00:37:14,940
+wanted to be shipped. There
+
+647
+00:37:14,940 --> 00:37:17,260
+are just things that I
+
+648
+00:37:17,260 --> 00:37:20,020
+didn't manage to capture
+
+649
+00:37:20,020 --> 00:37:21,280
+because there's like so
+
+650
+00:37:21,280 --> 00:37:22,140
+many preferences that I've
+
+651
+00:37:22,140 --> 00:37:23,120
+built over my career. I've
+
+652
+00:37:23,120 --> 00:37:24,680
+been coding for over a
+
+653
+00:37:24,680 --> 00:37:26,840
+decade now. And I just
+
+654
+00:37:26,840 --> 00:37:27,820
+don't trust the agent
+
+655
+00:37:27,820 --> 00:37:29,320
+outputs to always deliver
+
+656
+00:37:29,320 --> 00:37:30,260
+on what I want. And I
+
+657
+00:37:30,260 --> 00:37:33,120
+occasionally like on not
+
+658
+00:37:33,120 --> 00:37:34,020
+occasionally on every
+
+659
+00:37:34,020 --> 00:37:35,540
+prompt that I use in
+
+660
+00:37:35,540 --> 00:37:37,040
+cursor cursor being my
+
+661
+00:37:37,040 --> 00:37:38,320
+preference ID, I always
+
+662
+00:37:38,320 --> 00:37:39,320
+have to manually insert
+
+663
+00:37:39,320 --> 00:37:42,340
+some code. Either, um,
+
+664
+00:37:42,980 --> 00:37:44,700
+either add some error
+
+665
+00:37:44,700 --> 00:37:45,820
+handling the way I wanted
+
+666
+00:37:45,820 --> 00:37:48,020
+or fix how the logging is
+
+667
+00:37:48,020 --> 00:37:49,400
+done or remove the
+
+668
+00:37:49,400 --> 00:37:50,560
+ridiculous, super
+
+669
+00:37:50,560 --> 00:37:52,160
+elaborate comments. You
+
+670
+00:37:52,160 --> 00:37:53,680
+know, uh, there's always
+
+671
+00:37:53,680 --> 00:37:54,920
+something I have to change
+
+672
+00:37:54,920 --> 00:37:56,960
+manually. Uh, but yeah, I
+
+673
+00:37:56,960 --> 00:37:58,380
+am as, as the time is
+
+674
+00:37:58,380 --> 00:38:00,600
+moving, I'm trusting the
+
+675
+00:38:01,220 --> 00:38:02,020
+cursor agent
+
+676
+00:38:02,020 --> 00:38:03,040
+generations more and
+
+677
+00:38:03,040 --> 00:38:04,900
+more. That's like a very,
+
+678
+00:38:04,900 --> 00:38:05,860
+very consistent trend.
+
+679
+00:38:05,880 --> 00:38:06,920
+Like as the models
+
+680
+00:38:06,920 --> 00:38:08,560
+improve, I trust these
+
+681
+00:38:08,560 --> 00:38:09,720
+models more and more.
+
+682
+00:38:10,520 --> 00:38:11,460
+Yeah, I don't know. Maybe
+
+683
+00:38:11,460 --> 00:38:12,260
+this is an irrational
+
+684
+00:38:12,260 --> 00:38:13,140
+fear of mine that I'm
+
+685
+00:38:13,140 --> 00:38:13,740
+going to be like walking
+
+686
+00:38:13,740 --> 00:38:14,900
+through a bad part of
+
+687
+00:38:14,900 --> 00:38:16,320
+San Francisco. Shout out
+
+688
+00:38:16,320 --> 00:38:17,180
+Daniel Lurie's clean.
+
+689
+00:38:17,320 --> 00:38:17,960
+He's cleaning things up,
+
+690
+00:38:17,960 --> 00:38:18,540
+but you know, you're in
+
+691
+00:38:18,540 --> 00:38:19,140
+a bad part of San
+
+692
+00:38:19,140 --> 00:38:19,920
+Francisco and some guy
+
+693
+00:38:19,920 --> 00:38:20,800
+jumps out and he's like,
+
+694
+00:38:21,340 --> 00:38:22,520
+you need to write some
+
+695
+00:38:22,520 --> 00:38:23,600
+object, object oriented
+
+696
+00:38:23,600 --> 00:38:24,640
+Python or it's over,
+
+697
+00:38:24,720 --> 00:38:25,600
+dude, like you better do
+
+698
+00:38:25,600 --> 00:38:26,480
+it. And if that, if that
+
+699
+00:38:26,480 --> 00:38:27,500
+happened today, like I
+
+700
+00:38:27,500 --> 00:38:28,000
+don't know what would
+
+701
+00:38:28,000 --> 00:38:28,900
+happen, but, uh, you
+
+702
+00:38:28,900 --> 00:38:30,420
+know, um, I think, I
+
+703
+00:38:30,420 --> 00:38:30,840
+think there's something
+
+704
+00:38:30,840 --> 00:38:33,800
+to it right where it's
+
+705
+00:38:33,800 --> 00:38:34,660
+like, it depends on the
+
+706
+00:38:34,660 --> 00:38:35,620
+type of repo you're in.
+
+707
+00:38:35,620 --> 00:38:36,440
+If you're in like an
+
+708
+00:38:36,440 --> 00:38:37,420
+established repo with
+
+709
+00:38:37,420 --> 00:38:38,720
+like patterns, you can
+
+710
+00:38:38,720 --> 00:38:40,000
+use that as context to
+
+711
+00:38:40,000 --> 00:38:41,000
+get the AI to write
+
+712
+00:38:41,000 --> 00:38:41,840
+code the way you want
+
+713
+00:38:41,840 --> 00:38:43,180
+it to. If you're doing
+
+714
+00:38:43,180 --> 00:38:44,180
+a greenfield project,
+
+715
+00:38:44,480 --> 00:38:45,400
+it's going to do its
+
+716
+00:38:45,400 --> 00:38:46,940
+own thing, which is
+
+717
+00:38:46,940 --> 00:38:48,100
+okay. Maybe like the
+
+718
+00:38:48,100 --> 00:38:49,000
+thing I tell her, like
+
+719
+00:38:49,000 --> 00:38:50,140
+developers that like
+
+720
+00:38:50,140 --> 00:38:51,380
+people think now, oh,
+
+721
+00:38:51,480 --> 00:38:52,220
+rep was only for vibe
+
+722
+00:38:52,220 --> 00:38:53,080
+coders. But if you're a
+
+723
+00:38:53,080 --> 00:38:54,220
+dev and you want to
+
+724
+00:38:54,220 --> 00:38:54,860
+prototype something
+
+725
+00:38:54,860 --> 00:38:55,420
+really quick, it's
+
+726
+00:38:55,420 --> 00:38:56,080
+actually a great way to
+
+727
+00:38:56,080 --> 00:38:56,760
+just spin up a full
+
+728
+00:38:56,760 --> 00:38:57,520
+stack app. And then,
+
+729
+00:38:57,520 --> 00:38:58,440
+you know, you can just
+
+730
+00:38:58,440 --> 00:38:59,240
+like build it, rebuild
+
+731
+00:38:59,240 --> 00:39:00,240
+it the way you want to
+
+732
+00:39:00,240 --> 00:39:01,080
+after you validate that
+
+733
+00:39:01,080 --> 00:39:02,720
+it works. We use like a
+
+734
+00:39:02,720 --> 00:39:03,440
+pretty opinionated
+
+735
+00:39:03,440 --> 00:39:04,360
+architecture, but it's
+
+736
+00:39:04,360 --> 00:39:04,980
+still, you know, it's
+
+737
+00:39:04,980 --> 00:39:05,780
+still AI written code.
+
+738
+00:39:05,780 --> 00:39:06,360
+And so it might not
+
+739
+00:39:06,360 --> 00:39:07,160
+do things the way you
+
+740
+00:39:07,160 --> 00:39:08,600
+want it to. But then
+
+741
+00:39:08,600 --> 00:39:09,540
+if you're writing, if
+
+742
+00:39:09,540 --> 00:39:10,000
+you're going from
+
+743
+00:39:10,000 --> 00:39:10,540
+scratching, you're
+
+744
+00:39:10,540 --> 00:39:11,780
+starting, maybe you
+
+745
+00:39:11,780 --> 00:39:12,740
+bootstrap it with like
+
+746
+00:39:12,740 --> 00:39:13,780
+coding standards and
+
+747
+00:39:13,780 --> 00:39:14,200
+you're still going to
+
+748
+00:39:14,200 --> 00:39:14,800
+get like weird
+
+749
+00:39:14,800 --> 00:39:17,440
+comments and dude, I, I
+
+750
+00:39:17,440 --> 00:39:18,620
+actually, so I did, I did
+
+751
+00:39:18,620 --> 00:39:19,460
+this the other day. I
+
+752
+00:39:19,460 --> 00:39:20,540
+like built something out
+
+753
+00:39:20,540 --> 00:39:21,420
+with Python and I was
+
+754
+00:39:21,420 --> 00:39:22,520
+like reading every line.
+
+755
+00:39:23,000 --> 00:39:24,980
+And I was like, what the
+
+756
+00:39:24,980 --> 00:39:27,200
+heck is this? It's a
+
+757
+00:39:27,200 --> 00:39:29,020
+crazy stuff. It was like,
+
+758
+00:39:29,020 --> 00:39:29,940
+why are you doing string
+
+759
+00:39:29,940 --> 00:39:30,880
+comprehension that way?
+
+760
+00:39:30,940 --> 00:39:31,880
+It's like crazy stuff.
+
+761
+00:39:33,620 --> 00:39:35,720
+Yeah, yeah, it's, uh,
+
+762
+00:39:36,760 --> 00:39:37,700
+it's, it's interesting
+
+763
+00:39:37,700 --> 00:39:39,860
+because if there, if I
+
+764
+00:39:39,860 --> 00:39:40,640
+was able to visualize
+
+765
+00:39:40,640 --> 00:39:42,000
+like a graph of my AI
+
+766
+00:39:42,000 --> 00:39:43,100
+usage over like a new
+
+767
+00:39:43,100 --> 00:39:45,100
+project, um, it, it
+
+768
+00:39:45,100 --> 00:39:45,800
+definitely goes like
+
+769
+00:39:45,800 --> 00:39:46,980
+this while I'm like
+
+770
+00:39:46,980 --> 00:39:47,840
+still establishing the
+
+771
+00:39:47,840 --> 00:39:49,060
+patterns. And then once
+
+772
+00:39:49,060 --> 00:39:50,140
+I've established like my
+
+773
+00:39:50,140 --> 00:39:51,520
+API patterns, I set up
+
+774
+00:39:51,520 --> 00:39:52,920
+my cursor rules. I've
+
+775
+00:39:52,920 --> 00:39:53,940
+set up like my type
+
+776
+00:39:53,940 --> 00:39:55,040
+safety and how I want
+
+777
+00:39:55,040 --> 00:39:56,300
+that stuff to be. I've
+
+778
+00:39:56,300 --> 00:39:57,360
+set up like this lent
+
+779
+00:39:57,360 --> 00:39:59,060
+and build cycle. So that
+
+780
+00:39:59,060 --> 00:40:00,320
+way, if it makes after
+
+781
+00:40:00,320 --> 00:40:01,400
+like a plan session, it
+
+782
+00:40:01,400 --> 00:40:02,280
+runs a lint and then
+
+783
+00:40:02,280 --> 00:40:03,880
+it runs a build. And
+
+784
+00:40:03,880 --> 00:40:05,000
+then after that, and
+
+785
+00:40:05,000 --> 00:40:06,000
+after everything's kind
+
+786
+00:40:06,000 --> 00:40:06,920
+of finalized, then I
+
+787
+00:40:06,920 --> 00:40:08,920
+just kind of, it is
+
+788
+00:40:08,920 --> 00:40:10,580
+just absolute flow
+
+789
+00:40:10,580 --> 00:40:12,600
+state. Like my, I'm
+
+790
+00:40:12,600 --> 00:40:13,680
+very, very happy. The
+
+791
+00:40:13,680 --> 00:40:14,620
+current state of the
+
+792
+00:40:14,620 --> 00:40:15,760
+inbound, um,
+
+793
+00:40:15,840 --> 00:40:16,960
+repositories in, I've
+
+794
+00:40:16,960 --> 00:40:17,820
+got so many cursor
+
+795
+00:40:17,820 --> 00:40:18,480
+rules and everything
+
+796
+00:40:18,480 --> 00:40:20,560
+like that. Literally, um,
+
+797
+00:40:20,880 --> 00:40:22,260
+I've got a workflow
+
+798
+00:40:22,260 --> 00:40:23,200
+that comes in. So if
+
+799
+00:40:23,200 --> 00:40:24,280
+someone reports like
+
+800
+00:40:24,280 --> 00:40:25,300
+there's a little feedback
+
+801
+00:40:25,300 --> 00:40:26,560
+card inside the app,
+
+802
+00:40:26,880 --> 00:40:27,620
+someone types in a
+
+803
+00:40:27,620 --> 00:40:29,080
+feedback thing and
+
+804
+00:40:29,080 --> 00:40:30,320
+report some technical
+
+805
+00:40:30,320 --> 00:40:31,880
+issue and an AI flag
+
+806
+00:40:31,880 --> 00:40:33,220
+to this technical, I
+
+807
+00:40:33,220 --> 00:40:34,420
+throw it over to a
+
+808
+00:40:34,420 --> 00:40:35,740
+tempo background agent
+
+809
+00:40:36,360 --> 00:40:39,160
+and it has no like
+
+810
+00:40:39,160 --> 00:40:40,120
+special prompt or
+
+811
+00:40:40,120 --> 00:40:40,920
+anything like that. It
+
+812
+00:40:40,920 --> 00:40:42,200
+just literally with some
+
+813
+00:40:42,200 --> 00:40:44,380
+like set up, it throws
+
+814
+00:40:44,380 --> 00:40:45,420
+in the user's issue
+
+815
+00:40:45,420 --> 00:40:46,740
+and it normally fixes
+
+816
+00:40:46,740 --> 00:40:48,220
+it. Like I'd say maybe
+
+817
+00:40:48,220 --> 00:40:50,200
+9 out of 10 times and
+
+818
+00:40:50,200 --> 00:40:51,260
+it just throws me a PR
+
+819
+00:40:51,260 --> 00:40:52,220
+that I'm able to review
+
+820
+00:40:52,220 --> 00:40:53,100
+and everything's kind of
+
+821
+00:40:53,100 --> 00:40:56,080
+like auto done. And I
+
+822
+00:40:56,080 --> 00:40:56,860
+feel like that's going
+
+823
+00:40:56,860 --> 00:40:57,600
+to be like the next
+
+824
+00:40:57,600 --> 00:40:58,500
+evolution of the web
+
+825
+00:40:58,500 --> 00:40:59,180
+where it's like
+
+826
+00:40:59,180 --> 00:41:01,580
+everybody just has more
+
+827
+00:41:02,480 --> 00:41:03,300
+automation and
+
+828
+00:41:03,300 --> 00:41:04,780
+automotive capabilities
+
+829
+00:41:04,780 --> 00:41:07,100
+to be able to work on
+
+830
+00:41:07,100 --> 00:41:08,780
+anything. So it's like a
+
+831
+00:41:08,780 --> 00:41:09,940
+dev rel now become sort
+
+832
+00:41:09,940 --> 00:41:10,580
+of like a product
+
+833
+00:41:10,580 --> 00:41:11,680
+manager in a, in a
+
+834
+00:41:11,680 --> 00:41:12,540
+sense, because he can
+
+835
+00:41:12,540 --> 00:41:13,640
+kind of overreach and
+
+836
+00:41:13,640 --> 00:41:14,860
+then like a designer can
+
+837
+00:41:14,860 --> 00:41:15,540
+actually reach into
+
+838
+00:41:15,540 --> 00:41:16,320
+some of the code.
+
+839
+00:41:16,740 --> 00:41:18,540
+So yeah, it's, it's
+
+840
+00:41:18,540 --> 00:41:19,720
+really interesting. But
+
+841
+00:41:19,720 --> 00:41:20,960
+yeah, I think,
+
+842
+00:41:21,600 --> 00:41:23,120
+yeah, sorry. The cool
+
+843
+00:41:23,120 --> 00:41:23,940
+thing about vibe coding
+
+844
+00:41:23,940 --> 00:41:24,720
+is they can classify
+
+845
+00:41:24,720 --> 00:41:25,640
+it as many things. It
+
+846
+00:41:25,640 --> 00:41:26,920
+can be an engineering
+
+847
+00:41:26,920 --> 00:41:28,620
+manager instructing a
+
+848
+00:41:28,620 --> 00:41:29,400
+team of agents being
+
+849
+00:41:29,400 --> 00:41:30,260
+self engineers. Somebody
+
+850
+00:41:30,260 --> 00:41:31,120
+doesn't perform just
+
+851
+00:41:31,120 --> 00:41:33,780
+firearm, right? Or a
+
+852
+00:41:33,780 --> 00:41:34,440
+product manager
+
+853
+00:41:34,440 --> 00:41:35,760
+specifying the product
+
+854
+00:41:35,760 --> 00:41:36,700
+specific writing product
+
+855
+00:41:36,700 --> 00:41:37,580
+specifications that are
+
+856
+00:41:37,580 --> 00:41:38,440
+passing it along to an
+
+857
+00:41:38,440 --> 00:41:39,040
+engineering team,
+
+858
+00:41:39,060 --> 00:41:40,460
+right? There are so many
+
+859
+00:41:40,460 --> 00:41:41,280
+ways to do it and
+
+860
+00:41:41,280 --> 00:41:42,800
+there's no right way
+
+861
+00:41:42,800 --> 00:41:44,060
+honestly, like it
+
+862
+00:41:44,060 --> 00:41:46,100
+depends on your flow,
+
+863
+00:41:46,100 --> 00:41:48,340
+right? I mean, I think
+
+864
+00:41:48,340 --> 00:41:49,140
+everybody wants to make
+
+865
+00:41:49,140 --> 00:41:49,980
+things black and white.
+
+866
+00:41:50,280 --> 00:41:51,240
+And it's just like, it's
+
+867
+00:41:51,240 --> 00:41:52,320
+not, there's nuance as
+
+868
+00:41:52,320 --> 00:41:53,780
+it would turn out. It's
+
+869
+00:41:53,780 --> 00:41:54,660
+not like Twitter, like,
+
+870
+00:41:54,720 --> 00:41:55,400
+you know, or it feels
+
+871
+00:41:55,400 --> 00:41:58,360
+post hot takes. But I
+
+872
+00:41:58,360 --> 00:41:59,220
+really like what Ryan
+
+873
+00:41:59,220 --> 00:42:01,160
+said, my most successful
+
+874
+00:42:01,160 --> 00:42:02,120
+like vibe coding
+
+875
+00:42:02,120 --> 00:42:03,260
+projects repos, I
+
+876
+00:42:03,260 --> 00:42:04,020
+think I'm most proud of
+
+877
+00:42:04,020 --> 00:42:04,860
+the replet documentation,
+
+878
+00:42:04,860 --> 00:42:06,120
+which I've written a
+
+879
+00:42:06,120 --> 00:42:06,940
+blog post on like kind
+
+880
+00:42:06,940 --> 00:42:08,980
+of how we did that was
+
+881
+00:42:08,980 --> 00:42:10,240
+I just wrote a ton of
+
+882
+00:42:10,240 --> 00:42:11,760
+docs for the docs, you
+
+883
+00:42:11,760 --> 00:42:12,420
+know, like all the
+
+884
+00:42:12,420 --> 00:42:14,740
+rules, all the examples,
+
+885
+00:42:14,740 --> 00:42:15,900
+all of the templates,
+
+886
+00:42:15,900 --> 00:42:17,280
+all of the bash commands
+
+887
+00:42:17,280 --> 00:42:19,280
+and PMPM scripts that
+
+888
+00:42:19,280 --> 00:42:20,440
+an agent could use. I
+
+889
+00:42:20,440 --> 00:42:21,260
+just built all the
+
+890
+00:42:21,260 --> 00:42:22,420
+infra for the agent to
+
+891
+00:42:22,420 --> 00:42:23,400
+do to check its own work
+
+892
+00:42:23,400 --> 00:42:24,300
+and to like have
+
+893
+00:42:24,300 --> 00:42:25,760
+context. And then when
+
+894
+00:42:25,760 --> 00:42:27,080
+you do that, you unlock
+
+895
+00:42:27,080 --> 00:42:28,100
+background agents, you
+
+896
+00:42:28,100 --> 00:42:29,300
+unlock like vibe coding
+
+897
+00:42:29,300 --> 00:42:30,400
+tools. And then you can
+
+898
+00:42:30,400 --> 00:42:31,140
+set up these workflows
+
+899
+00:42:31,140 --> 00:42:32,880
+where the scaffolding is
+
+900
+00:42:32,880 --> 00:42:34,040
+automated, right? And
+
+901
+00:42:34,040 --> 00:42:35,080
+it sounds like that's
+
+902
+00:42:35,080 --> 00:42:36,120
+what Ryan's doing. But
+
+903
+00:42:36,120 --> 00:42:36,920
+hopefully nobody like
+
+904
+00:42:36,920 --> 00:42:39,040
+prompt injects the issue
+
+905
+00:42:39,040 --> 00:42:40,140
+submission box from.
+
+906
+00:42:41,200 --> 00:42:42,560
+Yeah, well, that's
+
+907
+00:42:42,560 --> 00:42:43,940
+the, that's another fun
+
+908
+00:42:43,940 --> 00:42:44,840
+thing that's kind of
+
+909
+00:42:44,840 --> 00:42:47,280
+come about it's AI has
+
+910
+00:42:47,280 --> 00:42:48,680
+gotten really good at
+
+911
+00:42:48,680 --> 00:42:49,600
+when you stack it in
+
+912
+00:42:49,600 --> 00:42:52,360
+layers to notice that
+
+913
+00:42:52,360 --> 00:42:53,960
+they're like one of those
+
+914
+00:42:53,960 --> 00:42:56,060
+layers. It is like an
+
+915
+00:42:56,060 --> 00:42:57,340
+issue. Like for example,
+
+916
+00:42:57,480 --> 00:42:58,420
+for that feedback loop,
+
+917
+00:42:58,540 --> 00:42:59,300
+if you're interested,
+
+918
+00:42:59,760 --> 00:43:00,780
+when that feedback loop
+
+919
+00:43:00,780 --> 00:43:01,960
+comes in, there's an
+
+920
+00:43:01,960 --> 00:43:04,040
+agent that essentially does
+
+921
+00:43:04,040 --> 00:43:05,480
+the evaluation, but
+
+922
+00:43:05,480 --> 00:43:06,600
+then there's two levels
+
+923
+00:43:06,600 --> 00:43:08,780
+of agent above it that
+
+924
+00:43:08,780 --> 00:43:10,320
+essentially say, Hey,
+
+925
+00:43:10,700 --> 00:43:11,820
+this might be prompt
+
+926
+00:43:11,820 --> 00:43:13,340
+injection attack, can
+
+927
+00:43:13,340 --> 00:43:14,560
+you evaluate it? And
+
+928
+00:43:14,560 --> 00:43:15,520
+then the agent above
+
+929
+00:43:15,520 --> 00:43:16,760
+that checks, it
+
+930
+00:43:16,760 --> 00:43:17,760
+basically vibe checks. And
+
+931
+00:43:17,760 --> 00:43:18,380
+it's, I think it's
+
+932
+00:43:18,380 --> 00:43:20,460
+using, it's like sonnet
+
+933
+00:43:20,460 --> 00:43:23,620
+for GPT five. And then
+
+934
+00:43:23,620 --> 00:43:24,820
+I think like Gemini or
+
+935
+00:43:24,820 --> 00:43:25,520
+something like that at
+
+936
+00:43:25,520 --> 00:43:26,600
+the top level. So there's
+
+937
+00:43:26,600 --> 00:43:27,780
+like overlap with that
+
+938
+00:43:27,780 --> 00:43:31,340
+as well. So, um, yeah,
+
+939
+00:43:31,620 --> 00:43:32,620
+it's, it's, it's super,
+
+940
+00:43:32,900 --> 00:43:34,020
+it's super interesting
+
+941
+00:43:34,020 --> 00:43:35,280
+because that's now an
+
+942
+00:43:35,280 --> 00:43:36,280
+attack factor. It's
+
+943
+00:43:36,280 --> 00:43:38,620
+essentially XSS in, um,
+
+944
+00:43:38,940 --> 00:43:41,140
+in AI form. So yeah,
+
+945
+00:43:41,780 --> 00:43:42,560
+yeah, I mean, it's like,
+
+946
+00:43:42,560 --> 00:43:43,520
+it's more like if you
+
+947
+00:43:43,520 --> 00:43:44,580
+don't realize like what
+
+948
+00:43:44,580 --> 00:43:45,760
+an MCP server does and
+
+949
+00:43:45,760 --> 00:43:46,820
+you like plug in some,
+
+950
+00:43:47,220 --> 00:43:49,140
+you know, uh, something
+
+951
+00:43:49,140 --> 00:43:50,200
+with, uh, sensitive
+
+952
+00:43:50,200 --> 00:43:51,020
+permissions that has
+
+953
+00:43:51,020 --> 00:43:52,580
+access to data. Some of
+
+954
+00:43:52,580 --> 00:43:53,620
+those MCPs attacks are
+
+955
+00:43:53,620 --> 00:43:54,160
+pretty crazy.
+
+956
+00:43:54,420 --> 00:43:56,300
+Oh yeah. MC I was just
+
+957
+00:43:56,300 --> 00:43:57,180
+about to bring it in.
+
+958
+00:43:57,260 --> 00:43:58,100
+Like the, there are
+
+959
+00:43:58,100 --> 00:43:58,800
+some really, really
+
+960
+00:43:58,800 --> 00:43:59,680
+scary attacks you can
+
+961
+00:43:59,680 --> 00:44:00,700
+do with MCP servers
+
+962
+00:44:00,700 --> 00:44:01,920
+nowadays. Uh,
+
+963
+00:44:02,040 --> 00:44:02,620
+what was it? There was
+
+964
+00:44:02,620 --> 00:44:03,140
+the one that was
+
+965
+00:44:03,140 --> 00:44:03,740
+published where like
+
+966
+00:44:03,740 --> 00:44:04,840
+somebody like prompted
+
+967
+00:44:04,840 --> 00:44:06,320
+injected a linear ticket
+
+968
+00:44:06,320 --> 00:44:07,040
+or it was like some
+
+969
+00:44:07,040 --> 00:44:07,760
+Jira ticket or
+
+970
+00:44:07,760 --> 00:44:09,240
+something that like is
+
+971
+00:44:09,240 --> 00:44:09,780
+something crazy.
+
+972
+00:44:10,280 --> 00:44:11,780
+Yeah, I think those
+
+973
+00:44:11,780 --> 00:44:12,820
+types of attacks are
+
+974
+00:44:12,820 --> 00:44:13,660
+now categorized as
+
+975
+00:44:13,660 --> 00:44:15,420
+context poisoning. Um,
+
+976
+00:44:16,100 --> 00:44:17,660
+might be wrong. Anyway,
+
+977
+00:44:17,820 --> 00:44:19,280
+but yeah, actually you
+
+978
+00:44:19,280 --> 00:44:20,800
+might want to stay in
+
+979
+00:44:20,800 --> 00:44:21,880
+touch with Ryan Matt
+
+980
+00:44:21,880 --> 00:44:23,000
+because Ryan, if
+
+981
+00:44:23,000 --> 00:44:24,220
+anybody in the world is
+
+982
+00:44:24,220 --> 00:44:25,040
+probably a very good
+
+983
+00:44:25,040 --> 00:44:25,840
+authority in vibe
+
+984
+00:44:25,840 --> 00:44:26,780
+coding, this person,
+
+985
+00:44:26,880 --> 00:44:27,940
+like when the composer
+
+986
+00:44:27,940 --> 00:44:28,920
+model came out by
+
+987
+00:44:28,920 --> 00:44:30,240
+cursor, like in a day,
+
+988
+00:44:30,320 --> 00:44:31,120
+this person generated
+
+989
+00:44:31,120 --> 00:44:32,160
+2 billion tokens. I
+
+990
+00:44:32,160 --> 00:44:33,220
+was like, how is this
+
+991
+00:44:33,220 --> 00:44:35,000
+even possible? Can you
+
+992
+00:44:35,000 --> 00:44:37,660
+do that? Have they
+
+993
+00:44:37,660 --> 00:44:38,540
+sent has open AI
+
+994
+00:44:38,540 --> 00:44:39,500
+sent you an award yet
+
+995
+00:44:39,500 --> 00:44:40,720
+Ryan for, uh, I don't
+
+996
+00:44:40,720 --> 00:44:42,200
+use open AI enough for
+
+997
+00:44:42,200 --> 00:44:43,520
+that. I've got a, I've
+
+998
+00:44:43,520 --> 00:44:45,780
+got a cursor tab key. Um,
+
+999
+00:44:45,900 --> 00:44:47,600
+there you go. But, um,
+
+1000
+00:44:47,600 --> 00:44:48,680
+other than other than
+
+1001
+00:44:48,680 --> 00:44:49,680
+that, I do not have an
+
+1002
+00:44:49,680 --> 00:44:50,540
+open it. Oh wait, hold
+
+1003
+00:44:50,540 --> 00:44:52,800
+on. Uh, do I have it
+
+1004
+00:44:52,800 --> 00:44:55,800
+here? I don't think I
+
+1005
+00:44:55,800 --> 00:44:58,380
+do. I have a custom
+
+1006
+00:44:58,380 --> 00:45:00,000
+thanks to my 3d printing
+
+1007
+00:45:00,000 --> 00:45:01,640
+company. I have a
+
+1008
+00:45:01,640 --> 00:45:04,160
+custom cursor, three
+
+1009
+00:45:04,160 --> 00:45:06,300
+comma club award that I
+
+1010
+00:45:06,300 --> 00:45:07,300
+don't think I have over
+
+1011
+00:45:07,300 --> 00:45:08,740
+here, but it's like a
+
+1012
+00:45:08,740 --> 00:45:09,580
+little plaque that
+
+1013
+00:45:09,580 --> 00:45:10,560
+basically just shows like
+
+1014
+00:45:10,560 --> 00:45:12,440
+three comma club. I
+
+1015
+00:45:12,440 --> 00:45:12,900
+don't know where that
+
+1016
+00:45:12,900 --> 00:45:14,640
+is. Interesting. Well,
+
+1017
+00:45:15,360 --> 00:45:16,300
+but yeah, back to
+
+1018
+00:45:16,300 --> 00:45:17,780
+life coding back to life
+
+1019
+00:45:17,780 --> 00:45:19,800
+coding. Uh, you taught
+
+1020
+00:45:19,800 --> 00:45:20,800
+life coding to a bunch
+
+1021
+00:45:20,800 --> 00:45:21,700
+of people for a while
+
+1022
+00:45:21,700 --> 00:45:23,080
+now, right? Uh, and as
+
+1023
+00:45:23,080 --> 00:45:24,840
+we just have seen, uh,
+
+1024
+00:45:24,840 --> 00:45:25,880
+you have a few opinions
+
+1025
+00:45:25,880 --> 00:45:27,660
+on like how it should
+
+1026
+00:45:27,660 --> 00:45:28,560
+be taught and what the
+
+1027
+00:45:28,560 --> 00:45:29,840
+implications of getting
+
+1028
+00:45:29,840 --> 00:45:32,880
+into it. Uh, curious, uh,
+
+1029
+00:45:33,100 --> 00:45:33,940
+in your experience so
+
+1030
+00:45:33,940 --> 00:45:36,840
+far teaching developers
+
+1031
+00:45:36,840 --> 00:45:38,160
+from various backgrounds.
+
+1032
+00:45:38,760 --> 00:45:39,820
+What are the three
+
+1033
+00:45:39,820 --> 00:45:41,160
+skills people think they
+
+1034
+00:45:41,160 --> 00:45:42,480
+need versus three that
+
+1035
+00:45:42,480 --> 00:45:43,960
+they actually need to
+
+1036
+00:45:43,960 --> 00:45:45,100
+interact with this new
+
+1037
+00:45:45,100 --> 00:45:46,480
+tooling? Well, uh,
+
+1038
+00:45:46,540 --> 00:45:47,900
+because I imagine people
+
+1039
+00:45:47,900 --> 00:45:49,000
+really come in with a
+
+1040
+00:45:49,000 --> 00:45:49,680
+lot of misconceptions
+
+1041
+00:45:49,680 --> 00:45:50,820
+when they get started.
+
+1042
+00:45:52,990 --> 00:45:54,030
+Three skills people
+
+1043
+00:45:54,030 --> 00:45:54,970
+think they need versus
+
+1044
+00:45:54,970 --> 00:45:56,350
+what they actually need.
+
+1045
+00:45:56,590 --> 00:45:58,350
+Yeah. Um, yeah, I
+
+1046
+00:45:58,350 --> 00:45:59,430
+think one, the one I
+
+1047
+00:45:59,430 --> 00:46:00,430
+see most often is like
+
+1048
+00:46:00,430 --> 00:46:01,150
+people think that
+
+1049
+00:46:01,150 --> 00:46:02,290
+there's like a magic
+
+1050
+00:46:02,850 --> 00:46:03,930
+incantation or prompt
+
+1051
+00:46:04,350 --> 00:46:05,210
+since like anybody that
+
+1052
+00:46:05,210 --> 00:46:06,510
+doesn't understand maybe
+
+1053
+00:46:06,510 --> 00:46:07,310
+hasn't spent the time
+
+1054
+00:46:07,310 --> 00:46:07,990
+to like deeply
+
+1055
+00:46:07,990 --> 00:46:08,870
+understand how something
+
+1056
+00:46:08,870 --> 00:46:09,670
+works, thinks that
+
+1057
+00:46:09,670 --> 00:46:10,250
+there's like some
+
+1058
+00:46:10,250 --> 00:46:11,030
+shortcut to it. So it's
+
+1059
+00:46:11,030 --> 00:46:12,170
+like, Oh, what do I
+
+1060
+00:46:12,170 --> 00:46:13,530
+prompt Claude to then
+
+1061
+00:46:13,530 --> 00:46:15,210
+paste into replant? And
+
+1062
+00:46:15,210 --> 00:46:16,870
+I'm like, that's not how
+
+1063
+00:46:16,870 --> 00:46:17,570
+you approach solving
+
+1064
+00:46:17,570 --> 00:46:19,310
+problems, right? Uh, so
+
+1065
+00:46:19,310 --> 00:46:19,890
+like, so then maybe
+
+1066
+00:46:19,890 --> 00:46:21,070
+that's one expectation.
+
+1067
+00:46:21,970 --> 00:46:22,750
+Um, the second
+
+1068
+00:46:22,750 --> 00:46:24,430
+expectation is I just
+
+1069
+00:46:24,430 --> 00:46:25,270
+have a box and I'm going
+
+1070
+00:46:25,270 --> 00:46:26,030
+to type in like
+
+1071
+00:46:26,030 --> 00:46:27,230
+whatever I think and
+
+1072
+00:46:27,230 --> 00:46:27,830
+that it's going to just
+
+1073
+00:46:27,830 --> 00:46:29,470
+magically appear. Maybe
+
+1074
+00:46:29,470 --> 00:46:30,150
+that's similar to the
+
+1075
+00:46:30,150 --> 00:46:31,810
+first one, but, uh,
+
+1076
+00:46:32,110 --> 00:46:32,890
+also not how it works,
+
+1077
+00:46:32,970 --> 00:46:33,550
+right? Like you have
+
+1078
+00:46:33,550 --> 00:46:35,350
+to, can this tool do
+
+1079
+00:46:35,350 --> 00:46:36,370
+what I want it to do?
+
+1080
+00:46:36,370 --> 00:46:36,990
+That's really the
+
+1081
+00:46:36,990 --> 00:46:38,290
+first question that you
+
+1082
+00:46:38,290 --> 00:46:39,530
+should be asking. And
+
+1083
+00:46:39,530 --> 00:46:40,410
+the, the follow up
+
+1084
+00:46:40,410 --> 00:46:41,310
+question to that is,
+
+1085
+00:46:41,310 --> 00:46:42,750
+what do I want to do?
+
+1086
+00:46:42,750 --> 00:46:43,730
+And if you're deeply
+
+1087
+00:46:43,730 --> 00:46:45,290
+asking yourself, what
+
+1088
+00:46:45,290 --> 00:46:46,150
+am I trying to build?
+
+1089
+00:46:46,370 --> 00:46:47,170
+Well, you can go kind
+
+1090
+00:46:47,170 --> 00:46:48,350
+of up the, up the
+
+1091
+00:46:48,350 --> 00:46:49,270
+ladder there to say,
+
+1092
+00:46:49,370 --> 00:46:50,070
+well, then what are the
+
+1093
+00:46:50,070 --> 00:46:50,810
+components that go
+
+1094
+00:46:50,810 --> 00:46:52,050
+into this thing? Now
+
+1095
+00:46:52,050 --> 00:46:52,670
+I get it. Not
+
+1096
+00:46:52,670 --> 00:46:53,290
+everybody thinks that
+
+1097
+00:46:53,290 --> 00:46:53,810
+way. That's like a
+
+1098
+00:46:53,810 --> 00:46:54,570
+very first principles,
+
+1099
+00:46:55,010 --> 00:46:55,870
+like, you know, just
+
+1100
+00:46:55,870 --> 00:46:57,010
+how I think maybe
+
+1101
+00:46:57,010 --> 00:46:58,050
+designers approach the
+
+1102
+00:46:58,050 --> 00:46:59,370
+problem differently. Hey,
+
+1103
+00:46:59,470 --> 00:47:00,490
+I want to create a
+
+1104
+00:47:00,490 --> 00:47:01,930
+beautiful experience for
+
+1105
+00:47:01,930 --> 00:47:02,810
+people and then turn
+
+1106
+00:47:02,810 --> 00:47:03,550
+that into something
+
+1107
+00:47:03,550 --> 00:47:05,230
+real understood. But at
+
+1108
+00:47:05,230 --> 00:47:06,210
+some point you have to
+
+1109
+00:47:06,210 --> 00:47:07,310
+be asking like deeper
+
+1110
+00:47:07,310 --> 00:47:08,330
+questions rather than
+
+1111
+00:47:08,330 --> 00:47:10,450
+just like, um, kind of
+
+1112
+00:47:10,450 --> 00:47:11,110
+shooting in the dark,
+
+1113
+00:47:11,110 --> 00:47:12,370
+right? So maybe three
+
+1114
+00:47:12,370 --> 00:47:13,470
+things. First, it's kind
+
+1115
+00:47:13,470 --> 00:47:14,610
+of like, uh, oh, I need
+
+1116
+00:47:14,610 --> 00:47:15,210
+to know like the
+
+1117
+00:47:15,210 --> 00:47:16,450
+incantation or like the
+
+1118
+00:47:16,450 --> 00:47:17,610
+secret process to how I
+
+1119
+00:47:17,610 --> 00:47:18,850
+do things. Second, it's
+
+1120
+00:47:18,850 --> 00:47:20,230
+like, oh, um, there's
+
+1121
+00:47:20,230 --> 00:47:21,350
+some magical tool that
+
+1122
+00:47:21,350 --> 00:47:22,350
+will solve my problem.
+
+1123
+00:47:22,350 --> 00:47:23,170
+And I just type in a
+
+1124
+00:47:23,170 --> 00:47:24,750
+prompt box that, that,
+
+1125
+00:47:24,750 --> 00:47:25,690
+you know, creates my
+
+1126
+00:47:25,690 --> 00:47:26,550
+idea and I don't have to
+
+1127
+00:47:26,550 --> 00:47:28,170
+do any work. Three,
+
+1128
+00:47:28,510 --> 00:47:29,290
+how do I make a
+
+1129
+00:47:29,290 --> 00:47:30,030
+million dollars five
+
+1130
+00:47:30,030 --> 00:47:31,270
+coding? Okay. Like, I
+
+1131
+00:47:31,270 --> 00:47:32,350
+just, you know, like
+
+1132
+00:47:32,350 --> 00:47:32,950
+that's like the
+
+1133
+00:47:32,950 --> 00:47:34,030
+catchy, you know, Oh,
+
+1134
+00:47:34,410 --> 00:47:36,450
+make me $1 billion. No
+
+1135
+00:47:36,450 --> 00:47:38,750
+mistakes. Okay. I
+
+1136
+00:47:38,750 --> 00:47:39,490
+get it. You know, it's
+
+1137
+00:47:39,490 --> 00:47:39,990
+now we're selling
+
+1138
+00:47:39,990 --> 00:47:40,910
+courses and it's at
+
+1139
+00:47:40,910 --> 00:47:41,810
+mafia stuff or
+
+1140
+00:47:41,810 --> 00:47:43,790
+whatever. Um, I don't
+
+1141
+00:47:43,790 --> 00:47:44,990
+think any of that is, uh,
+
+1142
+00:47:44,990 --> 00:47:46,410
+is super important. Um,
+
+1143
+00:47:47,970 --> 00:47:48,490
+let's talk about like
+
+1144
+00:47:48,490 --> 00:47:49,310
+what I do. Thing is
+
+1145
+00:47:49,310 --> 00:47:50,650
+important. Uh, the
+
+1146
+00:47:50,650 --> 00:47:51,430
+ability to think
+
+1147
+00:47:51,430 --> 00:47:52,090
+logically and break
+
+1148
+00:47:52,090 --> 00:47:52,890
+down problems. Number
+
+1149
+00:47:52,890 --> 00:47:54,350
+one, right? Okay. I
+
+1150
+00:47:54,350 --> 00:47:55,190
+have this thing that I
+
+1151
+00:47:55,190 --> 00:47:56,850
+want to build. Why, why
+
+1152
+00:47:56,850 --> 00:47:57,590
+am I building it? What
+
+1153
+00:47:57,590 --> 00:47:58,450
+does it do? It's in
+
+1154
+00:47:58,450 --> 00:47:59,290
+some senses. It's just
+
+1155
+00:47:59,290 --> 00:47:59,950
+kind of like product
+
+1156
+00:47:59,950 --> 00:48:00,970
+thinking, right? Like,
+
+1157
+00:48:00,970 --> 00:48:02,110
+uh, can I break this
+
+1158
+00:48:02,110 --> 00:48:03,510
+thing down into little
+
+1159
+00:48:03,510 --> 00:48:04,510
+building blocks? And
+
+1160
+00:48:04,510 --> 00:48:05,010
+you know, as an
+
+1161
+00:48:05,010 --> 00:48:05,570
+engineer, you might
+
+1162
+00:48:05,570 --> 00:48:06,290
+call it an architecture
+
+1163
+00:48:06,290 --> 00:48:07,070
+diagram. You might
+
+1164
+00:48:07,070 --> 00:48:08,490
+call it, um, thinking
+
+1165
+00:48:08,490 --> 00:48:09,490
+about the services that
+
+1166
+00:48:09,490 --> 00:48:09,790
+go in your
+
+1167
+00:48:09,790 --> 00:48:11,110
+application. Uh, but
+
+1168
+00:48:11,110 --> 00:48:12,790
+if you're a, uh, uh, if
+
+1169
+00:48:12,790 --> 00:48:13,710
+you're not an engineer,
+
+1170
+00:48:13,830 --> 00:48:14,890
+if you're someone new to
+
+1171
+00:48:14,890 --> 00:48:15,850
+vibe, but you might say,
+
+1172
+00:48:15,850 --> 00:48:17,490
+oh, well, I want to
+
+1173
+00:48:17,490 --> 00:48:18,910
+generate images. How do
+
+1174
+00:48:18,910 --> 00:48:19,910
+I generate images for
+
+1175
+00:48:19,910 --> 00:48:21,070
+my users? Well, you
+
+1176
+00:48:21,070 --> 00:48:21,930
+could ask AI and do
+
+1177
+00:48:21,930 --> 00:48:22,750
+research to understand
+
+1178
+00:48:22,750 --> 00:48:23,310
+what that looks like.
+
+1179
+00:48:23,350 --> 00:48:23,750
+And you probably
+
+1180
+00:48:23,750 --> 00:48:24,670
+learned that there's a
+
+1181
+00:48:24,670 --> 00:48:25,450
+service like maybe
+
+1182
+00:48:25,450 --> 00:48:26,790
+Google nano bananas,
+
+1183
+00:48:27,010 --> 00:48:27,470
+which weren't used.
+
+1184
+00:48:27,590 --> 00:48:27,890
+And then you might
+
+1185
+00:48:27,890 --> 00:48:29,270
+ask, well, how do I
+
+1186
+00:48:29,270 --> 00:48:31,010
+put that in an app? As
+
+1187
+00:48:31,010 --> 00:48:31,550
+it would turn out on
+
+1188
+00:48:31,550 --> 00:48:32,550
+rebel it, uh, soon
+
+1189
+00:48:32,550 --> 00:48:33,510
+that you know, you
+
+1190
+00:48:33,510 --> 00:48:34,010
+won't really need to
+
+1191
+00:48:34,010 --> 00:48:34,770
+ask that question, but
+
+1192
+00:48:34,770 --> 00:48:36,010
+you might learn that
+
+1193
+00:48:36,010 --> 00:48:36,590
+there's a thing called
+
+1194
+00:48:36,590 --> 00:48:37,410
+an API key that you
+
+1195
+00:48:37,410 --> 00:48:38,650
+get, uh, and you have
+
+1196
+00:48:38,650 --> 00:48:39,410
+to use a certain type
+
+1197
+00:48:39,410 --> 00:48:40,710
+of prompt to get an
+
+1198
+00:48:40,710 --> 00:48:41,410
+app to use that thing.
+
+1199
+00:48:41,650 --> 00:48:42,970
+So first I would say,
+
+1200
+00:48:43,030 --> 00:48:44,610
+um, you know, like the
+
+1201
+00:48:44,610 --> 00:48:45,290
+ability to break down
+
+1202
+00:48:45,290 --> 00:48:45,990
+problems and first
+
+1203
+00:48:45,990 --> 00:48:46,690
+principles thinking
+
+1204
+00:48:47,410 --> 00:48:48,370
+second, uh, this is
+
+1205
+00:48:48,370 --> 00:48:48,890
+actually one I've been
+
+1206
+00:48:48,890 --> 00:48:49,410
+thinking about a lot
+
+1207
+00:48:49,410 --> 00:48:50,730
+lately debugging, like
+
+1208
+00:48:51,950 --> 00:48:53,010
+debugging is a skill
+
+1209
+00:48:53,010 --> 00:48:53,730
+that everyone should
+
+1210
+00:48:53,730 --> 00:48:54,410
+just learn for their
+
+1211
+00:48:54,410 --> 00:48:55,570
+life. Period. Like if
+
+1212
+00:48:55,570 --> 00:48:56,250
+you just want to do
+
+1213
+00:48:56,250 --> 00:48:57,410
+stuff, learn debugging.
+
+1214
+00:48:57,810 --> 00:48:59,090
+So, uh, one of our
+
+1215
+00:48:59,090 --> 00:48:59,990
+engineers at replant
+
+1216
+00:48:59,990 --> 00:49:01,230
+Ryan, shout out Ryan
+
+1217
+00:49:01,230 --> 00:49:02,010
+dude is like a
+
+1218
+00:49:02,010 --> 00:49:04,010
+legendary Nick's
+
+1219
+00:49:04,010 --> 00:49:05,190
+contributor. Like if
+
+1220
+00:49:05,190 --> 00:49:06,010
+you just like look up
+
+1221
+00:49:06,010 --> 00:49:07,230
+a Nick's problem, if
+
+1222
+00:49:07,230 --> 00:49:07,690
+you just go into
+
+1223
+00:49:07,690 --> 00:49:08,270
+Google and you're like,
+
+1224
+00:49:08,290 --> 00:49:09,450
+oh, Hey, you know, I
+
+1225
+00:49:09,450 --> 00:49:10,170
+have this problem with
+
+1226
+00:49:10,170 --> 00:49:10,890
+the Nick's package or
+
+1227
+00:49:10,890 --> 00:49:11,770
+there will be like a
+
+1228
+00:49:11,770 --> 00:49:13,350
+form link that you'll
+
+1229
+00:49:13,350 --> 00:49:14,410
+find some Nick's OS
+
+1230
+00:49:14,410 --> 00:49:15,630
+forum. Link and Ryan
+
+1231
+00:49:15,630 --> 00:49:16,450
+will be in there like
+
+1232
+00:49:16,450 --> 00:49:17,390
+answering that question.
+
+1233
+00:49:17,950 --> 00:49:19,270
+Actually insane. Uh,
+
+1234
+00:49:19,330 --> 00:49:20,290
+he was like, Oh, hey
+
+1235
+00:49:20,290 --> 00:49:20,850
+everyone, I'm going to
+
+1236
+00:49:20,850 --> 00:49:21,790
+do a tech talk on this
+
+1237
+00:49:21,790 --> 00:49:22,810
+book called debugging.
+
+1238
+00:49:23,330 --> 00:49:24,390
+And I'm only like, I
+
+1239
+00:49:24,390 --> 00:49:25,090
+haven't read the entire
+
+1240
+00:49:25,090 --> 00:49:25,850
+book. I'm working my
+
+1241
+00:49:25,850 --> 00:49:26,950
+way through it. But
+
+1242
+00:49:26,950 --> 00:49:28,130
+what I realized is
+
+1243
+00:49:28,830 --> 00:49:29,530
+everyone should just
+
+1244
+00:49:29,530 --> 00:49:30,510
+know how to debug to
+
+1245
+00:49:30,510 --> 00:49:31,790
+solve problems. It's
+
+1246
+00:49:31,790 --> 00:49:32,450
+like, Hey, if I want
+
+1247
+00:49:32,450 --> 00:49:33,030
+to go, I mentioned,
+
+1248
+00:49:33,130 --> 00:49:33,830
+you know, earlier in
+
+1249
+00:49:33,830 --> 00:49:34,870
+the talk, if I want
+
+1250
+00:49:34,870 --> 00:49:35,850
+to fix something on my
+
+1251
+00:49:35,850 --> 00:49:36,650
+truck, if I want to
+
+1252
+00:49:36,650 --> 00:49:37,630
+fix something in my car,
+
+1253
+00:49:37,750 --> 00:49:38,470
+if I want to fix a
+
+1254
+00:49:38,470 --> 00:49:39,290
+piece of electronics or
+
+1255
+00:49:39,290 --> 00:49:41,110
+a lamp, I have to
+
+1256
+00:49:41,810 --> 00:49:43,010
+understand the problem,
+
+1257
+00:49:43,550 --> 00:49:44,630
+understand the domain
+
+1258
+00:49:44,630 --> 00:49:45,310
+that I'm working in,
+
+1259
+00:49:45,410 --> 00:49:46,150
+like the scope of the
+
+1260
+00:49:46,150 --> 00:49:46,990
+thing. Why isn't this
+
+1261
+00:49:46,990 --> 00:49:47,950
+light turning on? Well,
+
+1262
+00:49:47,990 --> 00:49:49,310
+is it plugged in? Um,
+
+1263
+00:49:49,310 --> 00:49:50,210
+well, does the light
+
+1264
+00:49:50,210 --> 00:49:52,030
+bulb work? Well, uh, if
+
+1265
+00:49:52,030 --> 00:49:53,130
+the it's plugged in and
+
+1266
+00:49:53,130 --> 00:49:54,050
+the light bulb works,
+
+1267
+00:49:54,050 --> 00:49:54,690
+there's something
+
+1268
+00:49:54,690 --> 00:49:55,950
+wrong between the
+
+1269
+00:49:55,950 --> 00:49:57,070
+socket and the light
+
+1270
+00:49:57,070 --> 00:49:58,070
+bulb. And so now I can
+
+1271
+00:49:58,070 --> 00:49:59,110
+start drilling down into
+
+1272
+00:49:59,110 --> 00:50:00,190
+that problem. And if
+
+1273
+00:50:00,190 --> 00:50:01,610
+you understand debugging
+
+1274
+00:50:01,610 --> 00:50:02,470
+principles, which are
+
+1275
+00:50:02,470 --> 00:50:03,650
+like, you know, Oh,
+
+1276
+00:50:03,650 --> 00:50:04,230
+I have an app and
+
+1277
+00:50:04,230 --> 00:50:05,950
+it's broken. Well, my
+
+1278
+00:50:05,950 --> 00:50:07,310
+app has a front end,
+
+1279
+00:50:07,390 --> 00:50:08,270
+the things I see, and
+
+1280
+00:50:08,270 --> 00:50:09,550
+it has back end things
+
+1281
+00:50:09,550 --> 00:50:11,170
+I don't see. How can I
+
+1282
+00:50:11,170 --> 00:50:12,030
+understand what's going
+
+1283
+00:50:12,030 --> 00:50:13,310
+on in those things to
+
+1284
+00:50:13,310 --> 00:50:14,470
+deep, to, to figure out
+
+1285
+00:50:14,470 --> 00:50:15,290
+what the root cause of
+
+1286
+00:50:15,290 --> 00:50:17,350
+the issue is? This is a
+
+1287
+00:50:17,350 --> 00:50:18,830
+skill that I don't see a
+
+1288
+00:50:18,830 --> 00:50:19,550
+lot of non-technical
+
+1289
+00:50:19,550 --> 00:50:20,470
+people have. Even some
+
+1290
+00:50:20,470 --> 00:50:21,090
+engineers could be
+
+1291
+00:50:21,090 --> 00:50:21,690
+better at this. I
+
+1292
+00:50:21,690 --> 00:50:22,430
+could be better at it.
+
+1293
+00:50:22,510 --> 00:50:23,290
+Right. Um, and
+
+1294
+00:50:23,290 --> 00:50:24,130
+sometimes I forget
+
+1295
+00:50:24,130 --> 00:50:25,330
+when I have a problem.
+
+1296
+00:50:26,030 --> 00:50:27,090
+Oh, Hey, like maybe my
+
+1297
+00:50:27,090 --> 00:50:28,310
+camera's not working. I,
+
+1298
+00:50:28,350 --> 00:50:28,910
+you know, what if I
+
+1299
+00:50:28,910 --> 00:50:29,530
+joined the screen, my
+
+1300
+00:50:29,530 --> 00:50:30,130
+camera wasn't working.
+
+1301
+00:50:30,250 --> 00:50:30,730
+Sometimes I'll just
+
+1302
+00:50:30,730 --> 00:50:31,150
+be like, I'll just
+
+1303
+00:50:31,150 --> 00:50:32,050
+turn it off on again.
+
+1304
+00:50:32,170 --> 00:50:32,430
+I'm going to be
+
+1305
+00:50:32,430 --> 00:50:33,850
+lazy. No, sit down,
+
+1306
+00:50:34,530 --> 00:50:35,490
+read the docs, read
+
+1307
+00:50:35,490 --> 00:50:36,430
+the instruction manual,
+
+1308
+00:50:36,950 --> 00:50:37,630
+understand what you're
+
+1309
+00:50:37,630 --> 00:50:38,210
+working with, and
+
+1310
+00:50:38,210 --> 00:50:39,270
+then try to solve the
+
+1311
+00:50:39,270 --> 00:50:39,910
+problem. And that's
+
+1312
+00:50:39,910 --> 00:50:40,550
+debugging. I think
+
+1313
+00:50:40,550 --> 00:50:41,250
+everybody should just
+
+1314
+00:50:41,250 --> 00:50:42,830
+learn how to do that. Um,
+
+1315
+00:50:43,610 --> 00:50:44,210
+so yeah, I'll take a
+
+1316
+00:50:44,210 --> 00:50:45,090
+pause there because I,
+
+1317
+00:50:45,170 --> 00:50:46,050
+you know, this is all,
+
+1318
+00:50:46,170 --> 00:50:47,130
+this is all a line up.
+
+1319
+00:50:47,730 --> 00:50:48,550
+Yeah, that was good.
+
+1320
+00:50:48,650 --> 00:50:49,630
+That was good. I just
+
+1321
+00:50:49,630 --> 00:50:50,590
+wish we had more time
+
+1322
+00:50:50,590 --> 00:50:52,210
+to let you, uh, to
+
+1323
+00:50:52,210 --> 00:50:53,330
+keep talking about this.
+
+1324
+00:50:53,630 --> 00:50:55,030
+Yeah. It's actually
+
+1325
+00:50:55,030 --> 00:50:56,190
+interesting. Debugging
+
+1326
+00:50:56,190 --> 00:50:58,610
+as a critical skill to
+
+1327
+00:50:58,610 --> 00:50:59,750
+have, I, I super
+
+1328
+00:50:59,750 --> 00:51:01,110
+resonated with that. Uh,
+
+1329
+00:51:01,110 --> 00:51:02,210
+I, I don't know. I
+
+1330
+00:51:02,210 --> 00:51:03,190
+mean, you'd already
+
+1331
+00:51:03,190 --> 00:51:04,430
+know this, but rubber
+
+1332
+00:51:04,430 --> 00:51:05,390
+duct debugging. There's
+
+1333
+00:51:05,390 --> 00:51:05,930
+a reason why I
+
+1334
+00:51:05,930 --> 00:51:06,710
+purchased to every
+
+1335
+00:51:06,710 --> 00:51:07,590
+single person I
+
+1336
+00:51:07,590 --> 00:51:08,510
+need. Uh, it's an
+
+1337
+00:51:08,510 --> 00:51:09,350
+incredible skill to have.
+
+1338
+00:51:09,350 --> 00:51:10,930
+It's essentially, I
+
+1339
+00:51:10,930 --> 00:51:11,370
+don't know if you're
+
+1340
+00:51:11,370 --> 00:51:11,790
+familiar with the
+
+1341
+00:51:11,790 --> 00:51:12,430
+concept of Socratic
+
+1342
+00:51:12,430 --> 00:51:13,670
+dialogue, but that's
+
+1343
+00:51:13,670 --> 00:51:15,190
+what it is. You're
+
+1344
+00:51:15,750 --> 00:51:17,230
+engaging yourself in the
+
+1345
+00:51:17,230 --> 00:51:18,350
+conversation that helps
+
+1346
+00:51:18,350 --> 00:51:19,530
+you identify the problem
+
+1347
+00:51:19,530 --> 00:51:20,990
+and solve it during the
+
+1348
+00:51:20,990 --> 00:51:22,950
+dialogue. Right. Uh,
+
+1349
+00:51:23,050 --> 00:51:24,110
+and Robert, that being,
+
+1350
+00:51:24,110 --> 00:51:24,930
+you know, an
+
+1351
+00:51:24,930 --> 00:51:25,810
+inanimate object that
+
+1352
+00:51:25,810 --> 00:51:26,610
+you're talking to just
+
+1353
+00:51:26,610 --> 00:51:28,470
+helps your mind
+
+1354
+00:51:28,470 --> 00:51:29,750
+facilitate this process.
+
+1355
+00:51:30,010 --> 00:51:31,750
+That's all. Um, but
+
+1356
+00:51:31,750 --> 00:51:32,910
+yeah, uh, actually I
+
+1357
+00:51:32,910 --> 00:51:33,870
+recommend this to
+
+1358
+00:51:33,870 --> 00:51:35,210
+everybody to try, uh,
+
+1359
+00:51:35,330 --> 00:51:36,870
+engaging with your, uh,
+
+1360
+00:51:36,870 --> 00:51:37,850
+LLMs in a Socratic
+
+1361
+00:51:37,850 --> 00:51:38,890
+dialogue and see if
+
+1362
+00:51:38,890 --> 00:51:40,250
+that improves your, uh,
+
+1363
+00:51:40,270 --> 00:51:41,370
+process of learning or
+
+1364
+00:51:41,370 --> 00:51:42,670
+solving problems. It's
+
+1365
+00:51:42,670 --> 00:51:43,490
+spreading incredible
+
+1366
+00:51:44,650 --> 00:51:45,750
+stuff. I wrote that
+
+1367
+00:51:45,750 --> 00:51:46,450
+down. I'm going to, I'm
+
+1368
+00:51:46,450 --> 00:51:47,050
+going to, I'm going to
+
+1369
+00:51:47,050 --> 00:51:47,670
+think through that one a
+
+1370
+00:51:47,670 --> 00:51:48,410
+little bit more deeply.
+
+1371
+00:51:49,010 --> 00:51:49,650
+Do we have time for me
+
+1372
+00:51:49,650 --> 00:51:50,430
+to give one more thing?
+
+1373
+00:51:50,750 --> 00:51:53,190
+Yes. Okay, cool. Um,
+
+1374
+00:51:53,450 --> 00:51:54,030
+because I was like,
+
+1375
+00:51:54,030 --> 00:51:55,090
+kind of trying to
+
+1376
+00:51:55,090 --> 00:51:56,030
+assemble my thoughts to
+
+1377
+00:51:56,030 --> 00:51:57,530
+remember, I think the
+
+1378
+00:51:57,530 --> 00:51:58,690
+biggest thing, biggest
+
+1379
+00:51:58,690 --> 00:51:59,310
+thing I see from
+
+1380
+00:51:59,310 --> 00:52:01,730
+people is a fear of
+
+1381
+00:52:01,730 --> 00:52:03,230
+failure. And just for
+
+1382
+00:52:03,230 --> 00:52:03,910
+people that get are
+
+1383
+00:52:03,910 --> 00:52:04,710
+getting into engineering,
+
+1384
+00:52:04,890 --> 00:52:05,330
+these are people who
+
+1385
+00:52:05,330 --> 00:52:05,950
+are coming to vibe
+
+1386
+00:52:05,950 --> 00:52:07,110
+coding. You know, we're
+
+1387
+00:52:07,110 --> 00:52:08,550
+used to products where,
+
+1388
+00:52:08,550 --> 00:52:09,510
+you know, like you open
+
+1389
+00:52:09,510 --> 00:52:10,230
+up, I don't know, you
+
+1390
+00:52:10,230 --> 00:52:11,690
+open up Duolingo and you
+
+1391
+00:52:11,690 --> 00:52:12,510
+press the button and
+
+1392
+00:52:12,510 --> 00:52:13,910
+you learn Spanish. It
+
+1393
+00:52:13,910 --> 00:52:14,850
+works. You know, maybe
+
+1394
+00:52:14,850 --> 00:52:15,610
+you fail in that
+
+1395
+00:52:15,610 --> 00:52:16,430
+process, but the app
+
+1396
+00:52:16,430 --> 00:52:17,810
+works and then they
+
+1397
+00:52:17,810 --> 00:52:18,870
+come into building and
+
+1398
+00:52:18,870 --> 00:52:19,750
+the app doesn't work.
+
+1399
+00:52:19,850 --> 00:52:20,530
+Like you try to build
+
+1400
+00:52:20,530 --> 00:52:20,990
+something and just
+
+1401
+00:52:20,990 --> 00:52:22,290
+breaks. This is like
+
+1402
+00:52:22,290 --> 00:52:22,890
+when I was learning to
+
+1403
+00:52:22,890 --> 00:52:23,630
+be an engineer, I was
+
+1404
+00:52:23,630 --> 00:52:24,290
+like trying to write a
+
+1405
+00:52:24,290 --> 00:52:25,310
+hello world program or
+
+1406
+00:52:25,310 --> 00:52:26,390
+like install Postgres
+
+1407
+00:52:26,390 --> 00:52:27,550
+on my laptop and, you
+
+1408
+00:52:27,550 --> 00:52:28,050
+know, I don't know,
+
+1409
+00:52:28,150 --> 00:52:30,290
+2018 or something. And
+
+1410
+00:52:30,290 --> 00:52:31,310
+it took me like a day
+
+1411
+00:52:31,310 --> 00:52:32,530
+to figure out. And
+
+1412
+00:52:32,530 --> 00:52:32,990
+like, that's
+
+1413
+00:52:32,990 --> 00:52:33,950
+demoralizing me. You
+
+1414
+00:52:33,950 --> 00:52:34,490
+want to feel like a
+
+1415
+00:52:34,490 --> 00:52:37,010
+loser. You sit down to
+
+1416
+00:52:37,010 --> 00:52:37,850
+open up a textbook and
+
+1417
+00:52:37,850 --> 00:52:39,470
+you're on page one at
+
+1418
+00:52:39,470 --> 00:52:40,470
+the end of the day, you
+
+1419
+00:52:40,470 --> 00:52:41,430
+know, it's like, okay,
+
+1420
+00:52:43,810 --> 00:52:44,930
+what I think most
+
+1421
+00:52:44,930 --> 00:52:45,830
+people don't understand
+
+1422
+00:52:45,830 --> 00:52:47,030
+is that like to do
+
+1423
+00:52:47,030 --> 00:52:47,810
+anything interesting,
+
+1424
+00:52:47,810 --> 00:52:48,570
+you just have to
+
+1425
+00:52:48,570 --> 00:52:49,690
+repeatedly fail over
+
+1426
+00:52:49,690 --> 00:52:50,270
+and over and over
+
+1427
+00:52:50,270 --> 00:52:51,650
+again. And, you know,
+
+1428
+00:52:51,750 --> 00:52:52,690
+like vibe coding tools
+
+1429
+00:52:52,690 --> 00:52:54,510
+are getting so good. In
+
+1430
+00:52:54,510 --> 00:52:55,310
+some ways, you can
+
+1431
+00:52:55,310 --> 00:52:56,090
+circumvent a lot of
+
+1432
+00:52:56,090 --> 00:52:57,110
+that failure. And a lot
+
+1433
+00:52:57,110 --> 00:52:58,790
+of our successes as a
+
+1434
+00:52:58,790 --> 00:53:00,090
+society are built on
+
+1435
+00:53:00,090 --> 00:53:00,730
+the failure of other
+
+1436
+00:53:00,730 --> 00:53:01,870
+people, right? Like, I
+
+1437
+00:53:01,870 --> 00:53:03,030
+hope no one ever ever
+
+1438
+00:53:03,030 --> 00:53:03,850
+has to open a
+
+1439
+00:53:03,850 --> 00:53:04,550
+textbook to learn
+
+1440
+00:53:04,550 --> 00:53:05,430
+Python again, the way
+
+1441
+00:53:05,430 --> 00:53:06,310
+that I did. You should
+
+1442
+00:53:06,310 --> 00:53:07,350
+chat with an LLM if you
+
+1443
+00:53:07,350 --> 00:53:07,990
+want to learn Python.
+
+1444
+00:53:08,610 --> 00:53:09,070
+Maybe one day you don't
+
+1445
+00:53:09,070 --> 00:53:09,710
+need to, I don't know.
+
+1446
+00:53:10,370 --> 00:53:14,330
+But the being an
+
+1447
+00:53:14,330 --> 00:53:15,210
+excellent engineer,
+
+1448
+00:53:15,350 --> 00:53:16,050
+being a professional
+
+1449
+00:53:16,050 --> 00:53:17,050
+means just failing
+
+1450
+00:53:17,050 --> 00:53:18,050
+repeatedly over and
+
+1451
+00:53:18,050 --> 00:53:19,290
+over and over again. And
+
+1452
+00:53:19,290 --> 00:53:20,330
+so in some sense, like I
+
+1453
+00:53:20,330 --> 00:53:21,350
+want to help people vibe
+
+1454
+00:53:21,350 --> 00:53:22,030
+code and build amazing
+
+1455
+00:53:22,030 --> 00:53:22,910
+things. I want that to
+
+1456
+00:53:22,910 --> 00:53:23,870
+be as easy as possible.
+
+1457
+00:53:24,290 --> 00:53:25,450
+But you will bump into
+
+1458
+00:53:25,450 --> 00:53:26,330
+a place where you fail
+
+1459
+00:53:26,330 --> 00:53:27,070
+and you're stuck and
+
+1460
+00:53:27,070 --> 00:53:27,630
+you don't know what to
+
+1461
+00:53:27,630 --> 00:53:30,230
+do. And the number one
+
+1462
+00:53:30,230 --> 00:53:30,930
+skill is going to be
+
+1463
+00:53:30,930 --> 00:53:32,070
+like persevering and
+
+1464
+00:53:32,070 --> 00:53:32,770
+finding the internal
+
+1465
+00:53:32,770 --> 00:53:34,270
+motivation to say, I'm
+
+1466
+00:53:34,270 --> 00:53:34,970
+an engineer, I'm trying
+
+1467
+00:53:34,970 --> 00:53:35,570
+to build this thing and
+
+1468
+00:53:35,570 --> 00:53:36,090
+I want to be a staff
+
+1469
+00:53:36,090 --> 00:53:36,870
+engineer. Maybe that's
+
+1470
+00:53:36,870 --> 00:53:38,010
+you. I want to be a
+
+1471
+00:53:38,010 --> 00:53:38,750
+manager. I want to lead
+
+1472
+00:53:38,750 --> 00:53:40,090
+a team. I want to be an
+
+1473
+00:53:40,090 --> 00:53:40,690
+entrepreneur. I want to
+
+1474
+00:53:40,690 --> 00:53:41,810
+start a business. I want
+
+1475
+00:53:41,810 --> 00:53:43,370
+to, you know, help my
+
+1476
+00:53:43,370 --> 00:53:44,430
+family. I want to like
+
+1477
+00:53:44,430 --> 00:53:46,430
+the type of person
+
+1478
+00:53:46,430 --> 00:53:47,490
+that I've always wanted
+
+1479
+00:53:47,490 --> 00:53:48,510
+to be. I'm just going to
+
+1480
+00:53:48,510 --> 00:53:49,530
+fail over and over and
+
+1481
+00:53:49,530 --> 00:53:50,930
+over again. And I'm not
+
+1482
+00:53:50,930 --> 00:53:51,490
+going to let that stop
+
+1483
+00:53:51,490 --> 00:53:52,130
+me.
+
+1484
+00:53:52,270 --> 00:53:53,370
+Yeah, that's actually
+
+1485
+00:53:53,370 --> 00:53:54,790
+an excellent. Yeah,
+
+1486
+00:53:54,870 --> 00:53:55,590
+sorry. It's an
+
+1487
+00:53:55,590 --> 00:53:56,170
+excellent piece of
+
+1488
+00:53:56,170 --> 00:53:56,950
+device that actually
+
+1489
+00:53:56,950 --> 00:53:57,810
+extends well beyond
+
+1490
+00:53:57,810 --> 00:53:58,950
+engineering also, right?
+
+1491
+00:53:59,090 --> 00:53:59,970
+Like, in general,
+
+1492
+00:54:00,130 --> 00:54:01,050
+tolerance to failure is
+
+1493
+00:54:01,050 --> 00:54:01,750
+something that will get
+
+1494
+00:54:01,750 --> 00:54:02,910
+you very, very far if you
+
+1495
+00:54:02,910 --> 00:54:04,210
+keep increasing it. And
+
+1496
+00:54:04,210 --> 00:54:05,750
+that's how you grow. You
+
+1497
+00:54:05,750 --> 00:54:06,970
+fail. You just keep
+
+1498
+00:54:06,970 --> 00:54:07,710
+failing continuously
+
+1499
+00:54:07,710 --> 00:54:08,850
+until you become the
+
+1500
+00:54:08,850 --> 00:54:10,270
+best at the thing. Right.
+
+1501
+00:54:12,440 --> 00:54:13,440
+Fully great. And I
+
+1502
+00:54:13,440 --> 00:54:14,300
+mean, it's it's public
+
+1503
+00:54:14,300 --> 00:54:15,240
+speaking. It's coming on
+
+1504
+00:54:15,240 --> 00:54:16,180
+podcasts like this. I've
+
+1505
+00:54:16,180 --> 00:54:17,080
+done podcasts. I look
+
+1506
+00:54:17,080 --> 00:54:17,820
+like the biggest idiot
+
+1507
+00:54:17,820 --> 00:54:18,980
+in the world. I mean,
+
+1508
+00:54:19,020 --> 00:54:19,820
+I probably still do. You
+
+1509
+00:54:19,820 --> 00:54:20,360
+know what? We got a
+
+1510
+00:54:20,360 --> 00:54:20,880
+couple hundred people
+
+1511
+00:54:20,880 --> 00:54:22,080
+watching. You know, it
+
+1512
+00:54:22,080 --> 00:54:24,280
+is what it is. So, you
+
+1513
+00:54:24,280 --> 00:54:26,340
+know, I think part of
+
+1514
+00:54:26,340 --> 00:54:27,940
+it is having a healthy
+
+1515
+00:54:28,400 --> 00:54:30,020
+respect, disregard for
+
+1516
+00:54:30,020 --> 00:54:30,860
+what other people think
+
+1517
+00:54:30,860 --> 00:54:31,600
+of you and your
+
+1518
+00:54:31,600 --> 00:54:33,680
+mistakes. And again,
+
+1519
+00:54:33,900 --> 00:54:34,300
+like you ship
+
+1520
+00:54:34,300 --> 00:54:34,880
+something that has a
+
+1521
+00:54:34,880 --> 00:54:36,420
+mistake in it. It's very
+
+1522
+00:54:36,420 --> 00:54:37,500
+easy to get self
+
+1523
+00:54:37,500 --> 00:54:39,000
+conscious about that as
+
+1524
+00:54:39,000 --> 00:54:39,760
+a dev rel, right? We
+
+1525
+00:54:39,760 --> 00:54:40,460
+talked about getting into
+
+1526
+00:54:40,460 --> 00:54:41,120
+dev rel. Oh, I'm going to
+
+1527
+00:54:41,120 --> 00:54:42,180
+put myself on camera and
+
+1528
+00:54:42,180 --> 00:54:42,580
+I'm going to get in
+
+1529
+00:54:42,580 --> 00:54:43,780
+front of the internet,
+
+1530
+00:54:44,020 --> 00:54:44,880
+everybody, my family,
+
+1531
+00:54:45,000 --> 00:54:45,820
+like all these people.
+
+1532
+00:54:46,220 --> 00:54:47,080
+What if I do something
+
+1533
+00:54:47,080 --> 00:54:47,740
+dumb? What if people
+
+1534
+00:54:47,740 --> 00:54:49,780
+think I'm a loser? What
+
+1535
+00:54:49,780 --> 00:54:50,820
+if people don't like my
+
+1536
+00:54:50,820 --> 00:54:52,700
+work? It's okay. Promise,
+
+1537
+00:54:52,900 --> 00:54:54,200
+I promise no one cares.
+
+1538
+00:54:54,800 --> 00:54:55,920
+I promise no one cares
+
+1539
+00:54:55,920 --> 00:54:57,520
+at all. But eventually
+
+1540
+00:54:57,520 --> 00:54:58,500
+through that persistence,
+
+1541
+00:54:58,500 --> 00:54:59,280
+you get good at what
+
+1542
+00:54:59,280 --> 00:55:00,160
+you do. And it's just,
+
+1543
+00:55:00,360 --> 00:55:01,220
+you know, that's part
+
+1544
+00:55:01,220 --> 00:55:02,720
+of it, right? Yeah.
+
+1545
+00:55:04,480 --> 00:55:06,720
+Cool. So we are almost
+
+1546
+00:55:06,720 --> 00:55:08,640
+at the top of the hour.
+
+1547
+00:55:08,880 --> 00:55:10,080
+So we're going to start
+
+1548
+00:55:10,080 --> 00:55:11,100
+working on our wrap up.
+
+1549
+00:55:11,480 --> 00:55:12,780
+Where should folks
+
+1550
+00:55:12,780 --> 00:55:14,160
+follow your work and
+
+1551
+00:55:14,160 --> 00:55:15,080
+start building and
+
+1552
+00:55:15,080 --> 00:55:16,160
+learn how to vibe code
+
+1553
+00:55:16,160 --> 00:55:16,880
+with the replica and
+
+1554
+00:55:16,880 --> 00:55:17,500
+everything like that?
+
+1555
+00:55:17,880 --> 00:55:19,000
+That this is your one
+
+1556
+00:55:19,000 --> 00:55:20,240
+to two minutes of self
+
+1557
+00:55:20,240 --> 00:55:21,640
+plug and replica plug.
+
+1558
+00:55:22,260 --> 00:55:24,180
+That's ending. Yeah,
+
+1559
+00:55:24,200 --> 00:55:24,900
+you can follow along
+
+1560
+00:55:24,900 --> 00:55:26,540
+with me on on X. I'm
+
+1561
+00:55:26,540 --> 00:55:27,360
+on LinkedIn. I have a
+
+1562
+00:55:27,360 --> 00:55:28,180
+YouTube channel. I also
+
+1563
+00:55:28,180 --> 00:55:29,360
+do a lot of content for
+
+1564
+00:55:29,360 --> 00:55:31,580
+replet socials. But you
+
+1565
+00:55:31,580 --> 00:55:32,580
+know, on X, it's Mattie
+
+1566
+00:55:32,580 --> 00:55:34,040
+peak recent recent handle
+
+1567
+00:55:34,040 --> 00:55:35,380
+acquisition on LinkedIn.
+
+1568
+00:55:35,400 --> 00:55:36,720
+It's my name. Same thing
+
+1569
+00:55:36,720 --> 00:55:37,960
+on YouTube. Or you can
+
+1570
+00:55:37,960 --> 00:55:39,400
+just go at replet on X
+
+1571
+00:55:39,840 --> 00:55:41,720
+LinkedIn YouTube. And
+
+1572
+00:55:41,720 --> 00:55:42,340
+that's where I create
+
+1573
+00:55:42,340 --> 00:55:43,840
+content. Through there,
+
+1574
+00:55:43,840 --> 00:55:44,980
+I try to share everything
+
+1575
+00:55:44,980 --> 00:55:46,120
+that I build. I try to
+
+1576
+00:55:46,120 --> 00:55:47,500
+really build in public
+
+1577
+00:55:47,500 --> 00:55:49,500
+and you know, we're
+
+1578
+00:55:49,500 --> 00:55:50,360
+doing it live now, but
+
+1579
+00:55:50,360 --> 00:55:51,020
+I'm hoping in the next
+
+1580
+00:55:51,020 --> 00:55:51,660
+couple of weeks, we'll
+
+1581
+00:55:51,660 --> 00:55:53,080
+have some first party
+
+1582
+00:55:53,080 --> 00:55:54,660
+replet materials to
+
+1583
+00:55:54,660 --> 00:55:55,840
+learn everything you need
+
+1584
+00:55:55,840 --> 00:55:57,780
+to know from what AI is
+
+1585
+00:55:57,780 --> 00:55:58,680
+to what vibe coding is.
+
+1586
+00:55:58,680 --> 00:55:59,660
+So that's kind of coming
+
+1587
+00:55:59,660 --> 00:56:01,520
+soon. You'll be able to
+
+1588
+00:56:01,520 --> 00:56:02,600
+find that on all the
+
+1589
+00:56:02,600 --> 00:56:03,200
+channels I mentioned
+
+1590
+00:56:03,200 --> 00:56:07,200
+earlier. Awesome. And
+
+1591
+00:56:07,200 --> 00:56:08,160
+we're going to close out
+
+1592
+00:56:08,160 --> 00:56:10,040
+with the usual classic
+
+1593
+00:56:10,040 --> 00:56:13,160
+next step question. If
+
+1594
+00:56:13,160 --> 00:56:14,520
+you could go 10 years
+
+1595
+00:56:14,520 --> 00:56:16,440
+into the past and talk
+
+1596
+00:56:16,440 --> 00:56:18,100
+to yourself will be one
+
+1597
+00:56:18,100 --> 00:56:18,840
+piece for the vibes you
+
+1598
+00:56:18,840 --> 00:56:19,700
+would share.
+
+1599
+00:56:21,740 --> 00:56:23,020
+Okay, go 10 years into
+
+1600
+00:56:23,020 --> 00:56:23,740
+the past and talk to
+
+1601
+00:56:23,740 --> 00:56:24,500
+myself. Alright, so like
+
+1602
+00:56:24,500 --> 00:56:25,380
+we have to frame this
+
+1603
+00:56:25,380 --> 00:56:26,600
+as it what year is it?
+
+1604
+00:56:26,720 --> 00:56:29,120
+It's 2025. What was I
+
+1605
+00:56:29,120 --> 00:56:30,780
+doing in 2015? Yeah,
+
+1606
+00:56:30,940 --> 00:56:31,400
+I'm gonna date myself
+
+1607
+00:56:31,400 --> 00:56:33,300
+here in 2015. I was a
+
+1608
+00:56:33,300 --> 00:56:35,940
+freshman in college. And
+
+1609
+00:56:35,940 --> 00:56:36,880
+I was just a total idiot.
+
+1610
+00:56:37,260 --> 00:56:38,160
+And you know, I was like
+
+1611
+00:56:38,160 --> 00:56:39,340
+doing things that a
+
+1612
+00:56:39,340 --> 00:56:40,280
+freshman in college very
+
+1613
+00:56:40,280 --> 00:56:42,560
+much did. At the time,
+
+1614
+00:56:43,140 --> 00:56:44,120
+you know, I was playing
+
+1615
+00:56:44,120 --> 00:56:45,000
+baseball in school, I was
+
+1616
+00:56:45,000 --> 00:56:46,380
+studying physics,
+
+1617
+00:56:46,480 --> 00:56:47,540
+economic, like I was I
+
+1618
+00:56:47,540 --> 00:56:48,180
+went to liberal arts
+
+1619
+00:56:48,180 --> 00:56:49,040
+school. So it's just like
+
+1620
+00:56:49,040 --> 00:56:51,160
+doing everything. I think
+
+1621
+00:56:51,160 --> 00:56:52,020
+I would have pushed
+
+1622
+00:56:52,020 --> 00:56:54,440
+myself to practice a lot
+
+1623
+00:56:54,440 --> 00:56:55,160
+of the things that I
+
+1624
+00:56:55,160 --> 00:56:56,060
+just kind of preach to
+
+1625
+00:56:56,060 --> 00:56:56,920
+you all, which is like
+
+1626
+00:56:56,920 --> 00:56:58,520
+not be afraid, afraid of
+
+1627
+00:56:58,520 --> 00:57:00,020
+failing, and to think
+
+1628
+00:57:00,020 --> 00:57:01,140
+more critically about
+
+1629
+00:57:01,140 --> 00:57:02,160
+what I want to do and
+
+1630
+00:57:02,160 --> 00:57:02,900
+less about what other
+
+1631
+00:57:02,900 --> 00:57:04,000
+people want me to do. And
+
+1632
+00:57:04,000 --> 00:57:06,420
+I think as a freshman
+
+1633
+00:57:06,420 --> 00:57:07,200
+college, I was very
+
+1634
+00:57:07,200 --> 00:57:08,120
+immature in that way that
+
+1635
+00:57:08,120 --> 00:57:09,160
+I cared a lot about what
+
+1636
+00:57:09,160 --> 00:57:09,900
+other people thought of
+
+1637
+00:57:09,900 --> 00:57:11,200
+me. And it wasn't until
+
+1638
+00:57:11,200 --> 00:57:12,220
+later in my life that I
+
+1639
+00:57:12,220 --> 00:57:15,860
+started acting in a way
+
+1640
+00:57:15,860 --> 00:57:16,700
+that aligned more with
+
+1641
+00:57:16,700 --> 00:57:17,880
+what I cared and what I
+
+1642
+00:57:17,880 --> 00:57:19,260
+wanted. And so when you
+
+1643
+00:57:19,260 --> 00:57:20,000
+see all of these things,
+
+1644
+00:57:20,000 --> 00:57:20,620
+if you follow me on
+
+1645
+00:57:20,620 --> 00:57:21,400
+Twitter, you'll see I
+
+1646
+00:57:21,400 --> 00:57:21,940
+post a lot about
+
+1647
+00:57:21,940 --> 00:57:23,120
+fitness, post a lot about
+
+1648
+00:57:23,120 --> 00:57:24,020
+replet, I post a lot about
+
+1649
+00:57:24,020 --> 00:57:25,080
+doing things outside and
+
+1650
+00:57:25,080 --> 00:57:25,680
+the things that I care
+
+1651
+00:57:25,680 --> 00:57:26,200
+about and the things
+
+1652
+00:57:26,200 --> 00:57:27,260
+that I think these are
+
+1653
+00:57:28,080 --> 00:57:29,140
+genuinely uniquely who
+
+1654
+00:57:29,140 --> 00:57:30,840
+I am and the work that
+
+1655
+00:57:30,840 --> 00:57:32,100
+I do is a byproduct of
+
+1656
+00:57:32,100 --> 00:57:33,780
+who I am as a person. And
+
+1657
+00:57:33,780 --> 00:57:34,860
+I wish I would have went
+
+1658
+00:57:34,860 --> 00:57:37,120
+back and I told my, you
+
+1659
+00:57:37,120 --> 00:57:39,760
+know, self in 2015, that
+
+1660
+00:57:39,760 --> 00:57:40,820
+is a lot more important
+
+1661
+00:57:40,820 --> 00:57:41,580
+than what other people
+
+1662
+00:57:41,580 --> 00:57:43,320
+think of you. What's
+
+1663
+00:57:43,320 --> 00:57:44,220
+that? There's that that
+
+1664
+00:57:44,220 --> 00:57:46,380
+quote, that Tolstov, you
+
+1665
+00:57:46,380 --> 00:57:47,200
+know, you've forsaken
+
+1666
+00:57:47,200 --> 00:57:48,180
+yourself for nothing or
+
+1667
+00:57:48,180 --> 00:57:49,140
+whatever. Yeah. That's
+
+1668
+00:57:49,640 --> 00:57:52,420
+right. So what is the
+
+1669
+00:57:52,420 --> 00:57:55,360
+actual quote? You have
+
+1670
+00:57:56,300 --> 00:57:57,840
+forsaken. I don't know.
+
+1671
+00:57:58,060 --> 00:57:58,380
+We're not gonna find
+
+1672
+00:57:58,380 --> 00:57:59,720
+a war. Sin is that
+
+1673
+00:57:59,720 --> 00:58:00,540
+you've destroyed and
+
+1674
+00:58:00,540 --> 00:58:01,500
+betrayed yourself for
+
+1675
+00:58:01,500 --> 00:58:04,800
+nothing. 100% man, that's
+
+1676
+00:58:04,800 --> 00:58:05,880
+that's what I would have
+
+1677
+00:58:05,880 --> 00:58:06,580
+won back and just said
+
+1678
+00:58:06,580 --> 00:58:08,300
+that. Excellent. That's
+
+1679
+00:58:08,300 --> 00:58:09,240
+excellent advice. And
+
+1680
+00:58:09,240 --> 00:58:12,100
+yeah, TLDR, don't let
+
+1681
+00:58:12,100 --> 00:58:13,120
+anybody tell you who you
+
+1682
+00:58:13,120 --> 00:58:14,560
+are. Do what you think is
+
+1683
+00:58:14,560 --> 00:58:15,340
+right for yourself.
+
+1684
+00:58:16,000 --> 00:58:17,200
+Right. Only you know who
+
+1685
+00:58:17,200 --> 00:58:17,940
+you are and what you
+
+1686
+00:58:17,940 --> 00:58:20,500
+care about. Awesome. I
+
+1687
+00:58:20,500 --> 00:58:21,120
+think that's a good
+
+1688
+00:58:21,120 --> 00:58:22,680
+place to wrap up. Thank
+
+1689
+00:58:22,680 --> 00:58:23,540
+everybody for tuning in.
+
+1690
+00:58:23,640 --> 00:58:24,620
+Thank you so much, Matt
+
+1691
+00:58:24,620 --> 00:58:25,740
+for joining us. I
+
+1692
+00:58:25,740 --> 00:58:26,640
+think that was an
+
+1693
+00:58:26,640 --> 00:58:27,720
+excellent episode. And
+
+1694
+00:58:27,720 --> 00:58:28,900
+we've got a lot of
+
+1695
+00:58:28,900 --> 00:58:30,000
+useful advice out there
+
+1696
+00:58:30,000 --> 00:58:32,160
+for folk. But yeah, and
+
+1697
+00:58:32,160 --> 00:58:33,260
+thank you everybody in
+
+1698
+00:58:33,260 --> 00:58:34,200
+the audience for joining.
+
+1699
+00:58:35,100 --> 00:58:36,060
+Keep an eye out. We'll
+
+1700
+00:58:36,060 --> 00:58:37,080
+be doing a lot more of
+
+1701
+00:58:37,080 --> 00:58:37,900
+those next step live
+
+1702
+00:58:37,900 --> 00:58:38,420
+streams moving
+
+1703
+00:58:38,420 --> 00:58:40,560
+forward. So yeah, thanks
+
+1704
+00:58:40,560 --> 00:58:41,440
+everybody for tuning in.
+
+1705
+00:58:42,220 --> 00:58:43,200
+Awesome. Yeah, thank you
+
+1706
+00:58:43,200 --> 00:58:44,340
+Matt. And we will catch
+
+1707
+00:58:44,340 --> 00:58:45,820
+you all later. We will
+
+1708
+00:58:45,820 --> 00:58:46,460
+see you later.

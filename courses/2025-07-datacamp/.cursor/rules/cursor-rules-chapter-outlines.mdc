@@ -1,0 +1,148 @@
+# Cursor Rules: Chapter Outline Writing
+
+<introduction>
+Guidelines for creating structured, actionable chapter outlines following the established DataCamp course format. Emphasizes brevity, timing precision, and clear learning progression.
+</introduction>
+
+## Core Structure Requirements
+
+<chapter_header>
+```markdown
+# Chapter X: [Action Verb] - [Focus Area]
+
+**Theme:** [Emotional transformation - from X to Y]
+**Message:** [Core pedagogical principle or approach]
+
+## Chapter Arc
+- **X.1:** [Learning type] (concept/build/methodology)
+- **X.2:** [Learning type] (concept/build/methodology)  
+- **X.3:** [Learning type] (concept/build/methodology)
+```
+</chapter_header>
+
+<lesson_structure>
+```markdown
+## Lesson X.Y: "[Actionable Title]"
+
+**Target:** XXX-XXX words, ~X.X-X.X minutes  
+**Objectives:** [2-3 specific, measurable learning outcomes]
+
+### Script Structure
+
+**[Section Name] (XXs)**
+- [Key point with specific detail]
+- [Action or example]
+
+### Slides
+1. [Slide description with specific visual/content]
+2. [Slide description with specific visual/content]
+```
+</lesson_structure>
+
+## Writing Guidelines
+
+<brevity_principles>
+<timing_precision>Always include specific word counts (250-300) and time estimates (~2.5-3 minutes)</timing_precision>
+<bullet_efficiency>Use concise bullets, not paragraphs. Each bullet = one key point or action</bullet_efficiency>
+<specific_examples>Include concrete examples, not abstract concepts ("meditation timer" not "simple app")</specific_examples>
+<time_allocation>Break script sections into timed segments that add up to total target time</time_allocation>
+</brevity_principles>
+
+<content_structure>
+<transformational_theme>Frame each chapter as an emotional/skill transformation journey</transformational_theme>
+<progressive_complexity>Structure lessons as: Concept → Hands-on → Framework/Methodology</progressive_complexity>
+<bridge_language>Include explicit transitions between lessons ("Next: You'll build...", "Bridge from 1.1:")</bridge_language>
+<actionable_titles>Use active, specific lesson titles that preview the outcome</actionable_titles>
+</content_structure>
+
+<script_formatting>
+<opening_hooks>Start each lesson with a compelling hook or bridge from previous content</opening_hooks>
+<timed_segments>Break scripts into 15-180 second segments with clear focus</timed_segments>
+<practical_examples>Include specific examples with concrete comparisons (traditional vs. new approach)</practical_examples>
+<clear_transitions>End each lesson with explicit setup for the next lesson</clear_transitions>
+</script_formatting>
+
+## Template Patterns
+
+<lesson_types>
+<concept_lesson>
+**Target:** 250-300 words, ~2.5-3 minutes
+**Structure:** Hook → Analogy → Definition → Example → Bridge
+**Focus:** Mindset shift, paradigm explanation
+</concept_lesson>
+
+<build_lesson>
+**Target:** 400-450 words, ~4.5-5 minutes
+**Structure:** Setup → Tool Tour → Build Process → Insights → Wrap
+**Focus:** Hands-on experience, proving concepts work
+</build_lesson>
+
+<framework_lesson>
+**Target:** 350-400 words, ~3.5-4 minutes
+**Structure:** Bridge → Framework Breakdown → Application → Summary
+**Focus:** Systematic methodology, replicable process
+</framework_lesson>
+</lesson_types>
+
+<slide_specifications>
+<visual_focus>Each slide should have one clear visual concept or comparison</visual_focus>
+<progression_logic>Slides should follow the script structure exactly</progression_logic>
+<specific_content>Describe specific slide content, not generic placeholders</specific_content>
+<transition_slides>Include explicit transition/preview slides for lesson bridges</transition_slides>
+</slide_specifications>
+
+## Voice and Tone
+
+<authentic_voice>
+<direct_language>Use active voice, specific verbs, avoid generic marketing speak</direct_language>
+<problem_focused>Lead with problems learners face, not features or tools</problem_focused>
+<conversational_bridges>Write transitions as natural conversation flow</conversational_bridges>
+<outcome_emphasis>Focus on what learners will accomplish, not what they'll learn</outcome_emphasis>
+</authentic_voice>
+
+<avoid_patterns>
+<generic_language>Avoid vague terms like "explore," "discover," "journey" without specifics</generic_language>
+<feature_focus>Don't lead with tool capabilities; lead with learner problems</feature_focus>
+<academic_tone>Avoid formal academic language; use conversational, practical tone</academic_tone>
+<unnecessary_complexity>Don't overcomplicate simple concepts with jargon</unnecessary_complexity>
+</avoid_patterns>
+
+## Exercise Integration
+
+<exercise_structure>
+```markdown
+## Exercises
+
+**X.1:** [Video type] + [Interactive type] + [Assessment type]
+**X.2:** [Video type] + [Interactive type] + [Assessment type]
+**X.3:** [Video type] + [Interactive type] + [Assessment type]
+```
+</exercise_structure>
+
+<exercise_types>
+<video_options>Video, Interactive video, Guided walkthrough</video_options>
+<interactive_options>Build follow-along, Interactive coding, Tool simulation</interactive_options>
+<assessment_options>MCQ, Classification, Matching, Sequencing, Fill-in-the-blank</assessment_options>
+</exercise_types>
+
+## Quality Checklist
+
+<content_quality>
+- [ ] Chapter theme shows clear emotional/skill transformation
+- [ ] Each lesson has specific word count and time target
+- [ ] Script segments are timed and add up to lesson total
+- [ ] Concrete examples replace abstract concepts
+- [ ] Slides match script structure exactly
+- [ ] Exercises combine multiple learning modalities
+- [ ] Voice is conversational and problem-focused
+- [ ] Transitions between lessons are explicit and smooth
+</content_quality>
+
+<structural_quality>
+- [ ] Three-lesson arc follows concept → build → framework pattern
+- [ ] Each lesson has clear, actionable title
+- [ ] Objectives are specific and measurable
+- [ ] Script structure uses consistent timing format
+- [ ] Slide descriptions are specific, not generic
+- [ ] Exercise types are varied and appropriate
+</structural_quality> 

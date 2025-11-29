@@ -1,0 +1,77 @@
+---
+description: 
+globs: *.md,*.mdx
+alwaysApply: false
+---
+# Matt Palmer Character Descriptions
+
+<introduction>
+Character descriptions of varying lengths for different contexts and platforms, aligned with personal brand voice and mission.
+</introduction>
+
+<character_descriptions>
+<length_40>
+Replit DevRel Lead democratizing AI coding
+</length_40>
+
+<length_60>
+Lead DevRel at Replit empowering devs through AI-assisted coding
+</length_60>
+
+<length_140>
+Lead DevRel at Replit championing "vibe coding"—AI-assisted development that democratizes software creation. Creator of 'Vibe Coding 101' (60K+ students).
+</length_140>
+
+<length_400>
+Matt Palmer leads Developer Relations at Replit, empowering ambitious individuals through "vibe coding"—his evidence-based approach to AI-assisted development. A former Senior Data Engineer with Physics & Economics background from Swarthmore, he created 'Vibe Coding 101' reaching 60,000+ students globally. Palmer democratizes coding through practical tutorials and Replit's AI tools, making software creation accessible to all skill levels.
+</length_400>
+
+<length_1000>
+Matt Palmer is Lead of Developer Relations at Replit, where he empowers ambitious individuals with actionable, evidence-based strategies for growth through accessible "vibe coding." Since February 2024, he's spearheaded technical content and product marketing while developing key industry partnerships. Palmer's career journey from Senior Data Engineer to developer advocate showcases his commitment to democratizing software creation. With a Physics and Economics degree from Swarthmore College, he bridges technical depth with educational accessibility. Through his YouTube channel (@mattpalmer) and as producer/instructor for 'Vibe Coding 101' with DeepLearningAI (reaching 60,000+ students globally), he champions AI-assisted development where developers leverage AI for significant coding tasks while focusing on application architecture. Palmer's philosophy emphasizes empathy for the developer journey, authenticity in content, and community building—viewing AI as a powerful productivity enhancer that lowers barriers to software creation for all skill levels.
+</length_1000>
+</character_descriptions>
+
+<voice_alignment>
+<brand_integration>
+<mission_emphasis>Each description emphasizes empowering individuals through accessible, evidence-based "vibe coding"</mission_emphasis>
+<democratization_focus>Highlights making software creation accessible to all skill levels</democratization_focus>
+<community_aspect>Includes community building and educational impact (60K+ students)</community_aspect>
+<evidence_based>Mentions data-driven approach and proven strategies</evidence_based>
+</brand_integration>
+
+<tone_characteristics>
+<direct_impactful>Clear, powerful messaging without unnecessary complexity or generic filler phrases</direct_impactful>
+<enthusiastic_approachable>Genuine passion for democratizing development, conversational rather than corporate</enthusiastic_approachable>
+<professional_credible>Maintains technical accuracy and trustworthiness without sounding overly polished</professional_credible>
+<authentic_personal>Includes relatable elements, honest about learning journey, avoids marketing-speak</authentic_personal>
+</tone_characteristics>
+
+<voice_guidelines>
+<avoid_phrases>
+<generic_transitions>"Here's the thing about...", "The truth is...", "At the end of the day..."</generic_transitions>
+<marketing_cliches>"Game-changing", "Revolutionary", "Next-level", excessive superlatives without substance</marketing_cliches>
+<corporate_speak>Overly formal language that distances from personal connection</corporate_speak>
+</avoid_phrases>
+<embrace_elements>
+<conversational_tone>Direct questions, natural speech patterns, relatable observations</conversational_tone>
+<personal_touches>Real experiences, honest struggles, self-deprecating humor when appropriate</personal_touches>
+<outcome_focus>What people can actually achieve, concrete benefits over abstract features</outcome_focus>
+</embrace_elements>
+</voice_guidelines>
+</voice_alignment>
+
+<usage_guidelines>
+<platform id="ultra_brief">40 chars: Social handles, quick mentions, hashtags</platform>
+<platform id="brief_intro">60 chars: Speaker introductions, social bios, brief contexts</platform>
+<platform id="social_professional">140 chars: Twitter bios, LinkedIn headlines, conference descriptions</platform>
+<platform id="detailed_bio">400 chars: About sections, professional bios, podcast descriptions</platform>
+<platform id="comprehensive">1000 chars: Speaker pages, detailed biographies, comprehensive about sections</platform>
+</usage_guidelines>
+
+<content_principles>
+<principle id="inspire_demonstrate">Shows what's possible through AI-assisted development with concrete examples</principle>
+<principle id="democratize_creation">Emphasizes accessibility for all skill levels without condescension</principle>
+<principle id="connect_benefits">Focuses on outcomes and impact (60K+ students, democratization) over features</principle>
+<principle id="evidence_based">Highlights proven strategies and data-driven approach with authentic voice</principle>
+<principle id="foster_community">Includes educational and community building aspects naturally, not as buzzwords</principle>
+</content_principles>

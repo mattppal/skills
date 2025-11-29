@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><!--[if mso]>
+    <xml><w:WordDocument xmlns:w="urn:schemas-microsoft-com:office:word"><w:DontUseAdvancedTypographyReadingMail/></w:WordDocument>
+    <o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml>
+    <![endif]--><!--[if !mso]><!-->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&amp;display=swap"
+        rel="stylesheet" type="text/css"><!--<![endif]-->
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            padding: 0
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: inherit !important
+        }
+
+        #MessageViewBody a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        p {
+            line-height: inherit
+        }
+
+        .desktop_hide,
+        .desktop_hide table {
+            mso-hide: all;
+            display: none;
+            max-height: 0;
+            overflow: hidden
+        }
+
+        .image_block img+div {
+            display: none
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0
+        }
+
+        #converted-body .list_block ol,
+        #converted-body .list_block ul,
+        .body [class~=x_list_block] ol,
+        .body [class~=x_list_block] ul,
+        u+.body .list_block ol,
+        u+.body .list_block ul {
+            padding-left: 20px
+        }
+
+        @media (max-width:620px) {
+            .social_block.desktop_hide .social-table {
+                display: inline-block !important
+            }
+
+            .image_block div.fullWidth {
+                max-width: 100% !important
+            }
+
+            .mobile_hide {
+                display: none
+            }
+
+            .video_block .sizer {
+                max-width: none !important
+            }
+
+            .row-content {
+                width: 100% !important
+            }
+
+            .stack .column {
+                width: 100%;
+                display: block
+            }
+
+            .mobile_hide {
+                min-height: 0;
+                max-height: 0;
+                max-width: 0;
+                overflow: hidden;
+                font-size: 0
+            }
+
+            .desktop_hide,
+            .desktop_hide table {
+                display: table !important;
+                max-height: none !important
+            }
+        }
+
+        /* Email Component Classes */
+        .email-container {
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+            background-color: #fff;
+        }
+
+        .email-row {
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+        }
+
+        .email-row-content {
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+            border-radius: 0;
+            color: #000;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .email-column {
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+            font-weight: 400;
+            text-align: left;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            vertical-align: top;
+        }
+
+        /* Text Styles */
+        .text-base {
+            color: #000;
+            direction: ltr;
+            font-family: 'Source Sans Pro', Tahoma, Verdana, Segoe, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 1.5;
+            text-align: left;
+            mso-line-height-alt: 24px;
+        }
+
+        .text-small {
+            font-size: 12px;
+            font-family: 'Source Sans Pro', Tahoma, Verdana, Segoe, sans-serif;
+            mso-line-height-alt: 14.399999999999999px;
+            color: #797979;
+            line-height: 1.2;
+        }
+
+        .text-tiny {
+            font-size: 14px;
+            font-family: 'Source Sans Pro', Tahoma, Verdana, Segoe, sans-serif;
+            mso-line-height-alt: 16.8px;
+            color: #555;
+            line-height: 1.2;
+        }
+
+        /* Heading Styles */
+        .heading-main {
+            margin: 0;
+            color: #000;
+            direction: ltr;
+            font-family: 'Source Sans Pro', Tahoma, Verdana, Segoe, sans-serif;
+            font-size: 21px;
+            font-weight: bold;
+            letter-spacing: normal;
+            line-height: 1.5;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 0;
+            mso-line-height-alt: 32px;
+        }
+
+        /* Paragraph Styles */
+        .paragraph-standard {
+            margin: 0;
+            margin-bottom: 16px;
+        }
+
+        .paragraph-final {
+            margin: 0;
+        }
+
+        .paragraph-image {
+            margin: 0px 0px 4px;
+            text-align: justify;
+        }
+
+        /* Link Styles */
+        .link-primary {
+            text-decoration: underline;
+            color: #fd5402;
+        }
+
+        /* List Styles */
+        .list-container {
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+            word-break: break-word;
+            color: #000;
+            direction: ltr;
+            font-family: 'Source Sans Pro', Tahoma, Verdana, Segoe, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 1.5;
+            text-align: left;
+            mso-line-height-alt: 24px;
+        }
+
+        .list-margin {
+            margin-left: -20px;
+        }
+
+        .list-reset {
+            margin-top: 0;
+            margin-bottom: 0;
+            list-style-type: revert;
+        }
+
+        .list-item {
+            margin: 0;
+        }
+
+        /* Block Styles */
+        .text-block {
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+            word-break: break-word;
+        }
+
+        .image-block {
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+        }
+
+        .heading-block {
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+        }
+
+        .paragraph-block {
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+            word-break: break-word;
+        }
+
+        .list-block {
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+            word-break: break-word;
+            color: #000;
+            direction: ltr;
+            font-family: 'Source Sans Pro', Tahoma, Verdana, Segoe, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 1.5;
+            text-align: left;
+            mso-line-height-alt: 24px;
+        }
+
+        .social-block {
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+        }
+
+        /* Padding Classes */
+        .pad-10 {
+            padding: 10px;
+        }
+
+        .pad-custom-1 {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+        }
+
+        .pad-custom-2 {
+            padding: 5px 10px 10px 10px;
+        }
+
+        .pad-custom-3 {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+        }
+
+        /* Image Styles */
+        .image-full {
+            display: block;
+            height: auto;
+            border: 0;
+            width: 100%;
+        }
+
+        .image-logo {
+            display: block;
+            height: auto;
+            border: 0;
+            width: 100%;
+        }
+
+        .image-social {
+            display: block;
+            height: auto;
+            border: 0;
+        }
+
+        /* Image Container Padding */
+        .image-container-logo {
+            padding: 25px;
+        }
+
+        .image-container-feature {
+            padding: 10px;
+        }
+
+        .image-container-social {
+            padding: 15px;
+        }
+
+        .image-container-tight {
+            padding: 5px;
+        }
+
+        /* Social Media Styles */
+        .social-table {
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+            display: inline-block;
+        }
+
+        .social-cell {
+            padding: 0 10px 0 10px;
+        }
+
+        /* Alignment Classes */
+        .center {
+            text-align: center;
+        }
+
+        .left {
+            text-align: left;
+        }
+    </style>
+    <!--[if mso ]><style>sup, sub { font-size: 100% !important; } sup { mso-text-raise:10% } sub { mso-text-raise:-10% }</style> <![endif]-->
+</head>
+
+<body class="body" style="background-color:#fff;margin:0;padding:0;-webkit-text-size-adjust:none;text-size-adjust:none">
+    <table border="0" cellpadding="0" cellspacing="0" class="nl-container email-container" role="presentation"
+        width="100%">
+        <tbody>
+            <tr>
+                <td>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-1 email-row"
+                        role="presentation" width="100%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                        class="row-content stack" role="presentation"
+                                        style="mso-table-lspace: 0; mso-table-rspace: 0; border-radius: 0; color: #000; width: 600px; margin: 0 auto;"
+                                        width="600">
+                                        <tbody>
+                                            <tr>
+                                                <td class="column column-1"
+                                                    style="mso-table-lspace: 0; mso-table-rspace: 0; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top;"
+                                                    width="100%">
+                                                    <table border="0" cellpadding="0" cellspacing="0"
+                                                        class="image_block block-1 image-block" role="presentation"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="image-container-logo">
+                                                                    <div align="center" class="alignment">
+                                                                        <div class="fullWidth"
+                                                                            style="max-width: 270px;"><a
+                                                                                href="https://replit.com" rel="noopener"
+                                                                                target="_blank"><img alt=""
+                                                                                    height="auto"
+                                                                                    src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/688a6826b9ec49299691e89a144d7cfa/Frame%202055246350.png"
+                                                                                    style="display: block; height: auto; border: 0; width: 100%;"
+                                                                                    title="" width="270"></a></div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-2"
+                        role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                        class="row-content stack" role="presentation"
+                                        style="mso-table-lspace: 0; mso-table-rspace: 0; color: #000; width: 600px; margin: 0 auto;"
+                                        width="600">
+                                        <tbody>
+                                            <tr>
+                                                <td class="column column-1"
+                                                    style="mso-table-lspace: 0; mso-table-rspace: 0; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top;"
+                                                    width="100%">
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="text_block block-1" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="font-family: Tahoma,Verdana,sans-serif;">
+                                                                        <div class=""
+                                                                            style="font-size: 12px; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; mso-line-height-alt: 14.399999999999999px; color: #797979; line-height: 1.2;">
+                                                                            <p
+                                                                                style="margin: 0; font-size: 12px; mso-line-height-alt: 14.399999999999999px;">
+                                                                                <span
+                                                                                    style="word-break: break-word; font-size: 14px;">{{now
+                                                                                    format="EEEE, MMMM d, y"}}</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="paragraph_block block-2" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0; margin-bottom: 14px;">Hey
+                                                                            creators,</p>
+                                                                        <p style="margin: 0; margin-bottom: 14px;">July
+                                                                            was massive for our mission to enable
+                                                                            <strong>everyone</strong> to create their
+                                                                            ideas. We've been laser-focused on making
+                                                                            Agent smarter, more personalized, and
+                                                                            accessible to more creators than ever
+                                                                            before.
+                                                                        </p>
+                                                                        <p style="margin: 0;">This month's biggest wins:
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="5" cellspacing="0"
+                                                        class="list_block block-3" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word; color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad" style="padding-left: 5px; padding-right: 5px;">
+                                                                    <div style="margin-left: -20px;">
+                                                                        <ul
+                                                                            style="margin-top: 0; margin-bottom: 0; list-style-type: revert;">
+                                                                            <li style="margin: 0;"><strong>Web Search
+                                                                                    for Agent</strong> — access
+                                                                                real-time information and the latest
+                                                                                APIs</li>
+                                                                            <li style="margin: 0;"><strong>Dynamic
+                                                                                    Intelligence</strong> with Extended
+                                                                                Thinking and High Power mode</li>
+                                                                            <li style="margin: 0;"><strong>Custom Agent
+                                                                                    Instructions</strong> through
+                                                                                replit.md files</li>
+                                                                            <li style="margin: 0;"><strong>Effort-based
+                                                                                    billing</strong> that's fairer and
+                                                                                gives free users more flexibility</li>
+                                                                            <li style="margin: 0;"><strong>Domain
+                                                                                    purchasing</strong> rolled out to
+                                                                                all Core users</li>
+                                                                            <li style="margin: 0;"><strong>Agent Queue
+                                                                                    system</strong> for organized,
+                                                                                seamless development</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="paragraph_block block-4" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0; margin-bottom: 14px;">All
+                                                                            these and much more in the
+                                                                            most&nbsp;exciting<em> </em>product updates
+                                                                            in your inbox.</p>
+                                                                        <p style="margin: 0;">Let's jump in 👇</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-3"
+                        role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                        class="row-content stack" role="presentation"
+                                        style="mso-table-lspace: 0; mso-table-rspace: 0; border-radius: 0; color: #000; width: 600px; margin: 0 auto;"
+                                        width="600">
+                                        <tbody>
+                                            <tr>
+                                                <td class="column column-1"
+                                                    style="mso-table-lspace: 0; mso-table-rspace: 0; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top;"
+                                                    width="100%">
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="heading_block block-1" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <h1
+                                                                        style="margin: 0; color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 21px; font-weight: bold; letter-spacing: normal; line-height: 1.5; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 32px;">
+                                                                        <span class="tinyMce-placeholder"
+                                                                            style="word-break: break-word;">🔍 Web
+                                                                            Search for Agent</span>
+                                                                    </h1>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="paragraph_block block-2" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0; margin-bottom: 16px;">Agent
+                                                                            can now search the web and access real-time
+                                                                            information while building your projects. No
+                                                                            more being stuck with outdated documentation
+                                                                            or missing the latest framework updates.</p>
+                                                                        <p style="margin: 0; margin-bottom: 16px;">
+                                                                            Whether you need current API specifications,
+                                                                            the newest library versions, or fresh
+                                                                            examples from the community, Agent pulls in
+                                                                            exactly what you need when you need it. Your
+                                                                            builds stay current with the rapidly
+                                                                            evolving development landscape.</p>
+                                                                        <p style="margin: 0;">This is the breakthrough
+                                                                            that makes Agent truly powerful—unlimited
+                                                                            access to the collective knowledge of the
+                                                                            developer community, updated in real-time.
+                                                                            <a href="https://docs.replit.com/replitai/web-search"
+                                                                                rel="noopener"
+                                                                                style="text-decoration: underline; color: #fd5402;"
+                                                                                target="_blank">Learn about Web Search.</a>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="heading_block block-3" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <h1
+                                                                        style="margin: 0; color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 21px; font-weight: bold; letter-spacing: normal; line-height: 1.5; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 32px;">
+                                                                        <span class="tinyMce-placeholder"
+                                                                            style="word-break: break-word;">🧠 Dynamic
+                                                                            Intelligence</span>
+                                                                    </h1>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="paragraph_block block-4" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p
+                                                                            style="margin: 0px 0px 4px; text-align: justify;">
+                                                                            <img src="https://library.iterable.com/3150/20781/d2fa3f01e759439abf45c3fd341480e0-dynamic-intelligence.png"
+                                                                                width="100%" class="pad-10">
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0;">Agent just got a major
+                                                                            brain upgrade. Dynamic
+                                                                            Intelligence brings two game-changing
+                                                                            capabilities that make building complex
+                                                                            applications feel effortless.</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="5" cellspacing="0"
+                                                        class="list_block block-5" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word; color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad" style="padding-left: 5px; padding-right: 5px;">
+                                                                    <div style="margin-left: -20px;">
+                                                                        <ul
+                                                                            style="margin-top: 0; margin-bottom: 0; list-style-type: revert;">
+                                                                            <li style="margin: 0;"><strong>Extended
+                                                                                    Thinking</strong> — gives Agent time
+                                                                                to really analyze your requests before
+                                                                                jumping in</li>
+                                                                            <li style="margin: 0;"><strong>High Power
+                                                                                    mode</strong> — upgrades you to
+                                                                                Claude Opus for those challenging builds
+                                                                                where precision matters most</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="paragraph_block block-6" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0;">Combined with Web Search,
+                                                                            Dynamic Intelligence transforms Agent into a
+                                                                            truly intelligent coding partner that thinks
+                                                                            before it acts and has access to the latest
+                                                                            information. This is the future of
+                                                                            AI-assisted development. <a
+                                                                                href="https://docs.replit.com/replitai/dynamic-intelligence"
+                                                                                rel="noopener"
+                                                                                style="text-decoration: underline; color: #fd5402;"
+                                                                                target="_blank">Learn about Dynamic
+                                                                                Intelligence.</a></p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="heading_block block-3" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <h1
+                                                                        style="margin: 0; color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 21px; font-weight: bold; letter-spacing: normal; line-height: 1.5; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 32px;">
+                                                                        <span class="tinyMce-placeholder"
+                                                                            style="word-break: break-word;">📝 Custom
+                                                                            Agent Instructions (replit.md)</span>
+                                                                    </h1>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="paragraph_block block-4" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0; margin-bottom: 4px;"><img
+                                                                                src="https://library.iterable.com/3150/20781/74a6cbb7db8a4bf6801ee8088fe0a440-replitmd.jpg"
+                                                                                width="100%" class="pad-10"></p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0; margin-bottom: 16px;">Your
+                                                                            coding style matters, and now Agent learns
+                                                                            exactly how you work. With <a
+                                                                                href="https://docs.replit.com/replitai/replit-dot-md"
+                                                                                rel="noopener"
+                                                                                style="text-decoration: underline; color: #fd5402;"
+                                                                                target="_blank"><strong>replit.md</strong></a>
+                                                                            files, you can teach Agent your
+                                                                            preferences&mdash;coding standards, project
+                                                                            structure, communication style, even
+                                                                            specific libraries you love using.</p>
+                                                                        <p style="margin: 0; margin-bottom: 16px;">Think
+                                                                            of it as giving Agent a personal onboarding
+                                                                            session for every project. Want Agent to use
+                                                                            TypeScript by default? Prefer functional
+                                                                            components in React? Have specific naming
+                                                                            conventions? Just document it once in
+                                                                            replit.md and Agent remembers.</p>
+                                                                        <p style="margin: 0;">This is personalization
+                                                                            that actually makes you more productive. No
+                                                                            more explaining the same preferences over
+                                                                            and over&mdash;Agent just gets your style
+                                                                            from day one.</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="heading_block block-5" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <h1
+                                                                        style="margin: 0; color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 21px; font-weight: bold; letter-spacing: normal; line-height: 1.5; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 32px;">
+                                                                        <span class="tinyMce-placeholder"
+                                                                            style="word-break: break-word;">💰
+                                                                            Effort-based Billing</span>
+                                                                    </h1>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="paragraph_block block-6" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0; margin-bottom: 4px;"><img
+                                                                                src="https://library.iterable.com/3150/20781/03a355ac64da4ad7808a0f9cb392431d-effort-based-billing.png"
+                                                                                width="100%" class="pad-10"></p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0; margin-bottom: 16px;">We
+                                                                            completely rethought how pricing works to
+                                                                            make it fairer for everyone. Instead of
+                                                                            fixed checkpoints, you now pay based on the
+                                                                            actual work Agent does. Simple requests use
+                                                                            fewer resources, complex builds use
+                                                                            more&mdash;and you only pay for what you
+                                                                            need.</p>
+                                                                        <p style="margin: 0; margin-bottom: 16px;">Free
+                                                                            users got the biggest upgrade: <strong>$3
+                                                                                worth of checkpoints</strong> instead of
+                                                                            just 5 fixed ones. That means way more
+                                                                            flexibility to build what matters to you,
+                                                                            whether that's ten quick fixes or one
+                                                                            substantial feature.</p>
+                                                                        <p style="margin: 0;">Building should be
+                                                                            accessible to everyone, and this pricing
+                                                                            model gets us closer to that reality. <a
+                                                                                href="https://docs.replit.com/billing/replit-ai"
+                                                                                rel="noopener"
+                                                                                style="text-decoration: underline; color: #fd5402;"
+                                                                                target="_blank">Learn about AI billing.</a></p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="heading_block block-7" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <h1
+                                                                        style="margin: 0; color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 21px; font-weight: bold; letter-spacing: normal; line-height: 1.5; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 32px;">
+                                                                        <span class="tinyMce-placeholder"
+                                                                            style="word-break: break-word;">🌐 Domain
+                                                                            Purchasing</span>
+                                                                    </h1>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="paragraph_block block-8" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0; margin-bottom: 4px;"><img
+                                                                                src="https://library.iterable.com/3150/20781/e598b04a412949eaaea8a02a36c9a5ad-buy-domain.png"
+                                                                                width="100%" class="pad-10"></p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0; margin-bottom: 16px;">
+                                                                            Professional web presence just got easier.
+                                                                            <strong>Domain purchasing</strong> is now
+                                                                            available to all Core users&mdash;buy,
+                                                                            configure, and manage domains directly in
+                                                                            Replit without leaving your development
+                                                                            environment.
+                                                                        </p>
+                                                                        <p style="margin: 0; margin-bottom: 16px;">Set
+                                                                            up custom DNS records, move domains between
+                                                                            apps, and give your projects the
+                                                                            professional URLs they deserve. No more
+                                                                            juggling external domain registrars or
+                                                                            complicated DNS configurations.</p>
+                                                                        <p style="margin: 0;">Your ideas deserve to live
+                                                                            at addresses that match their quality, and
+                                                                            now that's as simple as clicking "Buy
+                                                                            Domain" in your deployment settings. <a
+                                                                                href="https://docs.replit.com/cloud-services/deployments/domain-purchasing"
+                                                                                rel="noopener"
+                                                                                style="text-decoration: underline; color: #fd5402;"
+                                                                                target="_blank">Learn about Domain
+                                                                                Purchasing</a></p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="heading_block block-9" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <h1
+                                                                        style="margin: 0; color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 21px; font-weight: bold; letter-spacing: normal; line-height: 1.5; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 32px;">
+                                                                        <span class="tinyMce-placeholder"
+                                                                            style="word-break: break-word;">🗂️ Agent
+                                                                            Queue</span>
+                                                                    </h1>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="paragraph_block block-10" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0; margin-bottom: 4px;"><img
+                                                                                src="https://library.iterable.com/3150/20781/b176c43cda024a909c12f0505048b859-message-queue-overview.png"
+                                                                                width="100%" class="pad-10"></p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0; margin-bottom: 16px;">
+                                                                            Multi-tasking chaos is over. Agent now
+                                                                            automatically <strong>queues your
+                                                                                messages</strong>, handling one task at
+                                                                            a time so nothing gets lost or confused.
+                                                                            Send multiple requests and Agent works
+                                                                            through them methodically.</p>
+                                                                        <p style="margin: 0;">No more worrying about
+                                                                            interrupting Agent mid-task or losing track
+                                                                            of what you asked for. Everything gets the
+                                                                            attention it deserves, in the order you
+                                                                            requested it. <a
+                                                                                href="https://docs.replit.com/replitai/message-queue"
+                                                                                rel="noopener"
+                                                                                style="text-decoration: underline; color: #fd5402;"
+                                                                                target="_blank">Learn about Message
+                                                                                Queue.</a></p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="heading_block block-11" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <h1
+                                                                        style="margin: 0; color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 21px; font-weight: bold; letter-spacing: normal; line-height: 1.5; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 32px;">
+                                                                        <span class="tinyMce-placeholder"
+                                                                            style="word-break: break-word;">📌 Other new
+                                                                            features</span>
+                                                                    </h1>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="5" cellspacing="0"
+                                                        class="list_block block-12" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word; color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad" style="padding-left: 5px; padding-right: 5px;">
+                                                                    <div style="margin-left: -20px;">
+                                                                        <ul
+                                                                            style="margin-top: 0; margin-bottom: 0; list-style-type: revert;">
+                                                                            <li style="margin: 0;"><strong>Improved
+                                                                                    icons</strong>: Curated, colorful
+                                                                                icons with smart matching that load
+                                                                                instantly</li>
+                                                                            <li style="margin: 0;">
+                                                                                <strong>Gallery</strong>: Discover
+                                                                                amazing community projects at <a
+                                                                                    href="https://replit.com/gallery"
+                                                                                    rel="noopener"
+                                                                                    style="text-decoration: underline; color: #fd5402;"
+                                                                                    target="_blank">replit.com/gallery</a>
+                                                                            </li>
+                                                                            <li style="margin: 0;"><strong>Teams App
+                                                                                    Store improvements</strong>: Better
+                                                                                org deployment with starred favorites,
+                                                                                search, and popularity rankings</li>
+                                                                            <li style="margin: 0;"><strong>Deployment
+                                                                                    privacy indicators</strong>: Clear
+                                                                                visual cues showing whether your
+                                                                                deployments are public or private</li>
+                                                                            <li style="margin: 0;"><strong>LLM routing
+                                                                                    improvements</strong>: Faster AI
+                                                                                responses with better performance and
+                                                                                lower costs</li>
+                                                                            <li style="margin: 0;"><strong>Push
+                                                                                    notifications</strong>: Mobile
+                                                                                alerts for usage warnings so you can
+                                                                                manage your account proactively</li>
+                                                                            <li style="margin: 0;"><strong>Domain
+                                                                                    management upgrades</strong>: Move
+                                                                                domains between apps and set up custom
+                                                                                DNS records with complete control</li>
+                                                                            <li style="margin: 0;"><strong>Admin
+                                                                                    controls for High Power
+                                                                                    Models</strong>: Organization admins
+                                                                                can manage Agent High Power access
+                                                                                across their entire team</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="paragraph_block block-13" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0;">You can find weekly
+                                                                            updates and more in our <a
+                                                                                href="https://replit.com/changelog"
+                                                                                rel="noopener"
+                                                                                style="text-decoration: underline; color: #fd5402;"
+                                                                                target="_blank">Changelog</a></p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="heading_block block-14" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <h1
+                                                                        style="margin: 0; color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 21px; font-weight: bold; letter-spacing: normal; line-height: 1.5; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 32px;">
+                                                                        <span class="tinyMce-placeholder"
+                                                                            style="word-break: break-word;">📹 Videos
+                                                                            &amp; tutorials</span>
+                                                                    </h1>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="paragraph_block block-15" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0; margin-bottom: 16px;">I've
+                                                                            been deep in the builder community this
+                                                                            month, and the creativity I'm seeing with
+                                                                            these new Agent capabilities is incredible.
+                                                                            Check out my latest tutorials on leveraging
+                                                                            Dynamic Intelligence and setting up custom
+                                                                            Agent instructions on the <a
+                                                                                href="https://youtube.com/@replit"
+                                                                                rel="noopener"
+                                                                                style="text-decoration: underline; color: #fd5402;"
+                                                                                target="_blank">Replit YouTube
+                                                                                channel</a>.</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0" class="paragraph_block block-16"
+                                                        role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p
+                                                                            style="margin: 0px 0px 4px; text-align: justify;">
+                                                                            <a href="https://youtu.be/OqSbgBMoTm0"
+                                                                                rel="noopener" target="_blank">
+                                                                                <img src="https://library.iterable.com/3150/20781/776002aa61cb45318f45045f7acd5227-thumbnail-2.png"
+                                                                                    width="100%" class="pad-10">
+                                                                            </a>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0">
+                                                                            <strong>Deployments Masterclass</strong> —
+                                                                            Learn how to take your projects from
+                                                                            development to production with confidence.
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p
+                                                                            style="margin: 0px 0px 4px; text-align: justify;">
+                                                                            <a href="https://youtu.be/mrkq0horazY"
+                                                                                rel="noopener" target="_blank">
+                                                                                <img src="https://library.iterable.com/3150/20781/9edceab7ec744b5c9902660c1da67627-thumbnail-1-1.png"
+                                                                                    width="100%" class="pad-10">
+                                                                            </a>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p>
+                                                                            <strong>Workspace Masterclass</strong> —
+                                                                            Master your development environment and
+                                                                            workflow optimization techniques.
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-4"
+                        role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                        class="row-content stack" role="presentation"
+                                        style="mso-table-lspace: 0; mso-table-rspace: 0; border-radius: 0; color: #000; width: 600px; margin: 0 auto;"
+                                        width="600">
+                                        <tbody>
+                                            <tr>
+                                                <td class="column column-1"
+                                                    style="mso-table-lspace: 0; mso-table-rspace: 0; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top;"
+                                                    width="100%">
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="heading_block block-1" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <h1
+                                                                        style="margin: 0; color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 21px; font-weight: bold; letter-spacing: normal; line-height: 1.5; text-align: left; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 32px;">
+                                                                        <strong>🔮 Looking Ahead</strong>
+                                                                    </h1>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="paragraph_block block-2" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="color: #000; direction: ltr; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0; line-height: 1.5; text-align: left; mso-line-height-alt: 24px;">
+                                                                        <p style="margin: 0; margin-bottom: 16px;">
+                                                                            August is shaping up to be another
+                                                                            game-changer. We're doubling down on
+                                                                            enterprise capabilities while keeping
+                                                                            individual creators at the heart of
+                                                                            everything we build.</p>
+                                                                        <p style="margin: 0; margin-bottom: 16px;">Keep
+                                                                            creating, keep sharing what you build, and
+                                                                            keep pushing the boundaries of what's
+                                                                            possible. Every idea you bring to life
+                                                                            proves that software creation truly is for
+                                                                            everyone.</p>
+                                                                        <p style="margin: 0; margin-bottom: 16px;">Best,
+                                                                        </p>
+                                                                        <p style="margin: 0;"><a
+                                                                                href="https://www.youtube.com/@mattpalmer"
+                                                                                rel="noopener"
+                                                                                style="text-decoration: underline; color: #fd5402;"
+                                                                                target="_blank">Matt</a> @ Replit</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="0" cellspacing="0"
+                                                        class="image_block block-3 image-block" role="presentation"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="image-container-social">
+                                                                    <div align="center" class="alignment">
+                                                                        <div style="max-width: 90px;"><a
+                                                                                href="https://www.youtube.com/@mattpalmer"
+                                                                                rel="noopener" target="_blank"><img
+                                                                                    alt="" height="auto"
+                                                                                    src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/688a6826b9ec49299691e89a144d7cfa/editor_images/Frame%202055246611.png"
+                                                                                    style="display: block; height: auto; border: 0; width: 100%;"
+                                                                                    title="" width="90"></a></div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="social_block block-4" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div align="center" class="alignment">
+                                                                        <table border="0" cellpadding="0"
+                                                                            cellspacing="0" class="social-table"
+                                                                            role="presentation"
+                                                                            style="mso-table-lspace: 0; mso-table-rspace: 0; display: inline-block;"
+                                                                            width="208px">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td style="padding: 0 10px 0 10px;">
+                                                                                        <a href="https://twitter.com/Replit"
+                                                                                            rel="noopener"
+                                                                                            target="_blank"><img
+                                                                                                alt="Twitter"
+                                                                                                height="auto"
+                                                                                                src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/twitter@2x.png"
+                                                                                                style="display: block; height: auto; border: 0;"
+                                                                                                title="Twitter"
+                                                                                                width="32"></a>
+                                                                                    </td>
+                                                                                    <td style="padding: 0 10px 0 10px;">
+                                                                                        <a href="https://www.linkedin.com/company/repl-it"
+                                                                                            rel="noopener"
+                                                                                            target="_blank"><img
+                                                                                                alt="LinkedIn"
+                                                                                                height="auto"
+                                                                                                src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/linkedin@2x.png"
+                                                                                                style="display: block; height: auto; border: 0;"
+                                                                                                title="LinkedIn"
+                                                                                                width="32"></a>
+                                                                                    </td>
+                                                                                    <td style="padding: 0 10px 0 10px;">
+                                                                                        <a href="https://www.youtube.com/channel/UCgoJjdR6-7AMu9fDitb6nVw"
+                                                                                            rel="noopener"
+                                                                                            target="_blank"><img
+                                                                                                alt="YouTube"
+                                                                                                height="auto"
+                                                                                                src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/youtube@2x.png"
+                                                                                                style="display: block; height: auto; border: 0;"
+                                                                                                title="YouTube"
+                                                                                                width="32"></a>
+                                                                                    </td>
+                                                                                    <td style="padding: 0 10px 0 10px;">
+                                                                                        <a href="https://www.instagram.com/repl.it/?hl=en"
+                                                                                            rel="noopener"
+                                                                                            target="_blank"><img
+                                                                                                alt="Instagram"
+                                                                                                height="auto"
+                                                                                                src="https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/t-only-logo-dark-gray/instagram@2x.png"
+                                                                                                style="display: block; height: auto; border: 0;"
+                                                                                                title="Instagram"
+                                                                                                width="32"></a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-5"
+                        role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                        class="row-content stack" role="presentation"
+                                        style="mso-table-lspace: 0; mso-table-rspace: 0; border-radius: 0; color: #000; width: 600px; margin: 0 auto;"
+                                        width="600">
+                                        <tbody>
+                                            <tr>
+                                                <td class="column column-1"
+                                                    style="mso-table-lspace: 0; mso-table-rspace: 0; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top;"
+                                                    width="100%">
+                                                    <table border="0" cellpadding="10" cellspacing="0"
+                                                        class="text_block block-1" role="presentation"
+                                                        style="mso-table-lspace: 0; mso-table-rspace: 0; word-break: break-word;"
+                                                        width="100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pad">
+                                                                    <div
+                                                                        style="font-family: Tahoma,Verdana,sans-serif;">
+                                                                        <div class=""
+                                                                            style="font-size: 14px; font-family: 'Source Sans Pro',Tahoma,Verdana,Segoe,sans-serif; mso-line-height-alt: 16.8px; color: #555; line-height: 1.2;">
+                                                                            <p
+                                                                                style="margin: 0; text-align: center; font-size: 10px; mso-line-height-alt: 12px;">
+                                                                                <span
+                                                                                    style="word-break: break-word; font-size: 10px;">Sent
+                                                                                    by Replit</span>
+                                                                            </p>
+                                                                            <p
+                                                                                style="margin: 0; text-align: center; font-size: 10px; mso-line-height-alt: 12px;">
+                                                                                <span
+                                                                                    style="word-break: break-word; font-size: 10px;">{{physicalAddress}}&nbsp;<br></span>
+                                                                            </p>
+                                                                            <p
+                                                                                style="margin: 0; text-align: center; font-size: 10px; mso-line-height-alt: 12px;">
+                                                                                <span
+                                                                                    style="word-break: break-word; font-size: 10px;"><a
+                                                                                        href="{{unsubscribeUrl}}"
+                                                                                        rel="noopener"
+                                                                                        style="text-decoration: underline; color: #fd5402;"
+                                                                                        target="_blank">Unsubscribe
+                                                                                        here</a>&nbsp;&nbsp;</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- End -->
+</body>
+
+</html>

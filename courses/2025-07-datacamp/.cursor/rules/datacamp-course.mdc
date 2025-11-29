@@ -1,0 +1,150 @@
+# DataCamp Course Development Guidelines
+
+<introduction>
+These rules guide AI assistants in creating DataCamp courses by referencing the comprehensive guides in `@/guides`. Always consult the relevant guides when planning course content, exercises, scripts, or slides.
+</introduction>
+
+## Core Reference Materials
+
+The `@/guides` directory contains essential DataCamp course development guidelines:
+
+- **Course Structure**: `@/guides/The Anatomy of a DataCamp Course.md` - Course organization, chapters, lessons, exercise types
+- **Style Standards**: `@/guides/DataCamp Course Style Guidelines.md` - Grammar, formatting, code style, terminology
+- **Educational Design**: `@/guides/Creating Didactic Experiences.md` - Storytelling, cognitive load, learning objectives
+- **Video Content**: `@/guides/Script Writing Best Practices.md` - Script structure, length, voice, ADEPT pattern
+- **Visual Design**: `@/guides/Designing Strong Slides.md` - Slide creation and visual standards
+- **Exercise Types**: Individual files for each exercise type (Multiple Choice, Classification, Parsons, Visual, Prompting)
+
+## Planning Workflow
+
+### 1. Course Structure Planning
+**Always reference**: `@/guides/The Anatomy of a DataCamp Course.md`
+
+- Courses have 2-4 chapters maximum
+- Each lesson = 1 video exercise (2-4 minutes) + 2-3 interactive exercises
+- Learning objectives must be clearly defined for each lesson
+- Video exercises cover learning objectives; interactive exercises reinforce them
+- Follow the detailed outline structure provided in the guide
+
+### 2. Content Creation Standards
+**Always reference**: `@/guides/DataCamp Course Style Guidelines.md`
+
+**Grammar & Language**:
+- Use American English spelling and punctuation
+- Use Oxford comma, full sentences, proper spacing
+- Write "dataset" as one word, follow DataFrame/data frame conventions
+- Use "versus" in sentences, "vs." in titles only
+
+**Code Formatting**:
+- Functions/methods need parentheses: `mean()`, `.fit()`
+- Format code elements as inline code: `seaborn`, `pandas`
+- Follow language-specific style guides (PEP 8 for Python, tidyverse for R)
+- Comments on new lines, capitalize first letter, single space after #
+- Code comments identical in sample and solution code
+
+### 3. Educational Experience Design
+**Always reference**: `@/guides/Creating Didactic Experiences.md`
+
+**Storytelling Requirements**:
+- Embed unique narratives in each lesson's exercises
+- Stories must be self-contained within the lesson
+- Vary contexts across lessons (finance, healthcare, sports, e-commerce)
+- Align scenarios directly with learning objectives
+- Avoid sci-fi, fantasy, or overly complex plots
+- Use believable, relevant, real-world situations
+
+**Cognitive Load Management**:
+- Videos cover learning objectives from outline
+- Exercises test only concepts from that lesson's video
+- Provide meaningful hints and scaffolding for coding exercises
+- Avoid overwhelming learners with too many concepts at once
+
+### 4. Script Writing Standards
+**Always reference**: `@/guides/Script Writing Best Practices.md`
+
+**Script Requirements**:
+- 300-400 words optimal, 550 words maximum
+- Include motivation for problem being solved
+- Tell a story, use narrative structure
+- Apply ADEPT pattern: Analogy → Diagram → Example → Plain English → Technical definition
+- Vocalize code when showing it on slides
+- Avoid tongue twisters and overly formal language
+- Explain or avoid slang for international audience
+
+**Content Restrictions**:
+- No course titles, job titles, or current package versions
+- No memes, niche pop culture references
+- No mentions of current projects
+- Keep content timeless and evergreen
+
+### 5. Exercise Development
+**Reference specific exercise guides in** `@/guides/`
+
+**General Exercise Principles**:
+- All exercise types have specific best practice guides
+- Instructions must be bulleted with ending punctuation
+- Hints must be bulleted with ending punctuation
+- Exercise difficulty should progress logically
+- Each exercise reinforces video content
+
+**Exercise Type Selection**:
+- Multiple Choice: `@/guides/Multiple Choice Exercise Best Practices.md`
+- Classification: `@/guides/Classification Exercise Best Practices.md` 
+- Parsons: `@/guides/Parsons Exercise Best Practices.md`
+- Visual: `@/guides/Visual Exercise Best Practices.md`
+- Prompting: `@/guides/Prompting Exercise Best Practices.md`
+
+### 6. Slide Design
+**Always reference**: `@/guides/Designing Strong Slides.md`
+
+- Follow DataCamp visual standards
+- Support script content with clear visuals
+- Use diagrams and examples effectively
+- Maintain consistent design language
+
+## Implementation Guidelines
+
+### Before Starting Any Course Work:
+1. Read `@/guides/The Anatomy of a DataCamp Course.md` for structure requirements
+2. Review `@/guides/DataCamp Course Style Guidelines.md` for all formatting standards
+3. Understand `@/guides/Creating Didactic Experiences.md` for educational approach
+
+### When Planning Lessons:
+1. Define clear learning objectives (reference course anatomy guide)
+2. Create unique, self-contained narratives (reference didactic experiences guide)
+3. Ensure video content covers objectives, exercises reinforce them
+4. Plan exercise types that match learning goals
+
+### When Writing Scripts:
+1. Follow 300-400 word guidelines from script writing guide
+2. Include motivation, storytelling, and ADEPT pattern
+3. Ensure content is timeless and internationally accessible
+4. Vocalize any code shown on slides
+
+### When Creating Exercises:
+1. Reference specific exercise type best practices
+2. Ensure exercises only test concepts from that lesson's video
+3. Provide appropriate hints and scaffolding
+4. Use proper instruction formatting (bulleted, punctuated)
+
+### When Reviewing Content:
+1. Verify adherence to style guidelines (grammar, formatting, code style)
+2. Check that stories are self-contained and relevant
+3. Ensure cognitive load is appropriate
+4. Confirm all learning objectives are covered and reinforced
+
+## Quality Standards
+
+All DataCamp course content must:
+- Follow the exact structure outlined in the anatomy guide
+- Adhere to all style guidelines for consistency
+- Include engaging, educational narratives
+- Maintain appropriate cognitive load
+- Use DataCamp's specific exercise methodologies
+- Meet script length and quality requirements
+- Reference appropriate guides for each content type
+
+**Critical**: Always consult the relevant guides in `@/guides/` before creating any course content. These guides contain DataCamp's proven methodologies and requirements for successful courses.
+
+---
+
