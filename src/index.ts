@@ -8,8 +8,9 @@ import { discoverSkills, getSkillDisplayName } from './skills.js';
 import { installSkillForAgent, isSkillInstalled, getInstallPath } from './installer.js';
 import { detectInstalledAgents, agents } from './agents.js';
 import type { Skill, AgentType } from './types.js';
+import packageJson from '../package.json' with { type: 'json' };
 
-const version = '1.0.0';
+const version = packageJson.version;
 
 interface Options {
   global?: boolean;
