@@ -226,6 +226,15 @@ export const agents: Record<AgentType, AgentConfig> = {
       return existsSync(join(home, '.qwen'));
     },
   },
+  replit: {
+    name: 'replit',
+    displayName: 'Replit',
+    skillsDir: '.agent/skills',
+    globalSkillsDir: '.agent/skills',
+    detectInstalled: async () => {
+      return existsSync(join(process.cwd(), '.agent'));
+    },
+  },
   roo: {
     name: 'roo',
     displayName: 'Roo Code',

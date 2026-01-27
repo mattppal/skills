@@ -24,6 +24,7 @@ export type AgentType =
   | 'pi'
   | 'qoder'
   | 'qwen-code'
+  | 'replit'
   | 'roo'
   | 'trae'
   | 'windsurf'

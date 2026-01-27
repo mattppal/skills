@@ -3,7 +3,7 @@
 The CLI for the open agent skills ecosystem.
 
 <!-- agent-list:start -->
-Supports **Opencode**, **Claude Code**, **Codex**, **Cursor**, and [25 more](#available-agents).
+Supports **Opencode**, **Claude Code**, **Codex**, **Cursor**, and [26 more](#available-agents).
 <!-- agent-list:end -->
 
 <!-- agent-list:end -->
@@ -179,6 +179,7 @@ Skills can be installed to any of these agents:
 | Pi | `pi` | `.pi/skills/` | `~/.pi/agent/skills/` |
 | Qoder | `qoder` | `.qoder/skills/` | `~/.qoder/skills/` |
 | Qwen Code | `qwen-code` | `.qwen/skills/` | `~/.qwen/skills/` |
+| Replit | `replit` | `.agent/skills/` | N/A |
 | Roo Code | `roo` | `.roo/skills/` | `~/.roo/skills/` |
 | Trae | `trae` | `.trae/skills/` | `~/.trae/skills/` |
 | Windsurf | `windsurf` | `.windsurf/skills/` | `~/.codeium/windsurf/skills/` |
