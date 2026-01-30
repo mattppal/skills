@@ -39,8 +39,8 @@ npx skills add ./my-local-skills
 | Option                    | Description                                                                                                                                        |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `-g, --global`            | Install to user directory instead of project                                                                                                       |
-| `-a, --agent <agents...>` | <!-- agent-names:start -->Target specific agents (e.g., `claude-code`, `codex`). See [Available Agents](#available-agents)<!-- agent-names:end --> |
-| `-s, --skill <skills...>` | Install specific skills by name (quote multi-word names: `--skill "My Skill"`)                                                                     |
+| `-a, --agent <agents...>` | <!-- agent-names:start -->Target specific agents (e.g., `claude-code`, `codex`). Use `'*'` for all agents<!-- agent-names:end -->                  |
+| `-s, --skill <skills...>` | Install specific skills by name (use `'*'` for all skills)                                                                                         |
 | `-l, --list`              | List available skills without installing                                                                                                           |
 | `-y, --yes`               | Skip all confirmation prompts                                                                                                                      |
 | `--all`                   | Install all skills to all agents without prompts                                                                                                   |
@@ -65,6 +65,12 @@ npx skills add vercel-labs/agent-skills --skill frontend-design -g -a claude-cod
 
 # Install all skills from a repo to all agents
 npx skills add vercel-labs/agent-skills --all
+
+# Install all skills to specific agents
+npx skills add vercel-labs/agent-skills --skill '*' -a claude-code
+
+# Install specific skills to all agents
+npx skills add vercel-labs/agent-skills --agent '*' --skill frontend-design
 ```
 
 ### Installation Scope
@@ -162,7 +168,13 @@ npx skills remove --global web-design-guidelines
 npx skills remove --agent claude-code cursor my-skill
 
 # Remove all installed skills without confirmation
-npx skills remove --all -y
+npx skills remove --all
+
+# Remove all skills from a specific agent
+npx skills remove --skill '*' -a cursor
+
+# Remove a specific skill from all agents
+npx skills remove my-skill --agent '*'
 
 # Use 'rm' alias
 npx skills rm my-skill
@@ -171,9 +183,10 @@ npx skills rm my-skill
 | Option              | Description                                          |
 | ------------------- | ---------------------------------------------------- |
 | `-g, --global`      | Remove from global scope (~/) instead of project      |
-| `-a, --agent`       | Remove from specific agents only                     |
+| `-a, --agent`       | Remove from specific agents (use `'*'` for all)      |
+| `-s, --skill`       | Specify skills to remove (use `'*'` for all)         |
 | `-y, --yes`         | Skip confirmation prompts                            |
-| `--all`             | Remove all installed skills                          |
+| `--all`             | Shorthand for `--skill '*' --agent '*' -y`           |
 
 ## What are Agent Skills?
 
