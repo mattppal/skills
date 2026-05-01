@@ -1,10 +1,46 @@
-# Matt Palmer's Claude Skills
+# Matt Palmer's Agent Skills
 
-A collection of Claude Code skills for content creation, course development, and personal productivity.
+A private collection of agent skills for content creation, course development, travel planning, and personal productivity.
 
-## What Are Skills?
+This repo is formatted for the open `skills` CLI from [`vercel-labs/skills`](https://github.com/vercel-labs/skills). Skills live in `skills/<skill-name>/SKILL.md`, which lets the CLI install them into Claude Code, Codex, Cursor, and other supported agents.
 
-Skills are reusable prompt packages that Claude automatically activates based on context. Unlike slash commands (which you invoke manually), skills are **model-invoked**—Claude decides when to use them based on your request and the skill's description.
+## Install
+
+From a private GitHub repo, use an SSH URL so your local Git credentials handle authentication:
+
+```bash
+npx skills add git@github.com:<owner>/<repo>.git --global
+```
+
+Install into a specific agent:
+
+```bash
+npx skills add git@github.com:<owner>/<repo>.git --global --agent codex
+npx skills add git@github.com:<owner>/<repo>.git --global --agent claude-code
+```
+
+List available skills before installing:
+
+```bash
+npx skills add git@github.com:<owner>/<repo>.git --list
+```
+
+Install only one skill:
+
+```bash
+npx skills add git@github.com:<owner>/<repo>.git --global --skill brand-voice
+```
+
+For local testing from this checkout:
+
+```bash
+npx skills add . --list
+npx skills add . --global --agent codex --skill brand-voice
+```
+
+## What Are Agent Skills?
+
+Skills are reusable instruction packages that agents automatically activate based on the `name` and `description` in `SKILL.md` frontmatter. Unlike slash commands, skills are model-invoked: the agent decides when to use them based on the request and the skill description.
 
 ## Available Skills
 
@@ -17,20 +53,14 @@ Skills are reusable prompt packages that Claude automatically activates based on
 | `course-builder` | Create educational course content and lesson plans | Online courses, workshops |
 | `trip-planner` | Build detailed travel itineraries | Vacation planning |
 | `strength-program` | Design evidence-based training programs | Powerlifting/hypertrophy programming |
-
-## Installation
-
-These skills are located in `.claude/skills/`. To use them:
-
-1. **Project-level**: Skills in this repo are automatically available when working in this directory
-2. **Global**: Copy skill folders to `~/.claude/skills/` for cross-project availability
+| `technical-writing-revision` | Rewrite technical writing for clarity, structure, and precision | Docs, changelogs, blog posts, UI copy |
 
 ## Skill Structure
 
 Each skill follows this structure:
 
 ```
-.claude/skills/
+skills/
 ├── brand-voice/
 │   ├── SKILL.md          # Main skill definition
 │   └── style-reference.md # Supporting documentation
@@ -88,22 +118,22 @@ Plan a 5-day trip to Japan focused on hiking and food
 
 Original prompts are preserved in the `archive/` directory for reference. The skills consolidate and improve upon these individual prompts.
 
-## Contributing
+## Add or Update Skills
 
 To add a new skill:
 
-1. Create a new directory in `.claude/skills/`
+1. Create a new directory in `skills/`
 2. Add a `SKILL.md` file with YAML frontmatter:
    ```yaml
    ---
    name: skill-name
-   description: Brief description (max 1024 chars)
+   description: Brief description of what this skill does and when to use it
    ---
    ```
 3. Include clear instructions in the markdown body
-4. Optionally add supporting files (examples, references)
+4. Optionally add supporting files such as `references/`, `scripts/`, or assets
 
 ## Resources
 
-- [Claude Code Skills Documentation](https://code.claude.com/docs/en/skills)
-- [Creating Custom Skills](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
+- [`vercel-labs/skills`](https://github.com/vercel-labs/skills)
+- [Vercel Agent Skills Repository](https://github.com/vercel-labs/agent-skills)

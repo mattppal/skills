@@ -1,0 +1,4 @@
+interface:
+  display_name: "Technical Writing Revision"
+  short_description: "Improves technical writing and formatting."
+  default_prompt: "Use $technical-writing-revision to rewrite this repo text for clarity, structure, and technical precision without changing meaning."
